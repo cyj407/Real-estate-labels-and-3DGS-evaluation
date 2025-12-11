@@ -1,0 +1,120 @@
+model:
+  name: "ViT-B/32"
+  pretrained: "openai"
+  device: "cpu"  # Change to "cuda" if GPU available
+  batch_size: 16
+
+labeling:
+  top_k_labels: 10
+  confidence_threshold: 0.20
+  max_labels_per_category: 3
+  
+  # Label vocabulary organized by category
+  room_types:
+    - "living room"
+    - "bedroom"
+    - "master bedroom"
+    - "kitchen"
+    - "bathroom"
+    - "dining room"
+    - "home office"
+    - "study room"
+    - "balcony"
+    - "hallway"
+    - "entrance"
+    - "laundry room"
+  
+  style_labels:
+    - "modern minimalist design"
+    - "contemporary style"
+    - "traditional style"
+    - "industrial loft aesthetic"
+    - "scandinavian design"
+    - "luxury finishes"
+    - "cozy atmosphere"
+    - "bright and airy"
+    - "warm tones"
+    - "neutral color palette"
+  
+  feature_labels:
+    - "hardwood flooring"
+    - "tile flooring"
+    - "marble countertops"
+    - "granite countertops"
+    - "floor-to-ceiling windows"
+    - "large windows"
+    - "built-in storage"
+    - "built-in wardrobes"
+    - "open floor plan"
+    - "high ceilings"
+    - "natural lighting"
+    - "recessed lighting"
+    - "pendant lighting"
+    - "stainless steel appliances"
+    - "modern fixtures"
+    - "glass shower enclosure"
+    - "bathtub"
+    - "double sink vanity"
+    - "kitchen island"
+    - "open shelving"
+    - "crown molding"
+    - "exposed brick"
+    - "wood beam ceilings"
+  
+  condition_labels:
+    - "newly renovated"
+    - "well-maintained"
+    - "move-in ready"
+    - "pristine condition"
+    - "updated appliances"
+
+optimization:
+  use_caching: true
+  use_quantization: false
+  parallel_workers: 4
+  image_cache_dir: "cache/images"
+  embedding_cache_dir: "cache/embeddings"
+
+regions:
+  default: "taiwan"
+  supported: ["taiwan", "japan", "us"]
+  
+  # Region-specific vocabulary
+  region_vocab:
+    taiwan:
+      - "balcony with laundry area"
+      - "tile flooring"
+      - "security door"
+      - "shoe cabinet"
+    japan:
+      - "genkan entrance"
+      - "washitsu room"
+      - "tatami flooring"
+      - "unit bath"
+      - "sliding doors"
+    us:
+      - "walk-in closet"
+      - "central air conditioning"
+      - "hardwood floors"
+      - "granite countertops"
+      - "stainless steel appliances"
+
+evaluation:
+  metrics: 
+    - "coverage"
+    - "diversity"
+    - "specificity"
+    - "redundancy"
+    - "clip_consistency"
+  
+  # Error categories for analysis
+  error_categories:
+    - "over_generic"
+    - "hallucination"
+    - "wrong_room_type"
+    - "missing_features"
+
+output:
+  results_dir: "results"
+  save_visualizations: true
+  save_metrics: true

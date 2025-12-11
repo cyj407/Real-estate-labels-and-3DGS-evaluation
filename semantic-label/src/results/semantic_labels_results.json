@@ -1,0 +1,1259 @@
+{
+  "summary": {
+    "total_properties": 10,
+    "timestamp": "2025-12-11 10:13:22",
+    "config": {
+      "model": "ViT-B/32",
+      "device": "cpu",
+      "top_k_labels": 10
+    }
+  },
+  "latency_statistics": {
+    "mean_seconds": 1.6988256692886352,
+    "median_seconds": 1.721895456314087,
+    "p95_seconds": 1.7825270652770997,
+    "min_seconds": 1.5697441101074219,
+    "max_seconds": 1.7899351119995117
+  },
+  "aggregate_metrics": {
+    "mean_coverage": 0.28296232521533965,
+    "mean_specificity": 2.0799999999999996,
+    "mean_redundancy": 0.8111092329025269,
+    "mean_clip_consistency": 0.30867757499217985,
+    "diversity": 0.5457690457690457,
+    "total_properties": 10,
+    "per_property": [
+      {
+        "coverage": 0.2846362888813019,
+        "specificity": 2.1,
+        "redundancy": 0.8104029893875122,
+        "clip_consistency": 0.30777040123939514,
+        "num_labels": 10,
+        "num_images": 20,
+        "property_id": "GZ50364605"
+      },
+      {
+        "coverage": 0.2849159836769104,
+        "specificity": 1.9,
+        "redundancy": 0.8100783228874207,
+        "clip_consistency": 0.31350114941596985,
+        "num_labels": 10,
+        "num_images": 19,
+        "property_id": "TC08957218"
+      },
+      {
+        "coverage": 0.2902472913265228,
+        "specificity": 2.1,
+        "redundancy": 0.8073941469192505,
+        "clip_consistency": 0.3159198760986328,
+        "num_labels": 10,
+        "num_images": 20,
+        "property_id": "KS186226"
+      },
+      {
+        "coverage": 0.2839374542236328,
+        "specificity": 2.1,
+        "redundancy": 0.8091508746147156,
+        "clip_consistency": 0.30822259187698364,
+        "num_labels": 10,
+        "num_images": 20,
+        "property_id": "KS187345"
+      },
+      {
+        "coverage": 0.2802416682243347,
+        "specificity": 2.0,
+        "redundancy": 0.8225985765457153,
+        "clip_consistency": 0.30404624342918396,
+        "num_labels": 10,
+        "num_images": 20,
+        "property_id": "KS185237"
+      },
+      {
+        "coverage": 0.27740412950515747,
+        "specificity": 2.0,
+        "redundancy": 0.8126506209373474,
+        "clip_consistency": 0.3079202473163605,
+        "num_labels": 10,
+        "num_images": 20,
+        "property_id": "KS187126"
+      },
+      {
+        "coverage": 0.27197396755218506,
+        "specificity": 2.1,
+        "redundancy": 0.8394155502319336,
+        "clip_consistency": 0.3010714650154114,
+        "num_labels": 10,
+        "num_images": 20,
+        "property_id": "KS186928"
+      },
+      {
+        "coverage": 0.28753888607025146,
+        "specificity": 2.1,
+        "redundancy": 0.8007495403289795,
+        "clip_consistency": 0.30635157227516174,
+        "num_labels": 10,
+        "num_images": 20,
+        "property_id": "KS184357"
+      },
+      {
+        "coverage": 0.2854704260826111,
+        "specificity": 2.4,
+        "redundancy": 0.7835379838943481,
+        "clip_consistency": 0.31221067905426025,
+        "num_labels": 10,
+        "num_images": 20,
+        "property_id": "KS181499"
+      },
+      {
+        "coverage": 0.2832571566104889,
+        "specificity": 2.0,
+        "redundancy": 0.8151137232780457,
+        "clip_consistency": 0.30976152420043945,
+        "num_labels": 10,
+        "num_images": 19,
+        "property_id": "CW67133884"
+      }
+    ]
+  },
+  "properties": [
+    {
+      "property_id": "GZ50364605",
+      "metadata": {
+        "property_id": "GZ50364605",
+        "title": "楠梓市中心翻新2大套房公寓",
+        "property_type": "apartment",
+        "city": "高雄市",
+        "district": "楠梓區",
+        "num_bedroom": 2,
+        "num_bathroom": 2.0,
+        "interior_area": 16.57,
+        "property_age": 43
+      },
+      "labels": [
+        "open floor plan",
+        "bedroom",
+        "tile flooring",
+        "master bedroom",
+        "built-in wardrobes",
+        "living room",
+        "move-in ready",
+        "newly renovated",
+        "hardwood flooring",
+        "glass shower enclosure"
+      ],
+      "labels_with_scores": [
+        {
+          "label": "open floor plan",
+          "score": 0.2677742838859558,
+          "category": "features"
+        },
+        {
+          "label": "bedroom",
+          "score": 0.25559884309768677,
+          "category": "room_types"
+        },
+        {
+          "label": "tile flooring",
+          "score": 0.2535553574562073,
+          "category": "features"
+        },
+        {
+          "label": "master bedroom",
+          "score": 0.2518540918827057,
+          "category": "room_types"
+        },
+        {
+          "label": "built-in wardrobes",
+          "score": 0.25156745314598083,
+          "category": "features"
+        },
+        {
+          "label": "living room",
+          "score": 0.2503507137298584,
+          "category": "room_types"
+        },
+        {
+          "label": "move-in ready",
+          "score": 0.24889712035655975,
+          "category": "condition"
+        },
+        {
+          "label": "newly renovated",
+          "score": 0.24585485458374023,
+          "category": "condition"
+        },
+        {
+          "label": "hardwood flooring",
+          "score": 0.244710773229599,
+          "category": "features"
+        },
+        {
+          "label": "glass shower enclosure",
+          "score": 0.24410243332386017,
+          "category": "features"
+        }
+      ],
+      "region": "taiwan",
+      "image_stats": {
+        "total_images": 20,
+        "interior_images": 20,
+        "exterior_images": 0,
+        "interior_ratio": 1.0
+      },
+      "evaluation": {
+        "coverage": 0.2846362888813019,
+        "specificity": 2.1,
+        "redundancy": 0.8104029893875122,
+        "clip_consistency": 0.30777040123939514,
+        "num_labels": 10,
+        "num_images": 20
+      },
+      "error_analysis": {
+        "over_generic": [],
+        "potentially_hallucinated": [],
+        "low_specificity": [
+          "bedroom",
+          "tile flooring",
+          "master bedroom",
+          "built-in wardrobes",
+          "living room",
+          "move-in ready",
+          "newly renovated",
+          "hardwood flooring"
+        ]
+      },
+      "timing": {
+        "total_seconds": 1.5697441101074219,
+        "stage1_classification": 0.2957940101623535,
+        "stage2_labeling": 0.25149011611938477,
+        "stage3_adaptation": 1.8835067749023438e-05,
+        "stage4_evaluation": 1.0224251747131348
+      }
+    },
+    {
+      "property_id": "TC08957218",
+      "metadata": {
+        "property_id": "TC08957218",
+        "title": "屋主發財屋~右昌庭院車庫別墅",
+        "property_type": "townhouse",
+        "city": "高雄市",
+        "district": "楠梓區",
+        "num_bedroom": 5,
+        "num_bathroom": 4.0,
+        "interior_area": 49.93,
+        "property_age": 30
+      },
+      "labels": [
+        "open floor plan",
+        "tile flooring",
+        "glass shower enclosure",
+        "hallway",
+        "newly renovated",
+        "entrance",
+        "kitchen",
+        "built-in wardrobes",
+        "modern fixtures",
+        "move-in ready"
+      ],
+      "labels_with_scores": [
+        {
+          "label": "open floor plan",
+          "score": 0.26816561818122864,
+          "category": "features"
+        },
+        {
+          "label": "tile flooring",
+          "score": 0.26753172278404236,
+          "category": "features"
+        },
+        {
+          "label": "glass shower enclosure",
+          "score": 0.2507750988006592,
+          "category": "features"
+        },
+        {
+          "label": "hallway",
+          "score": 0.2505378723144531,
+          "category": "room_types"
+        },
+        {
+          "label": "newly renovated",
+          "score": 0.2470727264881134,
+          "category": "condition"
+        },
+        {
+          "label": "entrance",
+          "score": 0.24697783589363098,
+          "category": "room_types"
+        },
+        {
+          "label": "kitchen",
+          "score": 0.24481366574764252,
+          "category": "room_types"
+        },
+        {
+          "label": "built-in wardrobes",
+          "score": 0.24039630591869354,
+          "category": "features"
+        },
+        {
+          "label": "modern fixtures",
+          "score": 0.23936697840690613,
+          "category": "features"
+        },
+        {
+          "label": "move-in ready",
+          "score": 0.23906153440475464,
+          "category": "condition"
+        }
+      ],
+      "region": "taiwan",
+      "image_stats": {
+        "total_images": 19,
+        "interior_images": 19,
+        "exterior_images": 0,
+        "interior_ratio": 1.0
+      },
+      "evaluation": {
+        "coverage": 0.2849159836769104,
+        "specificity": 1.9,
+        "redundancy": 0.8100783228874207,
+        "clip_consistency": 0.31350114941596985,
+        "num_labels": 10,
+        "num_images": 19
+      },
+      "error_analysis": {
+        "over_generic": [],
+        "potentially_hallucinated": [],
+        "low_specificity": [
+          "tile flooring",
+          "hallway",
+          "newly renovated",
+          "entrance",
+          "kitchen",
+          "built-in wardrobes",
+          "modern fixtures",
+          "move-in ready"
+        ]
+      },
+      "timing": {
+        "total_seconds": 1.59627103805542,
+        "stage1_classification": 0.24696087837219238,
+        "stage2_labeling": 0.24297595024108887,
+        "stage3_adaptation": 1.5974044799804688e-05,
+        "stage4_evaluation": 1.1063010692596436
+      }
+    },
+    {
+      "property_id": "KS186226",
+      "metadata": {
+        "property_id": "KS186226",
+        "title": "楠梓科技園區全新完工三房平車",
+        "property_type": "condo",
+        "city": "高雄市",
+        "district": "楠梓區",
+        "num_bedroom": 3,
+        "num_bathroom": 2.0,
+        "interior_area": 18.18,
+        "property_age": 0
+      },
+      "labels": [
+        "open floor plan",
+        "tile flooring",
+        "built-in wardrobes",
+        "master bedroom",
+        "bedroom",
+        "glass shower enclosure",
+        "large windows",
+        "dining room",
+        "newly renovated",
+        "hardwood flooring"
+      ],
+      "labels_with_scores": [
+        {
+          "label": "open floor plan",
+          "score": 0.2762204110622406,
+          "category": "features"
+        },
+        {
+          "label": "tile flooring",
+          "score": 0.25956517457962036,
+          "category": "features"
+        },
+        {
+          "label": "built-in wardrobes",
+          "score": 0.2576519846916199,
+          "category": "features"
+        },
+        {
+          "label": "master bedroom",
+          "score": 0.249029278755188,
+          "category": "room_types"
+        },
+        {
+          "label": "bedroom",
+          "score": 0.24838566780090332,
+          "category": "room_types"
+        },
+        {
+          "label": "glass shower enclosure",
+          "score": 0.24791550636291504,
+          "category": "features"
+        },
+        {
+          "label": "large windows",
+          "score": 0.2472776621580124,
+          "category": "features"
+        },
+        {
+          "label": "dining room",
+          "score": 0.2470787763595581,
+          "category": "room_types"
+        },
+        {
+          "label": "newly renovated",
+          "score": 0.2469325065612793,
+          "category": "condition"
+        },
+        {
+          "label": "hardwood flooring",
+          "score": 0.24490050971508026,
+          "category": "features"
+        }
+      ],
+      "region": "taiwan",
+      "image_stats": {
+        "total_images": 20,
+        "interior_images": 20,
+        "exterior_images": 0,
+        "interior_ratio": 1.0
+      },
+      "evaluation": {
+        "coverage": 0.2902472913265228,
+        "specificity": 2.1,
+        "redundancy": 0.8073941469192505,
+        "clip_consistency": 0.3159198760986328,
+        "num_labels": 10,
+        "num_images": 20
+      },
+      "error_analysis": {
+        "over_generic": [],
+        "potentially_hallucinated": [],
+        "low_specificity": [
+          "tile flooring",
+          "built-in wardrobes",
+          "master bedroom",
+          "bedroom",
+          "large windows",
+          "dining room",
+          "newly renovated",
+          "hardwood flooring"
+        ]
+      },
+      "timing": {
+        "total_seconds": 1.7899351119995117,
+        "stage1_classification": 0.2939419746398926,
+        "stage2_labeling": 0.269528865814209,
+        "stage3_adaptation": 1.5020370483398438e-05,
+        "stage4_evaluation": 1.2264349460601807
+      }
+    },
+    {
+      "property_id": "KS187345",
+      "metadata": {
+        "property_id": "KS187345",
+        "title": "楠梓台積電/後勁捷運站三房平車",
+        "property_type": "condo",
+        "city": "高雄市",
+        "district": "楠梓區",
+        "num_bedroom": 3,
+        "num_bathroom": 2.0,
+        "interior_area": 18.05,
+        "property_age": 0
+      },
+      "labels": [
+        "open floor plan",
+        "tile flooring",
+        "built-in wardrobes",
+        "glass shower enclosure",
+        "master bedroom",
+        "hardwood flooring",
+        "bedroom",
+        "large windows",
+        "living room",
+        "newly renovated"
+      ],
+      "labels_with_scores": [
+        {
+          "label": "open floor plan",
+          "score": 0.27250486612319946,
+          "category": "features"
+        },
+        {
+          "label": "tile flooring",
+          "score": 0.2593136429786682,
+          "category": "features"
+        },
+        {
+          "label": "built-in wardrobes",
+          "score": 0.2530898451805115,
+          "category": "features"
+        },
+        {
+          "label": "glass shower enclosure",
+          "score": 0.2494051456451416,
+          "category": "features"
+        },
+        {
+          "label": "master bedroom",
+          "score": 0.2463030368089676,
+          "category": "room_types"
+        },
+        {
+          "label": "hardwood flooring",
+          "score": 0.2442970722913742,
+          "category": "features"
+        },
+        {
+          "label": "bedroom",
+          "score": 0.24412591755390167,
+          "category": "room_types"
+        },
+        {
+          "label": "large windows",
+          "score": 0.24382221698760986,
+          "category": "features"
+        },
+        {
+          "label": "living room",
+          "score": 0.2423948496580124,
+          "category": "room_types"
+        },
+        {
+          "label": "newly renovated",
+          "score": 0.24053558707237244,
+          "category": "condition"
+        }
+      ],
+      "region": "taiwan",
+      "image_stats": {
+        "total_images": 20,
+        "interior_images": 20,
+        "exterior_images": 0,
+        "interior_ratio": 1.0
+      },
+      "evaluation": {
+        "coverage": 0.2839374542236328,
+        "specificity": 2.1,
+        "redundancy": 0.8091508746147156,
+        "clip_consistency": 0.30822259187698364,
+        "num_labels": 10,
+        "num_images": 20
+      },
+      "error_analysis": {
+        "over_generic": [],
+        "potentially_hallucinated": [],
+        "low_specificity": [
+          "tile flooring",
+          "built-in wardrobes",
+          "master bedroom",
+          "hardwood flooring",
+          "bedroom",
+          "large windows",
+          "living room",
+          "newly renovated"
+        ]
+      },
+      "timing": {
+        "total_seconds": 1.7010040283203125,
+        "stage1_classification": 0.2751448154449463,
+        "stage2_labeling": 0.26752805709838867,
+        "stage3_adaptation": 1.1920928955078125e-05,
+        "stage4_evaluation": 1.1583061218261719
+      }
+    },
+    {
+      "property_id": "KS185237",
+      "metadata": {
+        "property_id": "KS185237",
+        "title": "六合商圈前金捷運站景觀漂亮2房",
+        "property_type": "condo",
+        "city": "高雄市",
+        "district": "前金區",
+        "num_bedroom": 2,
+        "num_bathroom": 1.0,
+        "interior_area": 11.22,
+        "property_age": 4
+      },
+      "labels": [
+        "open floor plan",
+        "master bedroom",
+        "living room",
+        "bedroom",
+        "newly renovated",
+        "tile flooring",
+        "floor-to-ceiling windows",
+        "move-in ready",
+        "hardwood flooring",
+        "luxury finishes"
+      ],
+      "labels_with_scores": [
+        {
+          "label": "open floor plan",
+          "score": 0.25917619466781616,
+          "category": "features"
+        },
+        {
+          "label": "master bedroom",
+          "score": 0.24177329242229462,
+          "category": "room_types"
+        },
+        {
+          "label": "living room",
+          "score": 0.24172139167785645,
+          "category": "room_types"
+        },
+        {
+          "label": "bedroom",
+          "score": 0.2408858984708786,
+          "category": "room_types"
+        },
+        {
+          "label": "newly renovated",
+          "score": 0.24019315838813782,
+          "category": "condition"
+        },
+        {
+          "label": "tile flooring",
+          "score": 0.238382026553154,
+          "category": "features"
+        },
+        {
+          "label": "floor-to-ceiling windows",
+          "score": 0.2359367311000824,
+          "category": "features"
+        },
+        {
+          "label": "move-in ready",
+          "score": 0.23524633049964905,
+          "category": "condition"
+        },
+        {
+          "label": "hardwood flooring",
+          "score": 0.23392784595489502,
+          "category": "features"
+        },
+        {
+          "label": "luxury finishes",
+          "score": 0.2334393560886383,
+          "category": "style"
+        }
+      ],
+      "region": "taiwan",
+      "image_stats": {
+        "total_images": 20,
+        "interior_images": 20,
+        "exterior_images": 0,
+        "interior_ratio": 1.0
+      },
+      "evaluation": {
+        "coverage": 0.2802416682243347,
+        "specificity": 2.0,
+        "redundancy": 0.8225985765457153,
+        "clip_consistency": 0.30404624342918396,
+        "num_labels": 10,
+        "num_images": 20
+      },
+      "error_analysis": {
+        "over_generic": [],
+        "potentially_hallucinated": [],
+        "low_specificity": [
+          "master bedroom",
+          "living room",
+          "bedroom",
+          "newly renovated",
+          "tile flooring",
+          "floor-to-ceiling windows",
+          "move-in ready",
+          "hardwood flooring",
+          "luxury finishes"
+        ]
+      },
+      "timing": {
+        "total_seconds": 1.7382769584655762,
+        "stage1_classification": 0.2883789539337158,
+        "stage2_labeling": 0.27698469161987305,
+        "stage3_adaptation": 1.3113021850585938e-05,
+        "stage4_evaluation": 1.1728861331939697
+      }
+    },
+    {
+      "property_id": "KS187126",
+      "metadata": {
+        "property_id": "KS187126",
+        "title": "捷運青埔站旁兩房兩衛有車位",
+        "property_type": "condo",
+        "city": "高雄市",
+        "district": "橋頭區",
+        "num_bedroom": 2,
+        "num_bathroom": 2.0,
+        "interior_area": 15.0,
+        "property_age": 7
+      },
+      "labels": [
+        "open floor plan",
+        "tile flooring",
+        "newly renovated",
+        "glass shower enclosure",
+        "modern fixtures",
+        "kitchen",
+        "study room",
+        "entrance",
+        "luxury finishes",
+        "built-in wardrobes"
+      ],
+      "labels_with_scores": [
+        {
+          "label": "open floor plan",
+          "score": 0.2594292163848877,
+          "category": "features"
+        },
+        {
+          "label": "tile flooring",
+          "score": 0.25146809220314026,
+          "category": "features"
+        },
+        {
+          "label": "newly renovated",
+          "score": 0.248280331492424,
+          "category": "condition"
+        },
+        {
+          "label": "glass shower enclosure",
+          "score": 0.2382895052433014,
+          "category": "features"
+        },
+        {
+          "label": "modern fixtures",
+          "score": 0.2380731850862503,
+          "category": "features"
+        },
+        {
+          "label": "kitchen",
+          "score": 0.236930251121521,
+          "category": "room_types"
+        },
+        {
+          "label": "study room",
+          "score": 0.23554185032844543,
+          "category": "room_types"
+        },
+        {
+          "label": "entrance",
+          "score": 0.23413176834583282,
+          "category": "room_types"
+        },
+        {
+          "label": "luxury finishes",
+          "score": 0.23260045051574707,
+          "category": "style"
+        },
+        {
+          "label": "built-in wardrobes",
+          "score": 0.2324482947587967,
+          "category": "features"
+        }
+      ],
+      "region": "taiwan",
+      "image_stats": {
+        "total_images": 20,
+        "interior_images": 20,
+        "exterior_images": 0,
+        "interior_ratio": 1.0
+      },
+      "evaluation": {
+        "coverage": 0.27740412950515747,
+        "specificity": 2.0,
+        "redundancy": 0.8126506209373474,
+        "clip_consistency": 0.3079202473163605,
+        "num_labels": 10,
+        "num_images": 20
+      },
+      "error_analysis": {
+        "over_generic": [],
+        "potentially_hallucinated": [],
+        "low_specificity": [
+          "tile flooring",
+          "newly renovated",
+          "modern fixtures",
+          "kitchen",
+          "study room",
+          "entrance",
+          "luxury finishes",
+          "built-in wardrobes"
+        ]
+      },
+      "timing": {
+        "total_seconds": 1.773472785949707,
+        "stage1_classification": 0.2863740921020508,
+        "stage2_labeling": 0.287402868270874,
+        "stage3_adaptation": 1.2159347534179688e-05,
+        "stage4_evaluation": 1.1996681690216064
+      }
+    },
+    {
+      "property_id": "KS186928",
+      "metadata": {
+        "property_id": "KS186928",
+        "title": "高雄愛河畔景觀二房",
+        "property_type": "condo",
+        "city": "高雄市",
+        "district": "前金區",
+        "num_bedroom": 2,
+        "num_bathroom": 1.0,
+        "interior_area": 11.7,
+        "property_age": 1
+      },
+      "labels": [
+        "open floor plan",
+        "newly renovated",
+        "tile flooring",
+        "living room",
+        "dining room",
+        "move-in ready",
+        "master bedroom",
+        "contemporary style",
+        "modern fixtures",
+        "luxury finishes"
+      ],
+      "labels_with_scores": [
+        {
+          "label": "open floor plan",
+          "score": 0.2597695589065552,
+          "category": "features"
+        },
+        {
+          "label": "newly renovated",
+          "score": 0.24455559253692627,
+          "category": "condition"
+        },
+        {
+          "label": "tile flooring",
+          "score": 0.24427524209022522,
+          "category": "features"
+        },
+        {
+          "label": "living room",
+          "score": 0.24108365178108215,
+          "category": "room_types"
+        },
+        {
+          "label": "dining room",
+          "score": 0.23816092312335968,
+          "category": "room_types"
+        },
+        {
+          "label": "move-in ready",
+          "score": 0.23796474933624268,
+          "category": "condition"
+        },
+        {
+          "label": "master bedroom",
+          "score": 0.2369370013475418,
+          "category": "room_types"
+        },
+        {
+          "label": "contemporary style",
+          "score": 0.23621809482574463,
+          "category": "style"
+        },
+        {
+          "label": "modern fixtures",
+          "score": 0.23488664627075195,
+          "category": "features"
+        },
+        {
+          "label": "luxury finishes",
+          "score": 0.2341804951429367,
+          "category": "style"
+        }
+      ],
+      "region": "taiwan",
+      "image_stats": {
+        "total_images": 20,
+        "interior_images": 20,
+        "exterior_images": 0,
+        "interior_ratio": 1.0
+      },
+      "evaluation": {
+        "coverage": 0.27197396755218506,
+        "specificity": 2.1,
+        "redundancy": 0.8394155502319336,
+        "clip_consistency": 0.3010714650154114,
+        "num_labels": 10,
+        "num_images": 20
+      },
+      "error_analysis": {
+        "over_generic": [],
+        "potentially_hallucinated": [],
+        "low_specificity": [
+          "newly renovated",
+          "tile flooring",
+          "living room",
+          "dining room",
+          "move-in ready",
+          "master bedroom",
+          "contemporary style",
+          "modern fixtures",
+          "luxury finishes"
+        ]
+      },
+      "timing": {
+        "total_seconds": 1.7234058380126953,
+        "stage1_classification": 0.28259992599487305,
+        "stage2_labeling": 0.29921388626098633,
+        "stage3_adaptation": 1.4066696166992188e-05,
+        "stage4_evaluation": 1.1415648460388184
+      }
+    },
+    {
+      "property_id": "KS184357",
+      "metadata": {
+        "property_id": "KS184357",
+        "title": "高科大新楠家樂福高樓層精美２房",
+        "property_type": "condo",
+        "city": "高雄市",
+        "district": "楠梓區",
+        "num_bedroom": 2,
+        "num_bathroom": 1.0,
+        "interior_area": 13.78,
+        "property_age": 11
+      },
+      "labels": [
+        "open floor plan",
+        "tile flooring",
+        "newly renovated",
+        "glass shower enclosure",
+        "kitchen",
+        "modern fixtures",
+        "built-in wardrobes",
+        "balcony with laundry area",
+        "well-maintained",
+        "bedroom"
+      ],
+      "labels_with_scores": [
+        {
+          "label": "open floor plan",
+          "score": 0.2629162073135376,
+          "category": "features"
+        },
+        {
+          "label": "tile flooring",
+          "score": 0.2484508752822876,
+          "category": "features"
+        },
+        {
+          "label": "newly renovated",
+          "score": 0.24284997582435608,
+          "category": "condition"
+        },
+        {
+          "label": "glass shower enclosure",
+          "score": 0.2417542189359665,
+          "category": "features"
+        },
+        {
+          "label": "kitchen",
+          "score": 0.2404131144285202,
+          "category": "room_types"
+        },
+        {
+          "label": "modern fixtures",
+          "score": 0.239192932844162,
+          "category": "features"
+        },
+        {
+          "label": "built-in wardrobes",
+          "score": 0.23755021393299103,
+          "category": "features"
+        },
+        {
+          "label": "balcony",
+          "score": 0.2368788719177246,
+          "category": "room_types"
+        },
+        {
+          "label": "well-maintained",
+          "score": 0.23683755099773407,
+          "category": "condition"
+        },
+        {
+          "label": "bedroom",
+          "score": 0.23677143454551697,
+          "category": "room_types"
+        }
+      ],
+      "region": "taiwan",
+      "image_stats": {
+        "total_images": 20,
+        "interior_images": 20,
+        "exterior_images": 0,
+        "interior_ratio": 1.0
+      },
+      "evaluation": {
+        "coverage": 0.28753888607025146,
+        "specificity": 2.1,
+        "redundancy": 0.8007495403289795,
+        "clip_consistency": 0.30635157227516174,
+        "num_labels": 10,
+        "num_images": 20
+      },
+      "error_analysis": {
+        "over_generic": [],
+        "potentially_hallucinated": [],
+        "low_specificity": [
+          "tile flooring",
+          "newly renovated",
+          "kitchen",
+          "modern fixtures",
+          "built-in wardrobes",
+          "well-maintained",
+          "bedroom"
+        ]
+      },
+      "timing": {
+        "total_seconds": 1.7203850746154785,
+        "stage1_classification": 0.28902101516723633,
+        "stage2_labeling": 0.27793192863464355,
+        "stage3_adaptation": 1.4066696166992188e-05,
+        "stage4_evaluation": 1.153398036956787
+      }
+    },
+    {
+      "property_id": "KS181499",
+      "metadata": {
+        "property_id": "KS181499",
+        "title": "龍騰天御優質2+1房平車",
+        "property_type": "condo",
+        "city": "高雄市",
+        "district": "楠梓區",
+        "num_bedroom": 3,
+        "num_bathroom": 2.0,
+        "interior_area": 21.8,
+        "property_age": 13
+      },
+      "labels": [
+        "open floor plan",
+        "glass shower enclosure",
+        "tile flooring",
+        "built-in wardrobes",
+        "stainless steel appliances",
+        "newly renovated",
+        "luxury finishes",
+        "large windows",
+        "kitchen",
+        "balcony with laundry area"
+      ],
+      "labels_with_scores": [
+        {
+          "label": "open floor plan",
+          "score": 0.2615572512149811,
+          "category": "features"
+        },
+        {
+          "label": "glass shower enclosure",
+          "score": 0.2579551637172699,
+          "category": "features"
+        },
+        {
+          "label": "tile flooring",
+          "score": 0.2522931694984436,
+          "category": "features"
+        },
+        {
+          "label": "built-in wardrobes",
+          "score": 0.246183842420578,
+          "category": "features"
+        },
+        {
+          "label": "stainless steel appliances",
+          "score": 0.24078555405139923,
+          "category": "features"
+        },
+        {
+          "label": "newly renovated",
+          "score": 0.24017131328582764,
+          "category": "condition"
+        },
+        {
+          "label": "luxury finishes",
+          "score": 0.23846657574176788,
+          "category": "style"
+        },
+        {
+          "label": "large windows",
+          "score": 0.23841996490955353,
+          "category": "features"
+        },
+        {
+          "label": "kitchen",
+          "score": 0.23793384432792664,
+          "category": "room_types"
+        },
+        {
+          "label": "balcony",
+          "score": 0.2360253632068634,
+          "category": "room_types"
+        }
+      ],
+      "region": "taiwan",
+      "image_stats": {
+        "total_images": 20,
+        "interior_images": 20,
+        "exterior_images": 0,
+        "interior_ratio": 1.0
+      },
+      "evaluation": {
+        "coverage": 0.2854704260826111,
+        "specificity": 2.4,
+        "redundancy": 0.7835379838943481,
+        "clip_consistency": 0.31221067905426025,
+        "num_labels": 10,
+        "num_images": 20
+      },
+      "error_analysis": {
+        "over_generic": [],
+        "potentially_hallucinated": [],
+        "low_specificity": [
+          "tile flooring",
+          "built-in wardrobes",
+          "newly renovated",
+          "luxury finishes",
+          "large windows",
+          "kitchen"
+        ]
+      },
+      "timing": {
+        "total_seconds": 1.7339587211608887,
+        "stage1_classification": 0.27700090408325195,
+        "stage2_labeling": 0.2918400764465332,
+        "stage3_adaptation": 1.9073486328125e-05,
+        "stage4_evaluation": 1.1650850772857666
+      }
+    },
+    {
+      "property_id": "CW67133884",
+      "metadata": {
+        "property_id": "CW67133884",
+        "title": "台積電首選高樓層景觀宅",
+        "property_type": "condo",
+        "city": "高雄市",
+        "district": "楠梓區",
+        "num_bedroom": 2,
+        "num_bathroom": 1.0,
+        "interior_area": 11.79,
+        "property_age": 2
+      },
+      "labels": [
+        "open floor plan",
+        "tile flooring",
+        "bedroom",
+        "master bedroom",
+        "glass shower enclosure",
+        "built-in wardrobes",
+        "modern fixtures",
+        "luxury finishes",
+        "newly renovated",
+        "kitchen"
+      ],
+      "labels_with_scores": [
+        {
+          "label": "open floor plan",
+          "score": 0.26131758093833923,
+          "category": "features"
+        },
+        {
+          "label": "tile flooring",
+          "score": 0.25340577960014343,
+          "category": "features"
+        },
+        {
+          "label": "bedroom",
+          "score": 0.24422550201416016,
+          "category": "room_types"
+        },
+        {
+          "label": "master bedroom",
+          "score": 0.2441280484199524,
+          "category": "room_types"
+        },
+        {
+          "label": "glass shower enclosure",
+          "score": 0.2440865933895111,
+          "category": "features"
+        },
+        {
+          "label": "built-in wardrobes",
+          "score": 0.24263913929462433,
+          "category": "features"
+        },
+        {
+          "label": "modern fixtures",
+          "score": 0.24187727272510529,
+          "category": "features"
+        },
+        {
+          "label": "luxury finishes",
+          "score": 0.24053844809532166,
+          "category": "style"
+        },
+        {
+          "label": "newly renovated",
+          "score": 0.239958256483078,
+          "category": "condition"
+        },
+        {
+          "label": "kitchen",
+          "score": 0.23815998435020447,
+          "category": "room_types"
+        }
+      ],
+      "region": "taiwan",
+      "image_stats": {
+        "total_images": 19,
+        "interior_images": 19,
+        "exterior_images": 0,
+        "interior_ratio": 1.0
+      },
+      "evaluation": {
+        "coverage": 0.2832571566104889,
+        "specificity": 2.0,
+        "redundancy": 0.8151137232780457,
+        "clip_consistency": 0.30976152420043945,
+        "num_labels": 10,
+        "num_images": 19
+      },
+      "error_analysis": {
+        "over_generic": [],
+        "potentially_hallucinated": [],
+        "low_specificity": [
+          "tile flooring",
+          "bedroom",
+          "master bedroom",
+          "built-in wardrobes",
+          "modern fixtures",
+          "luxury finishes",
+          "newly renovated",
+          "kitchen"
+        ]
+      },
+      "timing": {
+        "total_seconds": 1.6418030261993408,
+        "stage1_classification": 0.2682020664215088,
+        "stage2_labeling": 0.27137303352355957,
+        "stage3_adaptation": 1.1682510375976562e-05,
+        "stage4_evaluation": 1.1022021770477295
+      }
+    }
+  ]
+}
