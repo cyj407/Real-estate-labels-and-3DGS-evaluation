@@ -4,6 +4,11 @@ model:
   device: "cpu"  # Change to "cuda" if GPU available
   batch_size: 16
 
+# Scene classifier for interior/exterior classification
+scene_classifier:
+  type: "siglip"  # Options: "clip" or "siglip"
+  siglip_model: "google/siglip2-base-patch16-224"
+
 labeling:
   top_k_labels: 10
   confidence_threshold: 0.20
@@ -11,18 +16,9 @@ labeling:
   
   # Label vocabulary organized by category
   room_types:
-    - "living room"
-    - "bedroom"
-    - "master bedroom"
-    - "kitchen"
-    - "bathroom"
-    - "dining room"
-    - "home office"
-    - "study room"
     - "balcony"
-    - "hallway"
-    - "entrance"
     - "laundry room"
+    - "kitchen"
   
   style_labels:
     - "modern minimalist design"
@@ -76,7 +72,7 @@ optimization:
   embedding_cache_dir: "cache/embeddings"
 
 regions:
-  default: "taiwan"
+  default: "us"
   supported: ["taiwan", "japan", "us"]
   
   # Region-specific vocabulary

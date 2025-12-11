@@ -33,28 +33,6 @@ class RegionAdapter:
             }
         }
     
-    def detect_region(self, property_metadata: Dict) -> str:
-        """
-        Detect property region from metadata.
-        
-        Args:
-            property_metadata: Property metadata dict with 'city' field
-        
-        Returns:
-            Region code ('taiwan', 'japan', 'us')
-        """
-        city = property_metadata.get('city', '').lower()
-        
-        # Simple heuristic based on city names
-        # In production, would use more sophisticated location detection
-        if any(jp_city in city for jp_city in ['tokyo', '東京', 'osaka', '大阪', 'kyoto']):
-            return 'japan'
-        elif any(us_city in city for us_city in ['new york', 'los angeles', 'chicago', 'houston']):
-            return 'us'
-        else:
-            # Default to Taiwan for current dataset
-            return 'taiwan'
-    
     def get_region_vocabulary(self, region: str) -> List[str]:
         """Get region-specific vocabulary additions."""
         return self.region_vocab.get(region, [])
@@ -96,11 +74,13 @@ class RegionAdapter:
     ) -> Dict[str, any]:
         """
         Enrich labels with region-specific context.
+        Uses the default region from config instead of auto-detection.
         
         Returns:
             Dictionary with original labels, region, and adapted labels
         """
-        region = self.detect_region(property_metadata)
+        # Use default region from config
+        region = self.default_region
         adapted_labels = self.adapt_labels(labels, region)
         
         return {

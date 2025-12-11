@@ -12,6 +12,7 @@ import numpy as np
 
 from data_loader import PropertyDataLoader
 from scene_classifier import SceneClassifier
+from siglip_classifier import SigLIPSceneClassifier
 from label_generator import LabelGenerator
 from region_adapter import RegionAdapter
 from evaluator import LabelEvaluator
@@ -35,11 +36,23 @@ class SemanticLabelingPipeline:
             cache_dir=self.config['optimization']['image_cache_dir']
         )
         
-        self.scene_classifier = SceneClassifier(
-            model_name=self.config['model']['name'],
-            pretrained=self.config['model']['pretrained'],
-            device=self.device
-        )
+        # Initialize scene classifier based on config
+        classifier_type = self.config.get('scene_classifier', {}).get('type', 'clip')
+        
+        if classifier_type == 'siglip':
+            print("Using SigLIP scene classifier")
+            siglip_model = self.config['scene_classifier'].get('siglip_model', 'google/siglip2-base-patch16-224')
+            self.scene_classifier = SigLIPSceneClassifier(
+                model_name=siglip_model,
+                device=self.device
+            )
+        else:
+            print("Using CLIP scene classifier")
+            self.scene_classifier = SceneClassifier(
+                model_name=self.config['model']['name'],
+                pretrained=self.config['model']['pretrained'],
+                device=self.device
+            )
         
         self.label_generator = LabelGenerator(
             config_path=config_path,
@@ -83,7 +96,6 @@ class SemanticLabelingPipeline:
         stage1_start = time.time()
         interior_paths, classification_stats = self.scene_classifier.filter_interior_images(
             image_paths,
-            threshold=0.2,  # Lowered to match CLIP scores
             batch_size=self.config['model']['batch_size']
         )
         stage1_time = time.time() - stage1_start

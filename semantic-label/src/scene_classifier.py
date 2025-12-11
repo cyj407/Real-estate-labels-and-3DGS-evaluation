@@ -28,7 +28,8 @@ class SceneClassifier:
         # Define scene classification prompts
         self.scene_prompts = [
             "a photo of an interior room",
-            "a photo of an exterior building facade",
+            "a photo of amenity interior",
+            "a photo of an exterior building",
             "a photo of outdoor scenery",
         ]
         
@@ -55,19 +56,8 @@ class SceneClassifier:
                 similarity = (image_features @ self.text_features.T).squeeze(0)
                 probs = similarity.softmax(dim=0).cpu().numpy()
             
-            # Interior is index 0
-            # Use a more lenient threshold - if interior score is reasonably high, classify as interior
-            interior_score = float(probs[0])
-            exterior_score = float(max(probs[1], probs[2]))
-            
-            # More permissive: classify as interior if it has ANY reasonable interior score
-            # or if interior score is close to exterior score
-            if interior_score > 0.25 or (interior_score > 0.15 and interior_score / (exterior_score + 0.01) > 0.7):
-                label = "interior"
-                confidence = interior_score
-            else:
-                label = "exterior"
-                confidence = exterior_score
+            label = "interior" if np.argmax(probs) <= 1 else "exterior"
+            confidence = np.max(probs)
             
             return label, confidence
             
@@ -112,23 +102,20 @@ class SceneClassifier:
                 probs = similarity.softmax(dim=-1).cpu().numpy()
             
             # Process results with same logic as classify_single_image
-            batch_results = []
-            for prob_vec in probs:
-                interior_score = float(prob_vec[0])
-                exterior_score = float(max(prob_vec[1], prob_vec[2]))
-                
-                # Same permissive logic as single image classification
-                if interior_score > 0.25 or (interior_score > 0.15 and interior_score / (exterior_score + 0.01) > 0.7):
-                    label = "interior"
-                    confidence = interior_score
-                else:
-                    label = "exterior"
-                    confidence = exterior_score
-                batch_results.append((label, confidence))
+            labels = np.argmax(probs, axis=1)  # Get the index of max probability for each image
+            max_probs = np.max(probs, axis=1)  # Get the max probability value for each image
             
+            # Convert to list of tuples: (label_name, confidence)
+            batch_results = []
+            for label_idx, prob in zip(labels, max_probs):
+                label = "interior" if label_idx <= 1 else "exterior"
+                batch_results.append((label, float(prob)))
+
+
             # Insert results at correct positions
             result_idx = 0
             for idx in range(len(batch_paths)):
+                print('path: {} label: {} confidence: {}'.format(batch_paths[idx], batch_results[result_idx][0], batch_results[result_idx][1]))
                 if idx in valid_indices:
                     results.append(batch_results[result_idx])
                     result_idx += 1
@@ -138,7 +125,7 @@ class SceneClassifier:
     def filter_interior_images(
         self, 
         image_paths: List[str], 
-        threshold: float = 0.5,
+        threshold: float = 0.2,
         batch_size: int = 16
     ) -> Tuple[List[str], Dict[str, any]]:
         """
@@ -192,21 +179,20 @@ if __name__ == "__main__":
         cache_dir="../cache/images"
     )
     
+    # Initialize classifier
+    classifier = SceneClassifier(device="cpu")
+
     properties = loader.load_all_properties()
-    if properties:
-        property_data, image_paths = properties[0]
+    for property_data, image_paths in properties:
         property_id = loader.get_property_id(property_data)
         
         print(f"\nTesting classifier on property {property_id}")
         print(f"Total images: {len(image_paths)}")
         
-        # Initialize classifier
-        classifier = SceneClassifier(device="cpu")
-        
         # Filter interior images
         interior_paths, stats = classifier.filter_interior_images(
             image_paths, 
-            threshold=0.5,
+            threshold=0.2,  # Lowered to match CLIP's actual confidence scores
             batch_size=16
         )
         
