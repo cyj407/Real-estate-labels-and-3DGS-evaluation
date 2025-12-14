@@ -1,7 +1,7 @@
 {
   "summary": {
     "total_properties": 10,
-    "timestamp": "2025-12-12 03:07:22",
+    "timestamp": "2025-12-15 00:31:33",
     "config": {
       "model": "ViT-B/32",
       "device": "cpu",
@@ -9,107 +9,107 @@
     }
   },
   "latency_statistics": {
-    "mean_seconds": 2.202964425086975,
-    "median_seconds": 2.1667144298553467,
-    "p95_seconds": 2.3779599547386168,
-    "min_seconds": 2.063905954360962,
-    "max_seconds": 2.3852500915527344
+    "mean_seconds": 6.734620475769043,
+    "median_seconds": 6.7298280000686646,
+    "p95_seconds": 7.8640107035636895,
+    "min_seconds": 5.986403942108154,
+    "max_seconds": 8.098304986953735
   },
   "aggregate_metrics": {
-    "mean_coverage": 0.28211874663829806,
-    "mean_specificity": 2.0900000000000003,
-    "mean_redundancy": 0.7955027639865875,
-    "mean_clip_consistency": 0.30852486491203307,
-    "diversity": 0.3878269878269879,
+    "mean_coverage": 0.22347192764282225,
+    "mean_specificity": 1.0,
+    "mean_redundancy": 0.0,
+    "mean_clip_consistency": 0.22687400430440902,
+    "diversity": 0.0,
     "total_properties": 10,
     "per_property": [
       {
-        "coverage": 0.2829233407974243,
-        "specificity": 2.1,
-        "redundancy": 0.7870150804519653,
-        "clip_consistency": 0.30847451090812683,
-        "num_labels": 10,
+        "coverage": 0.24315309524536133,
+        "specificity": 1.0,
+        "redundancy": 0.0,
+        "clip_consistency": 0.22148269414901733,
+        "num_labels": 1,
         "num_images": 20,
         "property_id": "GZ50364605"
       },
       {
-        "coverage": 0.2838600277900696,
-        "specificity": 2.0,
-        "redundancy": 0.7940239906311035,
-        "clip_consistency": 0.3138456344604492,
-        "num_labels": 10,
+        "coverage": 0.21750730276107788,
+        "specificity": 1.0,
+        "redundancy": 0.0,
+        "clip_consistency": 0.22552081942558289,
+        "num_labels": 1,
         "num_images": 19,
         "property_id": "TC08957218"
       },
       {
-        "coverage": 0.29092150926589966,
-        "specificity": 2.1,
-        "redundancy": 0.7951220870018005,
-        "clip_consistency": 0.3157692849636078,
-        "num_labels": 10,
+        "coverage": 0.22210901975631714,
+        "specificity": 1.0,
+        "redundancy": 0.0,
+        "clip_consistency": 0.22980071604251862,
+        "num_labels": 1,
         "num_images": 20,
         "property_id": "KS186226"
       },
       {
-        "coverage": 0.28396666049957275,
-        "specificity": 2.0,
-        "redundancy": 0.79303377866745,
-        "clip_consistency": 0.3091593086719513,
-        "num_labels": 10,
+        "coverage": 0.22364506125450134,
+        "specificity": 1.0,
+        "redundancy": 0.0,
+        "clip_consistency": 0.22310200333595276,
+        "num_labels": 1,
         "num_images": 20,
         "property_id": "KS187345"
       },
       {
-        "coverage": 0.27460095286369324,
-        "specificity": 1.9,
-        "redundancy": 0.8034363389015198,
-        "clip_consistency": 0.3047778606414795,
-        "num_labels": 10,
+        "coverage": 0.22608697414398193,
+        "specificity": 1.0,
+        "redundancy": 0.0,
+        "clip_consistency": 0.22883276641368866,
+        "num_labels": 1,
         "num_images": 20,
         "property_id": "KS185237"
       },
       {
-        "coverage": 0.2774204611778259,
-        "specificity": 2.1,
-        "redundancy": 0.8007278442382812,
-        "clip_consistency": 0.309049516916275,
-        "num_labels": 10,
+        "coverage": 0.22426331043243408,
+        "specificity": 1.0,
+        "redundancy": 0.0,
+        "clip_consistency": 0.22936248779296875,
+        "num_labels": 1,
         "num_images": 20,
         "property_id": "KS187126"
       },
       {
-        "coverage": 0.2818301320075989,
-        "specificity": 2.2,
-        "redundancy": 0.7854449152946472,
-        "clip_consistency": 0.3056274652481079,
-        "num_labels": 10,
+        "coverage": 0.21141408383846283,
+        "specificity": 1.0,
+        "redundancy": 0.0,
+        "clip_consistency": 0.2300061732530594,
+        "num_labels": 1,
         "num_images": 20,
         "property_id": "KS186928"
       },
       {
-        "coverage": 0.2860547602176666,
-        "specificity": 2.2,
-        "redundancy": 0.7989427447319031,
-        "clip_consistency": 0.3018485903739929,
-        "num_labels": 10,
+        "coverage": 0.21204712986946106,
+        "specificity": 1.0,
+        "redundancy": 0.0,
+        "clip_consistency": 0.22382310032844543,
+        "num_labels": 1,
         "num_images": 20,
         "property_id": "KS184357"
       },
       {
-        "coverage": 0.28143906593322754,
-        "specificity": 2.2,
-        "redundancy": 0.7965530157089233,
-        "clip_consistency": 0.30676156282424927,
-        "num_labels": 10,
+        "coverage": 0.21734915673732758,
+        "specificity": 1.0,
+        "redundancy": 0.0,
+        "clip_consistency": 0.22224242985248566,
+        "num_labels": 1,
         "num_images": 20,
         "property_id": "KS181499"
       },
       {
-        "coverage": 0.27817055583000183,
-        "specificity": 2.1,
-        "redundancy": 0.8007278442382812,
-        "clip_consistency": 0.30993491411209106,
-        "num_labels": 10,
+        "coverage": 0.23714414238929749,
+        "specificity": 1.0,
+        "redundancy": 0.0,
+        "clip_consistency": 0.2345668524503708,
+        "num_labels": 1,
         "num_images": 19,
         "property_id": "CW67133884"
       }
@@ -129,71 +129,24 @@
         "interior_area": 16.57,
         "property_age": 43
       },
-      "labels": [
-        "open floor plan",
-        "tile flooring",
-        "built-in wardrobes",
-        "laundry room",
-        "move-in ready",
-        "hardwood flooring",
-        "kitchen",
-        "glass shower enclosure",
-        "newly renovated",
-        "kitchen island"
-      ],
-      "labels_with_scores": [
-        {
-          "label": "open floor plan",
-          "score": 0.2688687741756439,
-          "category": "features"
-        },
-        {
-          "label": "tile flooring",
-          "score": 0.25545281171798706,
-          "category": "features"
-        },
-        {
-          "label": "built-in wardrobes",
-          "score": 0.2532684803009033,
-          "category": "features"
-        },
-        {
-          "label": "laundry room",
-          "score": 0.2518177628517151,
-          "category": "room_types"
-        },
-        {
-          "label": "move-in ready",
-          "score": 0.24923861026763916,
-          "category": "condition"
-        },
-        {
-          "label": "hardwood flooring",
-          "score": 0.24774423241615295,
-          "category": "features"
-        },
-        {
-          "label": "kitchen",
-          "score": 0.24634581804275513,
-          "category": "room_types"
-        },
-        {
-          "label": "glass shower enclosure",
-          "score": 0.2461073249578476,
-          "category": "features"
-        },
-        {
-          "label": "newly renovated",
-          "score": 0.2453426867723465,
-          "category": "condition"
-        },
-        {
-          "label": "kitchen island",
-          "score": 0.2389812171459198,
-          "category": "features"
-        }
-      ],
-      "region": "us",
+      "labels": {
+        "labels": [
+          "kitchen",
+          "living room",
+          "bathroom",
+          "basement",
+          "balcony",
+          "bedroom",
+          "tatami room",
+          "parking area",
+          "storage shelves",
+          "wall-mounted TV",
+          "sofa set",
+          "coffee table",
+          "natural light",
+          "well-maintained"
+        ]
+      },
       "image_stats": {
         "total_images": 20,
         "interior_images": 19,
@@ -201,33 +154,38 @@
         "interior_ratio": 0.95
       },
       "evaluation": {
-        "coverage": 0.2829233407974243,
-        "specificity": 2.1,
-        "redundancy": 0.7870150804519653,
-        "clip_consistency": 0.3084239065647125,
-        "num_labels": 10,
+        "coverage": 0.2693745791912079,
+        "specificity": 1.5714285714285714,
+        "redundancy": 0.8033593893051147,
+        "clip_consistency": 0.28907546401023865,
+        "num_labels": 14,
         "num_images": 19
       },
       "error_analysis": {
         "over_generic": [],
         "potentially_hallucinated": [],
         "low_specificity": [
-          "tile flooring",
-          "built-in wardrobes",
-          "laundry room",
-          "move-in ready",
-          "hardwood flooring",
           "kitchen",
-          "newly renovated",
-          "kitchen island"
+          "living room",
+          "bathroom",
+          "basement",
+          "balcony",
+          "bedroom",
+          "tatami room",
+          "parking area",
+          "storage shelves",
+          "wall-mounted TV",
+          "sofa set",
+          "coffee table",
+          "natural light",
+          "well-maintained"
         ]
       },
       "timing": {
-        "total_seconds": 2.3690497875213623,
-        "stage1_classification": 1.0573961734771729,
-        "stage2_labeling": 0.2772088050842285,
-        "stage3_adaptation": 1.9311904907226562e-05,
-        "stage4_evaluation": 1.0344109535217285
+        "total_seconds": 6.789907932281494,
+        "stage1_classification": 1.0809032917022705,
+        "stage2_labeling": 4.5166239738464355,
+        "stage4_evaluation": 1.1923680305480957
       }
     },
     {
@@ -243,71 +201,24 @@
         "interior_area": 49.93,
         "property_age": 30
       },
-      "labels": [
-        "tile flooring",
-        "open floor plan",
-        "glass shower enclosure",
-        "kitchen",
-        "newly renovated",
-        "built-in wardrobes",
-        "laundry room",
-        "modern fixtures",
-        "recessed lighting",
-        "balcony"
-      ],
-      "labels_with_scores": [
-        {
-          "label": "tile flooring",
-          "score": 0.276274710893631,
-          "category": "features"
-        },
-        {
-          "label": "open floor plan",
-          "score": 0.27154189348220825,
-          "category": "features"
-        },
-        {
-          "label": "glass shower enclosure",
-          "score": 0.25811925530433655,
-          "category": "features"
-        },
-        {
-          "label": "kitchen",
-          "score": 0.25165656208992004,
-          "category": "room_types"
-        },
-        {
-          "label": "newly renovated",
-          "score": 0.25031793117523193,
-          "category": "condition"
-        },
-        {
-          "label": "built-in wardrobes",
-          "score": 0.24841240048408508,
-          "category": "features"
-        },
-        {
-          "label": "laundry room",
-          "score": 0.24695178866386414,
-          "category": "room_types"
-        },
-        {
-          "label": "modern fixtures",
-          "score": 0.24435274302959442,
-          "category": "features"
-        },
-        {
-          "label": "recessed lighting",
-          "score": 0.2427724301815033,
-          "category": "features"
-        },
-        {
-          "label": "balcony",
-          "score": 0.2413659393787384,
-          "category": "room_types"
-        }
-      ],
-      "region": "us",
+      "labels": {
+        "labels": [
+          "kitchen with green cabinets",
+          "skylight ceiling",
+          "open living area",
+          "terrazzo floor",
+          "built-in storage",
+          "staircase feature",
+          "natural lighting",
+          "living room spacious",
+          "balcony tiled",
+          "sunny balcony",
+          "exterior balcony view",
+          "basement parking",
+          "well-maintained",
+          "dated but functional"
+        ]
+      },
       "image_stats": {
         "total_images": 19,
         "interior_images": 16,
@@ -315,33 +226,33 @@
         "interior_ratio": 0.8421052631578947
       },
       "evaluation": {
-        "coverage": 0.2838600277900696,
-        "specificity": 2.0,
-        "redundancy": 0.7940239906311035,
-        "clip_consistency": 0.3174205422401428,
-        "num_labels": 10,
+        "coverage": 0.2735899090766907,
+        "specificity": 2.357142857142857,
+        "redundancy": 0.7693670988082886,
+        "clip_consistency": 0.30635306239128113,
+        "num_labels": 14,
         "num_images": 16
       },
       "error_analysis": {
         "over_generic": [],
         "potentially_hallucinated": [],
         "low_specificity": [
-          "tile flooring",
-          "kitchen",
-          "newly renovated",
-          "built-in wardrobes",
-          "laundry room",
-          "modern fixtures",
-          "recessed lighting",
-          "balcony"
+          "skylight ceiling",
+          "terrazzo floor",
+          "built-in storage",
+          "staircase feature",
+          "natural lighting",
+          "balcony tiled",
+          "sunny balcony",
+          "basement parking",
+          "well-maintained"
         ]
       },
       "timing": {
-        "total_seconds": 2.0941271781921387,
-        "stage1_classification": 0.9585511684417725,
-        "stage2_labeling": 0.21037578582763672,
-        "stage3_adaptation": 1.2159347534179688e-05,
-        "stage4_evaluation": 0.9251689910888672
+        "total_seconds": 6.370834112167358,
+        "stage1_classification": 0.9589500427246094,
+        "stage2_labeling": 4.370898962020874,
+        "stage4_evaluation": 1.040952205657959
       }
     },
     {
@@ -357,71 +268,24 @@
         "interior_area": 18.18,
         "property_age": 0
       },
-      "labels": [
-        "open floor plan",
-        "tile flooring",
-        "built-in wardrobes",
-        "glass shower enclosure",
-        "hardwood flooring",
-        "kitchen",
-        "large windows",
-        "luxury finishes",
-        "laundry room",
-        "newly renovated"
-      ],
-      "labels_with_scores": [
-        {
-          "label": "open floor plan",
-          "score": 0.28039923310279846,
-          "category": "features"
-        },
-        {
-          "label": "tile flooring",
-          "score": 0.2671101689338684,
-          "category": "features"
-        },
-        {
-          "label": "built-in wardrobes",
-          "score": 0.2653842568397522,
-          "category": "features"
-        },
-        {
-          "label": "glass shower enclosure",
-          "score": 0.25433188676834106,
-          "category": "features"
-        },
-        {
-          "label": "hardwood flooring",
-          "score": 0.2542380392551422,
-          "category": "features"
-        },
-        {
-          "label": "kitchen",
-          "score": 0.2512335181236267,
-          "category": "room_types"
-        },
-        {
-          "label": "large windows",
-          "score": 0.24952654540538788,
-          "category": "features"
-        },
-        {
-          "label": "luxury finishes",
-          "score": 0.24614723026752472,
-          "category": "style"
-        },
-        {
-          "label": "laundry room",
-          "score": 0.2457524538040161,
-          "category": "room_types"
-        },
-        {
-          "label": "newly renovated",
-          "score": 0.24446265399456024,
-          "category": "condition"
-        }
-      ],
-      "region": "us",
+      "labels": {
+        "labels": [
+          "kitchen",
+          "balcony",
+          "living room",
+          "tatami room",
+          "basement",
+          "large windows",
+          "natural light",
+          "laminate floor",
+          "white walls",
+          "modern fixtures",
+          "glass doors",
+          "built-in storage",
+          "high ceiling",
+          "entryway"
+        ]
+      },
       "image_stats": {
         "total_images": 20,
         "interior_images": 16,
@@ -429,33 +293,38 @@
         "interior_ratio": 0.8
       },
       "evaluation": {
-        "coverage": 0.2892695367336273,
-        "specificity": 2.1,
-        "redundancy": 0.7951220870018005,
-        "clip_consistency": 0.3123508095741272,
-        "num_labels": 10,
+        "coverage": 0.27295559644699097,
+        "specificity": 1.7142857142857142,
+        "redundancy": 0.7985379695892334,
+        "clip_consistency": 0.30041223764419556,
+        "num_labels": 14,
         "num_images": 16
       },
       "error_analysis": {
         "over_generic": [],
         "potentially_hallucinated": [],
         "low_specificity": [
-          "tile flooring",
-          "built-in wardrobes",
-          "hardwood flooring",
           "kitchen",
+          "balcony",
+          "living room",
+          "tatami room",
+          "basement",
           "large windows",
-          "luxury finishes",
-          "laundry room",
-          "newly renovated"
+          "natural light",
+          "laminate floor",
+          "white walls",
+          "modern fixtures",
+          "glass doors",
+          "built-in storage",
+          "high ceiling",
+          "entryway"
         ]
       },
       "timing": {
-        "total_seconds": 2.129387140274048,
-        "stage1_classification": 0.9839940071105957,
-        "stage2_labeling": 0.1950061321258545,
-        "stage3_adaptation": 1.0967254638671875e-05,
-        "stage4_evaluation": 0.9503629207611084
+        "total_seconds": 6.7130889892578125,
+        "stage1_classification": 0.9757950305938721,
+        "stage2_labeling": 4.632307767868042,
+        "stage4_evaluation": 1.1049699783325195
       }
     },
     {
@@ -471,71 +340,24 @@
         "interior_area": 18.05,
         "property_age": 0
       },
-      "labels": [
-        "open floor plan",
-        "tile flooring",
-        "built-in wardrobes",
-        "glass shower enclosure",
-        "hardwood flooring",
-        "large windows",
-        "balcony",
-        "newly renovated",
-        "luxury finishes",
-        "kitchen"
-      ],
-      "labels_with_scores": [
-        {
-          "label": "open floor plan",
-          "score": 0.27250486612319946,
-          "category": "features"
-        },
-        {
-          "label": "tile flooring",
-          "score": 0.2593136429786682,
-          "category": "features"
-        },
-        {
-          "label": "built-in wardrobes",
-          "score": 0.2530898451805115,
-          "category": "features"
-        },
-        {
-          "label": "glass shower enclosure",
-          "score": 0.2494051456451416,
-          "category": "features"
-        },
-        {
-          "label": "hardwood flooring",
-          "score": 0.2442970722913742,
-          "category": "features"
-        },
-        {
-          "label": "large windows",
-          "score": 0.24382221698760986,
-          "category": "features"
-        },
-        {
-          "label": "balcony",
-          "score": 0.24223724007606506,
-          "category": "room_types"
-        },
-        {
-          "label": "newly renovated",
-          "score": 0.24053558707237244,
-          "category": "condition"
-        },
-        {
-          "label": "luxury finishes",
-          "score": 0.23966431617736816,
-          "category": "style"
-        },
-        {
-          "label": "kitchen",
-          "score": 0.2364884912967682,
-          "category": "room_types"
-        }
-      ],
-      "region": "us",
+      "labels": {
+        "labels": [
+          "kitchen",
+          "balcony",
+          "living room",
+          "basement",
+          "parking",
+          "natural light",
+          "built-in storage",
+          "floor-to-ceiling windows",
+          "modern",
+          "neutral palette",
+          "wooden flooring",
+          "greenery",
+          "high ceilings",
+          "compact units"
+        ]
+      },
       "image_stats": {
         "total_images": 20,
         "interior_images": 20,
@@ -543,33 +365,38 @@
         "interior_ratio": 1.0
       },
       "evaluation": {
-        "coverage": 0.28396666049957275,
-        "specificity": 2.0,
-        "redundancy": 0.79303377866745,
-        "clip_consistency": 0.3091593086719513,
-        "num_labels": 10,
+        "coverage": 0.2661435008049011,
+        "specificity": 1.5714285714285714,
+        "redundancy": 0.8143869638442993,
+        "clip_consistency": 0.2851135730743408,
+        "num_labels": 14,
         "num_images": 20
       },
       "error_analysis": {
         "over_generic": [],
         "potentially_hallucinated": [],
         "low_specificity": [
-          "tile flooring",
-          "built-in wardrobes",
-          "hardwood flooring",
-          "large windows",
+          "kitchen",
           "balcony",
-          "newly renovated",
-          "luxury finishes",
-          "kitchen"
+          "living room",
+          "basement",
+          "parking",
+          "natural light",
+          "built-in storage",
+          "floor-to-ceiling windows",
+          "modern",
+          "neutral palette",
+          "wooden flooring",
+          "greenery",
+          "high ceilings",
+          "compact units"
         ]
       },
       "timing": {
-        "total_seconds": 2.3852500915527344,
-        "stage1_classification": 1.014648199081421,
-        "stage2_labeling": 0.2814750671386719,
-        "stage3_adaptation": 9.059906005859375e-06,
-        "stage4_evaluation": 1.0891051292419434
+        "total_seconds": 5.986403942108154,
+        "stage1_classification": 0.9982490539550781,
+        "stage2_labeling": 3.734586238861084,
+        "stage4_evaluation": 1.2535390853881836
       }
     },
     {
@@ -585,71 +412,25 @@
         "interior_area": 11.22,
         "property_age": 4
       },
-      "labels": [
-        "open floor plan",
-        "tile flooring",
-        "newly renovated",
-        "hardwood flooring",
-        "kitchen",
-        "move-in ready",
-        "built-in wardrobes",
-        "balcony",
-        "floor-to-ceiling windows",
-        "luxury finishes"
-      ],
-      "labels_with_scores": [
-        {
-          "label": "open floor plan",
-          "score": 0.2614109218120575,
-          "category": "features"
-        },
-        {
-          "label": "tile flooring",
-          "score": 0.24284397065639496,
-          "category": "features"
-        },
-        {
-          "label": "newly renovated",
-          "score": 0.23997679352760315,
-          "category": "condition"
-        },
-        {
-          "label": "hardwood flooring",
-          "score": 0.23913249373435974,
-          "category": "features"
-        },
-        {
-          "label": "kitchen",
-          "score": 0.23794381320476532,
-          "category": "room_types"
-        },
-        {
-          "label": "move-in ready",
-          "score": 0.23689591884613037,
-          "category": "condition"
-        },
-        {
-          "label": "built-in wardrobes",
-          "score": 0.2367648482322693,
-          "category": "features"
-        },
-        {
-          "label": "balcony",
-          "score": 0.2361166626214981,
-          "category": "room_types"
-        },
-        {
-          "label": "floor-to-ceiling windows",
-          "score": 0.23525069653987885,
-          "category": "features"
-        },
-        {
-          "label": "luxury finishes",
-          "score": 0.23499548435211182,
-          "category": "style"
-        }
-      ],
-      "region": "us",
+      "labels": {
+        "labels": [
+          "kitchen",
+          "balcony",
+          "living room",
+          "basement",
+          "pool table",
+          "home bar",
+          "modern lighting",
+          "built-in storage",
+          "large balcony railing",
+          "floor-to-ceiling windows",
+          "city views",
+          "contemporary finishes",
+          "well-maintained",
+          "hardwood floors",
+          "multi-functional space"
+        ]
+      },
       "image_stats": {
         "total_images": 20,
         "interior_images": 17,
@@ -657,34 +438,38 @@
         "interior_ratio": 0.85
       },
       "evaluation": {
-        "coverage": 0.27460095286369324,
-        "specificity": 1.9,
-        "redundancy": 0.8034363389015198,
-        "clip_consistency": 0.30547034740448,
-        "num_labels": 10,
+        "coverage": 0.2632747292518616,
+        "specificity": 1.8,
+        "redundancy": 0.7986504435539246,
+        "clip_consistency": 0.2933465540409088,
+        "num_labels": 15,
         "num_images": 17
       },
       "error_analysis": {
         "over_generic": [],
         "potentially_hallucinated": [],
         "low_specificity": [
-          "tile flooring",
-          "newly renovated",
-          "hardwood flooring",
           "kitchen",
-          "move-in ready",
-          "built-in wardrobes",
           "balcony",
+          "living room",
+          "basement",
+          "pool table",
+          "home bar",
+          "modern lighting",
+          "built-in storage",
           "floor-to-ceiling windows",
-          "luxury finishes"
+          "city views",
+          "contemporary finishes",
+          "well-maintained",
+          "hardwood floors",
+          "multi-functional space"
         ]
       },
       "timing": {
-        "total_seconds": 2.178765058517456,
-        "stage1_classification": 0.9657740592956543,
-        "stage2_labeling": 0.23817706108093262,
-        "stage3_adaptation": 1.0967254638671875e-05,
-        "stage4_evaluation": 0.9747898578643799
+        "total_seconds": 6.8189661502838135,
+        "stage1_classification": 0.9721419811248779,
+        "stage2_labeling": 4.747316122055054,
+        "stage4_evaluation": 1.0994906425476074
       }
     },
     {
@@ -700,71 +485,28 @@
         "interior_area": 15.0,
         "property_age": 7
       },
-      "labels": [
-        "open floor plan",
-        "tile flooring",
-        "newly renovated",
-        "kitchen",
-        "glass shower enclosure",
-        "modern fixtures",
-        "laundry room",
-        "luxury finishes",
-        "built-in wardrobes",
-        "recessed lighting"
-      ],
-      "labels_with_scores": [
-        {
-          "label": "open floor plan",
-          "score": 0.26345914602279663,
-          "category": "features"
-        },
-        {
-          "label": "tile flooring",
-          "score": 0.2627316117286682,
-          "category": "features"
-        },
-        {
-          "label": "newly renovated",
-          "score": 0.2492305487394333,
-          "category": "condition"
-        },
-        {
-          "label": "kitchen",
-          "score": 0.2447308599948883,
-          "category": "room_types"
-        },
-        {
-          "label": "glass shower enclosure",
-          "score": 0.24465157091617584,
-          "category": "features"
-        },
-        {
-          "label": "modern fixtures",
-          "score": 0.24111932516098022,
-          "category": "features"
-        },
-        {
-          "label": "laundry room",
-          "score": 0.2398475706577301,
-          "category": "room_types"
-        },
-        {
-          "label": "luxury finishes",
-          "score": 0.2386985719203949,
-          "category": "style"
-        },
-        {
-          "label": "built-in wardrobes",
-          "score": 0.238150954246521,
-          "category": "features"
-        },
-        {
-          "label": "recessed lighting",
-          "score": 0.2375807762145996,
-          "category": "features"
-        }
-      ],
-      "region": "us",
+      "labels": {
+        "labels": [
+          "kitchen",
+          "balcony",
+          "living room",
+          "bathroom",
+          "lobby",
+          "play area",
+          "ball-pool",
+          "modern",
+          "renovated",
+          "well-lit",
+          "tiled",
+          "built-in storage",
+          "air conditioning",
+          "glass walls",
+          "reception",
+          "commercial-grade",
+          "condo-like",
+          "elevator lobby"
+        ]
+      },
       "image_stats": {
         "total_images": 20,
         "interior_images": 17,
@@ -772,33 +514,42 @@
         "interior_ratio": 0.85
       },
       "evaluation": {
-        "coverage": 0.2774204611778259,
-        "specificity": 2.1,
-        "redundancy": 0.8007278442382812,
-        "clip_consistency": 0.310635507106781,
-        "num_labels": 10,
+        "coverage": 0.27014440298080444,
+        "specificity": 1.3333333333333333,
+        "redundancy": 0.8299868702888489,
+        "clip_consistency": 0.29395943880081177,
+        "num_labels": 18,
         "num_images": 17
       },
       "error_analysis": {
         "over_generic": [],
         "potentially_hallucinated": [],
         "low_specificity": [
-          "tile flooring",
-          "newly renovated",
           "kitchen",
-          "modern fixtures",
-          "laundry room",
-          "luxury finishes",
-          "built-in wardrobes",
-          "recessed lighting"
+          "balcony",
+          "living room",
+          "bathroom",
+          "lobby",
+          "play area",
+          "ball-pool",
+          "modern",
+          "renovated",
+          "well-lit",
+          "tiled",
+          "built-in storage",
+          "air conditioning",
+          "glass walls",
+          "reception",
+          "commercial-grade",
+          "condo-like",
+          "elevator lobby"
         ]
       },
       "timing": {
-        "total_seconds": 2.126197099685669,
-        "stage1_classification": 0.9761159420013428,
-        "stage2_labeling": 0.22350502014160156,
-        "stage3_adaptation": 1.0013580322265625e-05,
-        "stage4_evaluation": 0.9265539646148682
+        "total_seconds": 6.0399558544158936,
+        "stage1_classification": 0.9948911666870117,
+        "stage2_labeling": 3.8073878288269043,
+        "stage4_evaluation": 1.2376601696014404
       }
     },
     {
@@ -814,71 +565,22 @@
         "interior_area": 11.7,
         "property_age": 1
       },
-      "labels": [
-        "open floor plan",
-        "tile flooring",
-        "laundry room",
-        "kitchen",
-        "hardwood flooring",
-        "kitchen island",
-        "luxury finishes",
-        "newly renovated",
-        "stainless steel appliances",
-        "glass shower enclosure"
-      ],
-      "labels_with_scores": [
-        {
-          "label": "open floor plan",
-          "score": 0.27075308561325073,
-          "category": "features"
-        },
-        {
-          "label": "tile flooring",
-          "score": 0.26129329204559326,
-          "category": "features"
-        },
-        {
-          "label": "laundry room",
-          "score": 0.25213050842285156,
-          "category": "room_types"
-        },
-        {
-          "label": "kitchen",
-          "score": 0.25094038248062134,
-          "category": "room_types"
-        },
-        {
-          "label": "hardwood flooring",
-          "score": 0.24776551127433777,
-          "category": "features"
-        },
-        {
-          "label": "kitchen island",
-          "score": 0.24669459462165833,
-          "category": "features"
-        },
-        {
-          "label": "luxury finishes",
-          "score": 0.24653363227844238,
-          "category": "style"
-        },
-        {
-          "label": "newly renovated",
-          "score": 0.2442014068365097,
-          "category": "condition"
-        },
-        {
-          "label": "stainless steel appliances",
-          "score": 0.24071462452411652,
-          "category": "features"
-        },
-        {
-          "label": "glass shower enclosure",
-          "score": 0.24008290469646454,
-          "category": "features"
-        }
-      ],
-      "region": "us",
+      "labels": {
+        "labels": [
+          "living room",
+          "modern",
+          "neutral",
+          "built-in storage",
+          "floor-to-ceiling windows",
+          "natural light",
+          "gray sofa",
+          "wooden accents",
+          "gallery wall",
+          "compact coffee table",
+          "well-maintained",
+          "newly renovated"
+        ]
+      },
       "image_stats": {
         "total_images": 20,
         "interior_images": 15,
@@ -886,32 +588,35 @@
         "interior_ratio": 0.75
       },
       "evaluation": {
-        "coverage": 0.2818301320075989,
-        "specificity": 2.2,
-        "redundancy": 0.7854449152946472,
-        "clip_consistency": 0.3069857358932495,
-        "num_labels": 10,
+        "coverage": 0.25171998143196106,
+        "specificity": 1.8333333333333333,
+        "redundancy": 0.8050991892814636,
+        "clip_consistency": 0.28200048208236694,
+        "num_labels": 12,
         "num_images": 15
       },
       "error_analysis": {
         "over_generic": [],
         "potentially_hallucinated": [],
         "low_specificity": [
-          "tile flooring",
-          "laundry room",
-          "kitchen",
-          "hardwood flooring",
-          "kitchen island",
-          "luxury finishes",
+          "living room",
+          "modern",
+          "neutral",
+          "built-in storage",
+          "floor-to-ceiling windows",
+          "natural light",
+          "gray sofa",
+          "wooden accents",
+          "gallery wall",
+          "well-maintained",
           "newly renovated"
         ]
       },
       "timing": {
-        "total_seconds": 2.063905954360962,
-        "stage1_classification": 0.9717750549316406,
-        "stage2_labeling": 0.18797802925109863,
-        "stage3_adaptation": 1.0967254638671875e-05,
-        "stage4_evaluation": 0.9041290283203125
+        "total_seconds": 6.746567010879517,
+        "stage1_classification": 0.9918370246887207,
+        "stage2_labeling": 4.759843111038208,
+        "stage4_evaluation": 0.9948711395263672
       }
     },
     {
@@ -927,71 +632,24 @@
         "interior_area": 13.78,
         "property_age": 11
       },
-      "labels": [
-        "open floor plan",
-        "tile flooring",
-        "kitchen",
-        "glass shower enclosure",
-        "built-in wardrobes",
-        "laundry room",
-        "newly renovated",
-        "modern fixtures",
-        "luxury finishes",
-        "stainless steel appliances"
-      ],
-      "labels_with_scores": [
-        {
-          "label": "open floor plan",
-          "score": 0.26734036207199097,
-          "category": "features"
-        },
-        {
-          "label": "tile flooring",
-          "score": 0.25746801495552063,
-          "category": "features"
-        },
-        {
-          "label": "kitchen",
-          "score": 0.2517860531806946,
-          "category": "room_types"
-        },
-        {
-          "label": "glass shower enclosure",
-          "score": 0.25057825446128845,
-          "category": "features"
-        },
-        {
-          "label": "built-in wardrobes",
-          "score": 0.24802295863628387,
-          "category": "features"
-        },
-        {
-          "label": "laundry room",
-          "score": 0.24719610810279846,
-          "category": "room_types"
-        },
-        {
-          "label": "newly renovated",
-          "score": 0.24411378800868988,
-          "category": "condition"
-        },
-        {
-          "label": "modern fixtures",
-          "score": 0.2438126504421234,
-          "category": "features"
-        },
-        {
-          "label": "luxury finishes",
-          "score": 0.24021697044372559,
-          "category": "style"
-        },
-        {
-          "label": "stainless steel appliances",
-          "score": 0.2401641458272934,
-          "category": "features"
-        }
-      ],
-      "region": "us",
+      "labels": {
+        "labels": [
+          "living room",
+          "kitchen",
+          "bathroom",
+          "laundry",
+          "balcony",
+          "bedroom",
+          "tatami room",
+          "built-in storage",
+          "lighting",
+          "modern cabinetry",
+          "tiled floors",
+          "open-plan",
+          "renovated",
+          "well-maintained"
+        ]
+      },
       "image_stats": {
         "total_images": 20,
         "interior_images": 15,
@@ -999,32 +657,38 @@
         "interior_ratio": 0.75
       },
       "evaluation": {
-        "coverage": 0.28603488206863403,
-        "specificity": 2.2,
-        "redundancy": 0.7989427447319031,
-        "clip_consistency": 0.30531907081604004,
-        "num_labels": 10,
+        "coverage": 0.27384528517723083,
+        "specificity": 1.3571428571428572,
+        "redundancy": 0.8189587593078613,
+        "clip_consistency": 0.29235854744911194,
+        "num_labels": 14,
         "num_images": 15
       },
       "error_analysis": {
         "over_generic": [],
         "potentially_hallucinated": [],
         "low_specificity": [
-          "tile flooring",
+          "living room",
           "kitchen",
-          "built-in wardrobes",
-          "laundry room",
-          "newly renovated",
-          "modern fixtures",
-          "luxury finishes"
+          "bathroom",
+          "laundry",
+          "balcony",
+          "bedroom",
+          "tatami room",
+          "built-in storage",
+          "lighting",
+          "modern cabinetry",
+          "tiled floors",
+          "open-plan",
+          "renovated",
+          "well-maintained"
         ]
       },
       "timing": {
-        "total_seconds": 2.179936170578003,
-        "stage1_classification": 0.9669880867004395,
-        "stage2_labeling": 0.19132494926452637,
-        "stage3_adaptation": 1.1920928955078125e-05,
-        "stage4_evaluation": 1.0215942859649658
+        "total_seconds": 6.204524755477905,
+        "stage1_classification": 1.0014410018920898,
+        "stage2_labeling": 4.178654909133911,
+        "stage4_evaluation": 1.0244033336639404
       }
     },
     {
@@ -1040,71 +704,22 @@
         "interior_area": 21.8,
         "property_age": 13
       },
-      "labels": [
-        "open floor plan",
-        "glass shower enclosure",
-        "tile flooring",
-        "built-in wardrobes",
-        "kitchen",
-        "stainless steel appliances",
-        "luxury finishes",
-        "newly renovated",
-        "large windows",
-        "laundry room"
-      ],
-      "labels_with_scores": [
-        {
-          "label": "open floor plan",
-          "score": 0.26468703150749207,
-          "category": "features"
-        },
-        {
-          "label": "glass shower enclosure",
-          "score": 0.26329392194747925,
-          "category": "features"
-        },
-        {
-          "label": "tile flooring",
-          "score": 0.2572164535522461,
-          "category": "features"
-        },
-        {
-          "label": "built-in wardrobes",
-          "score": 0.2522461414337158,
-          "category": "features"
-        },
-        {
-          "label": "kitchen",
-          "score": 0.24507124722003937,
-          "category": "room_types"
-        },
-        {
-          "label": "stainless steel appliances",
-          "score": 0.2443147599697113,
-          "category": "features"
-        },
-        {
-          "label": "luxury finishes",
-          "score": 0.2421245276927948,
-          "category": "style"
-        },
-        {
-          "label": "newly renovated",
-          "score": 0.24114669859409332,
-          "category": "condition"
-        },
-        {
-          "label": "large windows",
-          "score": 0.24037297070026398,
-          "category": "features"
-        },
-        {
-          "label": "laundry room",
-          "score": 0.23993584513664246,
-          "category": "room_types"
-        }
-      ],
-      "region": "us",
+      "labels": {
+        "labels": [
+          "kitchen",
+          "balcony",
+          "living room",
+          "tile floors",
+          "wooden cabinetry",
+          "built-in storage",
+          "large windows",
+          "natural light",
+          "glossy surfaces",
+          "well-maintained",
+          "bathroom",
+          "entryway"
+        ]
+      },
       "image_stats": {
         "total_images": 20,
         "interior_images": 17,
@@ -1112,32 +727,36 @@
         "interior_ratio": 0.85
       },
       "evaluation": {
-        "coverage": 0.28143906593322754,
-        "specificity": 2.2,
-        "redundancy": 0.7965530157089233,
-        "clip_consistency": 0.3080660104751587,
-        "num_labels": 10,
+        "coverage": 0.2684231102466583,
+        "specificity": 1.5833333333333333,
+        "redundancy": 0.8068844079971313,
+        "clip_consistency": 0.2915356755256653,
+        "num_labels": 12,
         "num_images": 17
       },
       "error_analysis": {
         "over_generic": [],
         "potentially_hallucinated": [],
         "low_specificity": [
-          "tile flooring",
-          "built-in wardrobes",
           "kitchen",
-          "luxury finishes",
-          "newly renovated",
+          "balcony",
+          "living room",
+          "tile floors",
+          "wooden cabinetry",
+          "built-in storage",
           "large windows",
-          "laundry room"
+          "natural light",
+          "glossy surfaces",
+          "well-maintained",
+          "bathroom",
+          "entryway"
         ]
       },
       "timing": {
-        "total_seconds": 2.1546638011932373,
-        "stage1_classification": 0.9644019603729248,
-        "stage2_labeling": 0.23273181915283203,
-        "stage3_adaptation": 1.0251998901367188e-05,
-        "stage4_evaluation": 0.9575068950653076
+        "total_seconds": 7.577651023864746,
+        "stage1_classification": 0.9896068572998047,
+        "stage2_labeling": 5.432803153991699,
+        "stage4_evaluation": 1.1552269458770752
       }
     },
     {
@@ -1153,71 +772,22 @@
         "interior_area": 11.79,
         "property_age": 2
       },
-      "labels": [
-        "open floor plan",
-        "tile flooring",
-        "built-in wardrobes",
-        "modern fixtures",
-        "glass shower enclosure",
-        "newly renovated",
-        "luxury finishes",
-        "kitchen",
-        "laundry room",
-        "recessed lighting"
-      ],
-      "labels_with_scores": [
-        {
-          "label": "open floor plan",
-          "score": 0.26183703541755676,
-          "category": "features"
-        },
-        {
-          "label": "tile flooring",
-          "score": 0.25467371940612793,
-          "category": "features"
-        },
-        {
-          "label": "built-in wardrobes",
-          "score": 0.24417349696159363,
-          "category": "features"
-        },
-        {
-          "label": "modern fixtures",
-          "score": 0.2429245561361313,
-          "category": "features"
-        },
-        {
-          "label": "glass shower enclosure",
-          "score": 0.24214427173137665,
-          "category": "features"
-        },
-        {
-          "label": "newly renovated",
-          "score": 0.24049688875675201,
-          "category": "condition"
-        },
-        {
-          "label": "luxury finishes",
-          "score": 0.2403101623058319,
-          "category": "style"
-        },
-        {
-          "label": "kitchen",
-          "score": 0.23902197182178497,
-          "category": "room_types"
-        },
-        {
-          "label": "laundry room",
-          "score": 0.23828242719173431,
-          "category": "room_types"
-        },
-        {
-          "label": "recessed lighting",
-          "score": 0.23635368049144745,
-          "category": "features"
-        }
-      ],
-      "region": "us",
+      "labels": {
+        "labels": [
+          "kitchen",
+          "living room",
+          "balcony",
+          "bedroom",
+          "built-in cabinets",
+          "open shelving",
+          "tile floor",
+          "natural light",
+          "modern appliances",
+          "laundry area",
+          "parking basement",
+          "mail room"
+        ]
+      },
       "image_stats": {
         "total_images": 19,
         "interior_images": 17,
@@ -1225,33 +795,36 @@
         "interior_ratio": 0.8947368421052632
       },
       "evaluation": {
-        "coverage": 0.27817055583000183,
-        "specificity": 2.1,
-        "redundancy": 0.8007278442382812,
-        "clip_consistency": 0.310447096824646,
-        "num_labels": 10,
+        "coverage": 0.27803871035575867,
+        "specificity": 1.75,
+        "redundancy": 0.8133554458618164,
+        "clip_consistency": 0.29521360993385315,
+        "num_labels": 12,
         "num_images": 17
       },
       "error_analysis": {
         "over_generic": [],
         "potentially_hallucinated": [],
         "low_specificity": [
-          "tile flooring",
-          "built-in wardrobes",
-          "modern fixtures",
-          "newly renovated",
-          "luxury finishes",
           "kitchen",
-          "laundry room",
-          "recessed lighting"
+          "living room",
+          "balcony",
+          "bedroom",
+          "built-in cabinets",
+          "open shelving",
+          "tile floor",
+          "natural light",
+          "modern appliances",
+          "laundry area",
+          "parking basement",
+          "mail room"
         ]
       },
       "timing": {
-        "total_seconds": 2.3483619689941406,
-        "stage1_classification": 1.0345299243927002,
-        "stage2_labeling": 0.23614788055419922,
-        "stage3_adaptation": 9.059906005859375e-06,
-        "stage4_evaluation": 1.0776598453521729
+        "total_seconds": 8.098304986953735,
+        "stage1_classification": 0.9674391746520996,
+        "stage2_labeling": 6.067633867263794,
+        "stage4_evaluation": 1.063216209411621
       }
     }
   ]

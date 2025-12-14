@@ -14,6 +14,8 @@ from data_loader import PropertyDataLoader
 from scene_classifier import SceneClassifier
 from siglip_classifier import SigLIPSceneClassifier
 from label_generator import LabelGenerator
+from siglip_label_generator import SigLIPLabelGenerator
+from openai_label_generator import OpenAILabelGenerator
 from region_adapter import RegionAdapter
 from evaluator import LabelEvaluator
 
@@ -52,14 +54,33 @@ class SemanticLabelingPipeline:
                 model_name=self.config['model']['name'],
                 pretrained=self.config['model']['pretrained'],
                 device=self.device
-            )
+              )
         
-        self.label_generator = LabelGenerator(
-            config_path=config_path,
-            model_name=self.config['model']['name'],
-            pretrained=self.config['model']['pretrained'],
-            device=self.device
-        )
+        # Initialize label generator based on config
+        self.generator_type = self.config.get('labeling', {}).get('generator_type', 'clip')
+        
+        if self.generator_type == 'siglip':
+            print("Using SigLIP label generator")
+            siglip_model = self.config['scene_classifier'].get('siglip_model', 'google/siglip2-base-patch16-224')
+            self.label_generator = SigLIPLabelGenerator(
+                config_path=config_path,
+                model_name=siglip_model,
+                device=self.device
+            )
+        elif self.generator_type == 'openai':
+            print("Using OpenAI label generator")
+            self.label_generator = OpenAILabelGenerator(
+                config=self.config,
+                device=self.device
+            )
+        else: # CLIP
+            print("Using CLIP label generator")
+            self.label_generator = LabelGenerator(
+                config_path=config_path,
+                model_name=self.config['model']['name'],
+                pretrained=self.config['model']['pretrained'],
+                device=self.device
+            )
         
         self.region_adapter = RegionAdapter(config_path=config_path)
         self.evaluator = LabelEvaluator(
@@ -100,33 +121,31 @@ class SemanticLabelingPipeline:
         )
         stage1_time = time.time() - stage1_start
         
-        # Stage 2: Generate semantic labels
+        # Stage 2: Generate semantic labels & Apply region adaptation
         stage2_start = time.time()
         label_result = self.label_generator.generate_labels(
             interior_paths,
-            top_k_total=self.config['labeling']['top_k_labels']
+            # top_k_total=self.config['labeling']['top_k_labels']
         )
+        
+        if self.generator_type != 'openai':
+            label_result = self.region_adapter.enrich_with_region_context(
+                label_result['labels'],
+                metadata
+            )
         stage2_time = time.time() - stage2_start
         
-        # Stage 3: Apply region adaptation
+        # Stage 3: Evaluate labels
         stage3_start = time.time()
-        region_result = self.region_adapter.enrich_with_region_context(
-            label_result['labels'],
-            metadata
-        )
-        stage3_time = time.time() - stage3_start
-        
-        # Stage 4: Evaluate labels
-        stage4_start = time.time()
         evaluation_metrics = self.evaluator.evaluate_property(
-            region_result['adapted_labels'],
+            label_result['adapted_labels'] if self.generator_type != 'openai' else label_result['labels'],
             interior_paths
         )
         error_analysis = self.evaluator.analyze_errors(
-            region_result['adapted_labels'],
+            label_result['adapted_labels'] if self.generator_type != 'openai' else label_result['labels'],
             interior_paths
         )
-        stage4_time = time.time() - stage4_start
+        stage3_time = time.time() - stage3_start
         
         total_time = time.time() - start_time
         
@@ -134,9 +153,8 @@ class SemanticLabelingPipeline:
         result = {
             'property_id': property_id,
             'metadata': metadata,
-            'labels': region_result['adapted_labels'],
-            'labels_with_scores': label_result['labels_with_scores'],
-            'region': region_result['region'],
+            'labels': label_result,
+            # 'labels_with_scores': label_result['labels_with_scores'],
             'image_stats': {
                 'total_images': len(image_paths),
                 'interior_images': len(interior_paths),
@@ -149,8 +167,7 @@ class SemanticLabelingPipeline:
                 'total_seconds': total_time,
                 'stage1_classification': stage1_time,
                 'stage2_labeling': stage2_time,
-                'stage3_adaptation': stage3_time,
-                'stage4_evaluation': stage4_time
+                'stage4_evaluation': stage3_time
             }
         }
         
@@ -158,10 +175,10 @@ class SemanticLabelingPipeline:
         print(f"\n✓ Processing Complete ({total_time:.2f}s)")
         print(f"  Interior Images: {len(interior_paths)}/{len(image_paths)}")
         print(f"  Generated Labels: {len(result['labels'])}")
-        print(f"  Region: {region_result['region']}")
+        # print(f"  Region: {region_result['region']}")
         print(f"\n  Top Labels:")
-        for item in label_result['labels_with_scores'][:5]:
-            print(f"    - {item['label']} ({item['score']:.3f})")
+        # for item in label_result['labels_with_scores'][:5]:
+        #     print(f"    - {item['label']} ({item['score']:.3f})")
         
         return result
     
