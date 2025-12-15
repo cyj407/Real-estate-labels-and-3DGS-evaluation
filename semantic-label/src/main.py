@@ -141,10 +141,10 @@ class SemanticLabelingPipeline:
             label_result['adapted_labels'] if self.generator_type != 'openai' else label_result['labels'],
             interior_paths
         )
-        error_analysis = self.evaluator.analyze_errors(
-            label_result['adapted_labels'] if self.generator_type != 'openai' else label_result['labels'],
-            interior_paths
-        )
+        # error_analysis = self.evaluator.analyze_errors(
+        #     label_result['adapted_labels'] if self.generator_type != 'openai' else label_result['labels'],
+        #     interior_paths
+        # )
         stage3_time = time.time() - stage3_start
         
         total_time = time.time() - start_time
@@ -153,7 +153,7 @@ class SemanticLabelingPipeline:
         result = {
             'property_id': property_id,
             'metadata': metadata,
-            'labels': label_result,
+            'labels': label_result['labels'] if isinstance(label_result, dict) and 'labels' in label_result else label_result,
             # 'labels_with_scores': label_result['labels_with_scores'],
             'image_stats': {
                 'total_images': len(image_paths),
@@ -162,12 +162,11 @@ class SemanticLabelingPipeline:
                 'interior_ratio': classification_stats['interior_ratio']
             },
             'evaluation': evaluation_metrics,
-            'error_analysis': error_analysis,
             'timing': {
                 'total_seconds': total_time,
                 'stage1_classification': stage1_time,
                 'stage2_labeling': stage2_time,
-                'stage4_evaluation': stage3_time
+                'stage3_evaluation': stage3_time
             }
         }
         
@@ -176,7 +175,7 @@ class SemanticLabelingPipeline:
         print(f"  Interior Images: {len(interior_paths)}/{len(image_paths)}")
         print(f"  Generated Labels: {len(result['labels'])}")
         # print(f"  Region: {region_result['region']}")
-        print(f"\n  Top Labels:")
+        # print(f"\n  Top Labels:")
         # for item in label_result['labels_with_scores'][:5]:
         #     print(f"    - {item['label']} ({item['score']:.3f})")
         

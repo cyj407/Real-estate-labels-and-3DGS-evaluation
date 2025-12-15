@@ -24,33 +24,77 @@ class OpenAILabelGenerator:
         
         self.client = OpenAI(api_key=api_key)
         self.model = self.config.get('labeling', {}).get('openai_model', 'gpt-5-nano')
-        self.max_images = self.config.get('labeling', {}).get('openai_max_images', 10)
         
         self.system_prompt = \
         """
         You are an expert real estate agent and interior designer with global property knowledge.
-        Your task is to analyze a set of interior photos of a property and generate at leasts 10 high-quality, fascinating, descriptive semantic tags.
+        Your task is to analyze a set of interior photos of a property and generate AT LEAST 10 high-quality, fascinating, descriptive semantic tags.
         The system must work across multiple regions (e.g., Taiwan, Japan, United States) without retraining.
 
-        The tags MUST:
-        1. Cover specific room types present below: kitchen, balcony, living room, tatami room, basement.
-        2. Describe architectural or interior style using region-neutral terms when possible, and region-specific terms when clearly identifiable.
-        3. Highlight key features visible in the photos (e.g., natural lighting, built-in storage, floor-to-ceiling windows).
-        4. Reflect the overall condition (e.g., newly renovated, well-maintained, dated but functional).
+        Tag selection rules (VERY IMPORTANT):
 
-        Cross-region requirements:
+        1. Room Types:
+        - ONLY include non-generic or special-purpose room types.
+        - DO NOT include generic rooms such as bedroom or living room unless they have a distinctive function or design.
+        - Examples of allowed room tags:
+        tatami room, garage, laundry room, basement, genkan
+        - Examples of disallowed generic tags:
+        bedroom, living room, bathroom (unless functionally special)
+        - DO NOT describe the same room type multiple times.
+
+        2. Bathroom Hardware Facilities:
+        - Explicitly tag special hardware or structural facilities when visible.
+        - Examples:
+        bathroom window, bathtub, separate shower, dry-wet separation, bidet toilet, double sink vanity
+        - DO NOT simply use tags like "bathroom", "shower", or "toilet".
+
+        3. Kitchen Hardware Facilities:
+        - Explicitly tag special hardware or structural facilities when visible.
+        - Examples:
+        kitchen island, gas stove, built-in oven
+        - DO NOT simply use tags like "kitchen" or "window".
+
+        4. Layout & Spatial Organization:
+        - Include layout-related tags describing spatial flow or planning.
+        - Examples:
+        open plan, LDK layout, split-level, compact layout, flexible space
+
+        5. Interior Style & Design Features (REQUIRED):
+        - Include at least ONE tag describing interior design style or overall aesthetic.
+        - Use region-neutral style labels when possible.
+        - Use culturally specific style terms ONLY when visually clear.
+        - Examples of allowed style tags:
+        modern minimalist design, contemporary style, traditional style, industrial loft aesthetic, scandinavian design, luxury finishes, cozy atmosphere, bright and airy, warm tones, neutral color palette
+
+        6. Comfort & Condition:
+        - Include tags describing comfort, lighting, ventilation, and overall condition.
+        - Examples:
+        natural lighting, cross ventilation, well-maintained, newly renovated
+
+        7. Region-Sensitive Features:
+        - Highlight features that are culturally or regionally valued IF visually identifiable.
+        - Examples:
+        feng shui layout, earthquake-resistant, sound insulation, tatami room
+        - Avoid assumptions if visual evidence is weak.
+
+        8. Cross-region Requirements:
         - Prefer globally understandable terminology.
-        - When a region-specific concept is visually clear, use the correct regional term (e.g., “genkan”, “mansion (JP)”, “walk-up (US)”).
-        - Avoid assumptions about region unless visual cues strongly indicate it.
-        - Normalize similar concepts across regions (e.g., balcony / veranda / lanai → balcony).
+        - Use region-specific terms ONLY when visually clear (e.g., genkan, tatami room).
+        - Normalize equivalent concepts (balcony / veranda / lanai → balcony).
+
+        9. Other Material & Built-in Features:
+        - Include visible material or built-in elements when relevant.
+        - Examples:
+        hardwood flooring, tile flooring, marble countertops, granite countertops,
+        built-in storage, built-in wardrobes, crown molding
 
         Output constraints:
-        - Output at leasts 10 comma-separated tags.
-        - Tags should be concise (1–3 words each).
-        - Do NOT include explanations, sentences, or region names.
+        - Output AT LEAST 10 comma-separated tags.
+        - Each tag must be 1–3 words.
+        - Do NOT include explanations, full sentences, or region names.
         """
 
-    def _encode_image(self, image_path: str) -> str:
+    def encode_image(self, image_path: str) -> str:
         """Encode image to base64 string."""
         with open(image_path, "rb") as image_file:
             return base64.b64encode(image_file.read()).decode('utf-8')
@@ -71,11 +115,6 @@ class OpenAILabelGenerator:
         # Select a subset of images to avoid payload limits/costs
         # We take evenly spaced images to get a good distribution
         selected_paths = image_paths
-        if len(image_paths) > self.max_images:
-            indices = [int(i * (len(image_paths) - 1) / (self.max_images - 1)) for i in range(self.max_images)]
-            selected_paths = [image_paths[i] for i in indices]
-            # Ensure unique in case of small list logic
-            selected_paths = list(dict.fromkeys(selected_paths))
 
         print(f"  Sending {len(selected_paths)} images to OpenAI ({self.model})...")
         
@@ -87,7 +126,7 @@ class OpenAILabelGenerator:
         
         for img_path in selected_paths:
             try:
-                base64_image = self._encode_image(img_path)
+                base64_image = self.encode_image(img_path)
                 user_content.append({
                     "type": "input_image",
                     "image_url": f"data:image/jpeg;base64,{base64_image}",

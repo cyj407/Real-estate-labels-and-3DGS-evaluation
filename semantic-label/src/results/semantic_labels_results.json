@@ -1,7 +1,7 @@
 {
   "summary": {
     "total_properties": 10,
-    "timestamp": "2025-12-15 00:31:33",
+    "timestamp": "2025-12-15 15:28:37",
     "config": {
       "model": "ViT-B/32",
       "device": "cpu",
@@ -9,107 +9,107 @@
     }
   },
   "latency_statistics": {
-    "mean_seconds": 6.734620475769043,
-    "median_seconds": 6.7298280000686646,
-    "p95_seconds": 7.8640107035636895,
-    "min_seconds": 5.986403942108154,
-    "max_seconds": 8.098304986953735
+    "mean_seconds": 6.818067669868469,
+    "median_seconds": 6.7945414781570435,
+    "p95_seconds": 8.182937252521514,
+    "min_seconds": 5.728361129760742,
+    "max_seconds": 8.419121742248535
   },
   "aggregate_metrics": {
-    "mean_coverage": 0.22347192764282225,
-    "mean_specificity": 1.0,
-    "mean_redundancy": 0.0,
-    "mean_clip_consistency": 0.22687400430440902,
-    "diversity": 0.0,
+    "mean_coverage": 0.27393048703670503,
+    "mean_specificity": 4.958823529411765,
+    "mean_redundancy": 0.7063977956771851,
+    "mean_clip_consistency": 0.29567921757698057,
+    "diversity": 0.8983996805879197,
     "total_properties": 10,
     "per_property": [
       {
-        "coverage": 0.24315309524536133,
-        "specificity": 1.0,
-        "redundancy": 0.0,
-        "clip_consistency": 0.22148269414901733,
-        "num_labels": 1,
+        "coverage": 0.27557292580604553,
+        "specificity": 1.9333333333333333,
+        "redundancy": 0.7812915444374084,
+        "clip_consistency": 0.29307591915130615,
+        "num_labels": 15,
         "num_images": 20,
         "property_id": "GZ50364605"
       },
       {
-        "coverage": 0.21750730276107788,
-        "specificity": 1.0,
-        "redundancy": 0.0,
-        "clip_consistency": 0.22552081942558289,
-        "num_labels": 1,
+        "coverage": 0.27247726917266846,
+        "specificity": 1.588235294117647,
+        "redundancy": 0.793795645236969,
+        "clip_consistency": 0.30390986800193787,
+        "num_labels": 17,
         "num_images": 19,
         "property_id": "TC08957218"
       },
       {
-        "coverage": 0.22210901975631714,
-        "specificity": 1.0,
+        "coverage": 0.30788129568099976,
+        "specificity": 32.0,
         "redundancy": 0.0,
-        "clip_consistency": 0.22980071604251862,
+        "clip_consistency": 0.3104049861431122,
         "num_labels": 1,
         "num_images": 20,
         "property_id": "KS186226"
       },
       {
-        "coverage": 0.22364506125450134,
-        "specificity": 1.0,
-        "redundancy": 0.0,
-        "clip_consistency": 0.22310200333595276,
-        "num_labels": 1,
+        "coverage": 0.27282389998435974,
+        "specificity": 1.8333333333333333,
+        "redundancy": 0.7803673148155212,
+        "clip_consistency": 0.28899258375167847,
+        "num_labels": 12,
         "num_images": 20,
         "property_id": "KS187345"
       },
       {
-        "coverage": 0.22608697414398193,
-        "specificity": 1.0,
-        "redundancy": 0.0,
-        "clip_consistency": 0.22883276641368866,
-        "num_labels": 1,
+        "coverage": 0.26853474974632263,
+        "specificity": 1.9333333333333333,
+        "redundancy": 0.7824584245681763,
+        "clip_consistency": 0.29042327404022217,
+        "num_labels": 15,
         "num_images": 20,
         "property_id": "KS185237"
       },
       {
-        "coverage": 0.22426331043243408,
-        "specificity": 1.0,
-        "redundancy": 0.0,
-        "clip_consistency": 0.22936248779296875,
-        "num_labels": 1,
+        "coverage": 0.27295926213264465,
+        "specificity": 2.066666666666667,
+        "redundancy": 0.7814205288887024,
+        "clip_consistency": 0.3012978434562683,
+        "num_labels": 15,
         "num_images": 20,
         "property_id": "KS187126"
       },
       {
-        "coverage": 0.21141408383846283,
-        "specificity": 1.0,
-        "redundancy": 0.0,
-        "clip_consistency": 0.2300061732530594,
-        "num_labels": 1,
+        "coverage": 0.2550191581249237,
+        "specificity": 2.2,
+        "redundancy": 0.7790160179138184,
+        "clip_consistency": 0.28935250639915466,
+        "num_labels": 15,
         "num_images": 20,
         "property_id": "KS186928"
       },
       {
-        "coverage": 0.21204712986946106,
-        "specificity": 1.0,
-        "redundancy": 0.0,
-        "clip_consistency": 0.22382310032844543,
-        "num_labels": 1,
+        "coverage": 0.26916924118995667,
+        "specificity": 1.9166666666666667,
+        "redundancy": 0.7876580953598022,
+        "clip_consistency": 0.2880486845970154,
+        "num_labels": 12,
         "num_images": 20,
         "property_id": "KS184357"
       },
       {
-        "coverage": 0.21734915673732758,
-        "specificity": 1.0,
-        "redundancy": 0.0,
-        "clip_consistency": 0.22224242985248566,
-        "num_labels": 1,
+        "coverage": 0.27236732840538025,
+        "specificity": 1.9166666666666667,
+        "redundancy": 0.7907745242118835,
+        "clip_consistency": 0.2969321608543396,
+        "num_labels": 12,
         "num_images": 20,
         "property_id": "KS181499"
       },
       {
-        "coverage": 0.23714414238929749,
-        "specificity": 1.0,
-        "redundancy": 0.0,
-        "clip_consistency": 0.2345668524503708,
-        "num_labels": 1,
+        "coverage": 0.2724997401237488,
+        "specificity": 2.2,
+        "redundancy": 0.7871958613395691,
+        "clip_consistency": 0.2943543493747711,
+        "num_labels": 15,
         "num_images": 19,
         "property_id": "CW67133884"
       }
@@ -129,24 +129,23 @@
         "interior_area": 16.57,
         "property_age": 43
       },
-      "labels": {
-        "labels": [
-          "kitchen",
-          "living room",
-          "bathroom",
-          "basement",
-          "balcony",
-          "bedroom",
-          "tatami room",
-          "parking area",
-          "storage shelves",
-          "wall-mounted TV",
-          "sofa set",
-          "coffee table",
-          "natural light",
-          "well-maintained"
-        ]
-      },
+      "labels": [
+        "balcony",
+        "garage",
+        "basement parking",
+        "laundry nook",
+        "separate toilet",
+        "bathroom sink",
+        "brick accent wall",
+        "wood flooring",
+        "teal accent wall",
+        "open plan",
+        "built-in storage",
+        "air conditioning",
+        "bright lighting",
+        "well-maintained",
+        "compact kitchen"
+      ],
       "image_stats": {
         "total_images": 20,
         "interior_images": 19,
@@ -154,38 +153,18 @@
         "interior_ratio": 0.95
       },
       "evaluation": {
-        "coverage": 0.2693745791912079,
-        "specificity": 1.5714285714285714,
-        "redundancy": 0.8033593893051147,
-        "clip_consistency": 0.28907546401023865,
-        "num_labels": 14,
+        "coverage": 0.27557292580604553,
+        "specificity": 1.9333333333333333,
+        "redundancy": 0.7812915444374084,
+        "clip_consistency": 0.2924240827560425,
+        "num_labels": 15,
         "num_images": 19
       },
-      "error_analysis": {
-        "over_generic": [],
-        "potentially_hallucinated": [],
-        "low_specificity": [
-          "kitchen",
-          "living room",
-          "bathroom",
-          "basement",
-          "balcony",
-          "bedroom",
-          "tatami room",
-          "parking area",
-          "storage shelves",
-          "wall-mounted TV",
-          "sofa set",
-          "coffee table",
-          "natural light",
-          "well-maintained"
-        ]
-      },
       "timing": {
-        "total_seconds": 6.789907932281494,
-        "stage1_classification": 1.0809032917022705,
-        "stage2_labeling": 4.5166239738464355,
-        "stage4_evaluation": 1.1923680305480957
+        "total_seconds": 8.419121742248535,
+        "stage1_classification": 1.1688942909240723,
+        "stage2_labeling": 6.287517786026001,
+        "stage3_evaluation": 0.9626967906951904
       }
     },
     {
@@ -201,24 +180,25 @@
         "interior_area": 49.93,
         "property_age": 30
       },
-      "labels": {
-        "labels": [
-          "kitchen with green cabinets",
-          "skylight ceiling",
-          "open living area",
-          "terrazzo floor",
-          "built-in storage",
-          "staircase feature",
-          "natural lighting",
-          "living room spacious",
-          "balcony tiled",
-          "sunny balcony",
-          "exterior balcony view",
-          "basement parking",
-          "well-maintained",
-          "dated but functional"
-        ]
-      },
+      "labels": [
+        "tatami room",
+        "garage",
+        "laundry room",
+        "basement",
+        "genkan",
+        "open plan",
+        "mezzanine",
+        "skylight",
+        "built-in storage",
+        "kitchen island",
+        "tile flooring",
+        "wooden ceiling",
+        "balcony",
+        "carport",
+        "contemporary style",
+        "bright and airy",
+        "well-maintained"
+      ],
       "image_stats": {
         "total_images": 19,
         "interior_images": 16,
@@ -226,33 +206,18 @@
         "interior_ratio": 0.8421052631578947
       },
       "evaluation": {
-        "coverage": 0.2735899090766907,
-        "specificity": 2.357142857142857,
-        "redundancy": 0.7693670988082886,
-        "clip_consistency": 0.30635306239128113,
-        "num_labels": 14,
+        "coverage": 0.27247726917266846,
+        "specificity": 1.588235294117647,
+        "redundancy": 0.793795645236969,
+        "clip_consistency": 0.3058704435825348,
+        "num_labels": 17,
         "num_images": 16
       },
-      "error_analysis": {
-        "over_generic": [],
-        "potentially_hallucinated": [],
-        "low_specificity": [
-          "skylight ceiling",
-          "terrazzo floor",
-          "built-in storage",
-          "staircase feature",
-          "natural lighting",
-          "balcony tiled",
-          "sunny balcony",
-          "basement parking",
-          "well-maintained"
-        ]
-      },
       "timing": {
-        "total_seconds": 6.370834112167358,
-        "stage1_classification": 0.9589500427246094,
-        "stage2_labeling": 4.370898962020874,
-        "stage4_evaluation": 1.040952205657959
+        "total_seconds": 6.827377796173096,
+        "stage1_classification": 1.0291481018066406,
+        "stage2_labeling": 4.93118691444397,
+        "stage3_evaluation": 0.8670127391815186
       }
     },
     {
@@ -268,24 +233,9 @@
         "interior_area": 18.18,
         "property_age": 0
       },
-      "labels": {
-        "labels": [
-          "kitchen",
-          "balcony",
-          "living room",
-          "tatami room",
-          "basement",
-          "large windows",
-          "natural light",
-          "laminate floor",
-          "white walls",
-          "modern fixtures",
-          "glass doors",
-          "built-in storage",
-          "high ceiling",
-          "entryway"
-        ]
-      },
+      "labels": [
+        "balcony\nsliding glass doors\nkitchen dishwasher\ninduction stove\nglass backsplash\nlaundry area\nopen plan\nLDK layout\nmodern minimalist\nnatural lighting\nwood flooring\nbalcony planters\nshower enclosure\nbathroom vanity\nentry grill\nfloor windows"
+      ],
       "image_stats": {
         "total_images": 20,
         "interior_images": 16,
@@ -293,38 +243,18 @@
         "interior_ratio": 0.8
       },
       "evaluation": {
-        "coverage": 0.27295559644699097,
-        "specificity": 1.7142857142857142,
-        "redundancy": 0.7985379695892334,
-        "clip_consistency": 0.30041223764419556,
-        "num_labels": 14,
+        "coverage": 0.30788129568099976,
+        "specificity": 32.0,
+        "redundancy": 0.0,
+        "clip_consistency": 0.3082507252693176,
+        "num_labels": 1,
         "num_images": 16
       },
-      "error_analysis": {
-        "over_generic": [],
-        "potentially_hallucinated": [],
-        "low_specificity": [
-          "kitchen",
-          "balcony",
-          "living room",
-          "tatami room",
-          "basement",
-          "large windows",
-          "natural light",
-          "laminate floor",
-          "white walls",
-          "modern fixtures",
-          "glass doors",
-          "built-in storage",
-          "high ceiling",
-          "entryway"
-        ]
-      },
       "timing": {
-        "total_seconds": 6.7130889892578125,
-        "stage1_classification": 0.9757950305938721,
-        "stage2_labeling": 4.632307767868042,
-        "stage4_evaluation": 1.1049699783325195
+        "total_seconds": 7.894267320632935,
+        "stage1_classification": 1.0105609893798828,
+        "stage2_labeling": 6.399850845336914,
+        "stage3_evaluation": 0.4838261604309082
       }
     },
     {
@@ -340,24 +270,20 @@
         "interior_area": 18.05,
         "property_age": 0
       },
-      "labels": {
-        "labels": [
-          "kitchen",
-          "balcony",
-          "living room",
-          "basement",
-          "parking",
-          "natural light",
-          "built-in storage",
-          "floor-to-ceiling windows",
-          "modern",
-          "neutral palette",
-          "wooden flooring",
-          "greenery",
-          "high ceilings",
-          "compact units"
-        ]
-      },
+      "labels": [
+        "balcony",
+        "terrace",
+        "open plan",
+        "kitchen with dishwasher",
+        "built-in cabinets",
+        "modern minimalist",
+        "bright light",
+        "neutral palette",
+        "wood-look floor",
+        "gym",
+        "underground parking",
+        "glass shower"
+      ],
       "image_stats": {
         "total_images": 20,
         "interior_images": 20,
@@ -365,38 +291,18 @@
         "interior_ratio": 1.0
       },
       "evaluation": {
-        "coverage": 0.2661435008049011,
-        "specificity": 1.5714285714285714,
-        "redundancy": 0.8143869638442993,
-        "clip_consistency": 0.2851135730743408,
-        "num_labels": 14,
+        "coverage": 0.27282389998435974,
+        "specificity": 1.8333333333333333,
+        "redundancy": 0.7803673148155212,
+        "clip_consistency": 0.28899258375167847,
+        "num_labels": 12,
         "num_images": 20
       },
-      "error_analysis": {
-        "over_generic": [],
-        "potentially_hallucinated": [],
-        "low_specificity": [
-          "kitchen",
-          "balcony",
-          "living room",
-          "basement",
-          "parking",
-          "natural light",
-          "built-in storage",
-          "floor-to-ceiling windows",
-          "modern",
-          "neutral palette",
-          "wooden flooring",
-          "greenery",
-          "high ceilings",
-          "compact units"
-        ]
-      },
       "timing": {
-        "total_seconds": 5.986403942108154,
-        "stage1_classification": 0.9982490539550781,
-        "stage2_labeling": 3.734586238861084,
-        "stage4_evaluation": 1.2535390853881836
+        "total_seconds": 6.761705160140991,
+        "stage1_classification": 1.0149221420288086,
+        "stage2_labeling": 4.938681125640869,
+        "stage3_evaluation": 0.8080840110778809
       }
     },
     {
@@ -412,25 +318,23 @@
         "interior_area": 11.22,
         "property_age": 4
       },
-      "labels": {
-        "labels": [
-          "kitchen",
-          "balcony",
-          "living room",
-          "basement",
-          "pool table",
-          "home bar",
-          "modern lighting",
-          "built-in storage",
-          "large balcony railing",
-          "floor-to-ceiling windows",
-          "city views",
-          "contemporary finishes",
-          "well-maintained",
-          "hardwood floors",
-          "multi-functional space"
-        ]
-      },
+      "labels": [
+        "balcony",
+        "gym",
+        "billiards room",
+        "clubhouse lounge",
+        "parking garage",
+        "media wall",
+        "open plan",
+        "modern minimalist design",
+        "bright lighting",
+        "city view",
+        "built-in shelves",
+        "wooden flooring",
+        "glass shower",
+        "bathtub",
+        "double sink vanity"
+      ],
       "image_stats": {
         "total_images": 20,
         "interior_images": 17,
@@ -438,38 +342,18 @@
         "interior_ratio": 0.85
       },
       "evaluation": {
-        "coverage": 0.2632747292518616,
-        "specificity": 1.8,
-        "redundancy": 0.7986504435539246,
-        "clip_consistency": 0.2933465540409088,
+        "coverage": 0.26853474974632263,
+        "specificity": 1.9333333333333333,
+        "redundancy": 0.7824584245681763,
+        "clip_consistency": 0.2903228998184204,
         "num_labels": 15,
         "num_images": 17
       },
-      "error_analysis": {
-        "over_generic": [],
-        "potentially_hallucinated": [],
-        "low_specificity": [
-          "kitchen",
-          "balcony",
-          "living room",
-          "basement",
-          "pool table",
-          "home bar",
-          "modern lighting",
-          "built-in storage",
-          "floor-to-ceiling windows",
-          "city views",
-          "contemporary finishes",
-          "well-maintained",
-          "hardwood floors",
-          "multi-functional space"
-        ]
-      },
       "timing": {
-        "total_seconds": 6.8189661502838135,
-        "stage1_classification": 0.9721419811248779,
-        "stage2_labeling": 4.747316122055054,
-        "stage4_evaluation": 1.0994906425476074
+        "total_seconds": 5.728361129760742,
+        "stage1_classification": 0.993049144744873,
+        "stage2_labeling": 3.923184871673584,
+        "stage3_evaluation": 0.8121099472045898
       }
     },
     {
@@ -485,28 +369,23 @@
         "interior_area": 15.0,
         "property_age": 7
       },
-      "labels": {
-        "labels": [
-          "kitchen",
-          "balcony",
-          "living room",
-          "bathroom",
-          "lobby",
-          "play area",
-          "ball-pool",
-          "modern",
-          "renovated",
-          "well-lit",
-          "tiled",
-          "built-in storage",
-          "air conditioning",
-          "glass walls",
-          "reception",
-          "commercial-grade",
-          "condo-like",
-          "elevator lobby"
-        ]
-      },
+      "labels": [
+        "separate shower",
+        "gas stove",
+        "kitchen cabinetry",
+        "balcony",
+        "glossy tile flooring",
+        "open plan",
+        "bright and airy",
+        "modern minimalist design",
+        "indoor playground",
+        "clubhouse",
+        "pool lounge",
+        "gym/lounge area",
+        "marble accents",
+        "built-in storage",
+        "lobby reception"
+      ],
       "image_stats": {
         "total_images": 20,
         "interior_images": 17,
@@ -514,42 +393,18 @@
         "interior_ratio": 0.85
       },
       "evaluation": {
-        "coverage": 0.27014440298080444,
-        "specificity": 1.3333333333333333,
-        "redundancy": 0.8299868702888489,
-        "clip_consistency": 0.29395943880081177,
-        "num_labels": 18,
+        "coverage": 0.27295926213264465,
+        "specificity": 2.066666666666667,
+        "redundancy": 0.7814205288887024,
+        "clip_consistency": 0.30165600776672363,
+        "num_labels": 15,
         "num_images": 17
       },
-      "error_analysis": {
-        "over_generic": [],
-        "potentially_hallucinated": [],
-        "low_specificity": [
-          "kitchen",
-          "balcony",
-          "living room",
-          "bathroom",
-          "lobby",
-          "play area",
-          "ball-pool",
-          "modern",
-          "renovated",
-          "well-lit",
-          "tiled",
-          "built-in storage",
-          "air conditioning",
-          "glass walls",
-          "reception",
-          "commercial-grade",
-          "condo-like",
-          "elevator lobby"
-        ]
-      },
       "timing": {
-        "total_seconds": 6.0399558544158936,
-        "stage1_classification": 0.9948911666870117,
-        "stage2_labeling": 3.8073878288269043,
-        "stage4_evaluation": 1.2376601696014404
+        "total_seconds": 6.760899782180786,
+        "stage1_classification": 1.0132179260253906,
+        "stage2_labeling": 4.929239749908447,
+        "stage3_evaluation": 0.8184218406677246
       }
     },
     {
@@ -565,22 +420,23 @@
         "interior_area": 11.7,
         "property_age": 1
       },
-      "labels": {
-        "labels": [
-          "living room",
-          "modern",
-          "neutral",
-          "built-in storage",
-          "floor-to-ceiling windows",
-          "natural light",
-          "gray sofa",
-          "wooden accents",
-          "gallery wall",
-          "compact coffee table",
-          "well-maintained",
-          "newly renovated"
-        ]
-      },
+      "labels": [
+        "open plan",
+        "compact kitchen",
+        "built-in microwave",
+        "induction hob",
+        "glass backsplash",
+        "floating shelves",
+        "wall-mounted storage",
+        "balcony access",
+        "large windows",
+        "modern minimalist design",
+        "neutral color palette",
+        "natural lighting",
+        "well-maintained",
+        "wood veneer panels",
+        "console wall shelf"
+      ],
       "image_stats": {
         "total_images": 20,
         "interior_images": 15,
@@ -588,35 +444,18 @@
         "interior_ratio": 0.75
       },
       "evaluation": {
-        "coverage": 0.25171998143196106,
-        "specificity": 1.8333333333333333,
-        "redundancy": 0.8050991892814636,
-        "clip_consistency": 0.28200048208236694,
-        "num_labels": 12,
+        "coverage": 0.2550191581249237,
+        "specificity": 2.2,
+        "redundancy": 0.7790160179138184,
+        "clip_consistency": 0.28495702147483826,
+        "num_labels": 15,
         "num_images": 15
       },
-      "error_analysis": {
-        "over_generic": [],
-        "potentially_hallucinated": [],
-        "low_specificity": [
-          "living room",
-          "modern",
-          "neutral",
-          "built-in storage",
-          "floor-to-ceiling windows",
-          "natural light",
-          "gray sofa",
-          "wooden accents",
-          "gallery wall",
-          "well-maintained",
-          "newly renovated"
-        ]
-      },
       "timing": {
-        "total_seconds": 6.746567010879517,
-        "stage1_classification": 0.9918370246887207,
-        "stage2_labeling": 4.759843111038208,
-        "stage4_evaluation": 0.9948711395263672
+        "total_seconds": 7.024749040603638,
+        "stage1_classification": 1.0068368911743164,
+        "stage2_labeling": 5.265567064285278,
+        "stage3_evaluation": 0.7523279190063477
       }
     },
     {
@@ -632,24 +471,20 @@
         "interior_area": 13.78,
         "property_age": 11
       },
-      "labels": {
-        "labels": [
-          "living room",
-          "kitchen",
-          "bathroom",
-          "laundry",
-          "balcony",
-          "bedroom",
-          "tatami room",
-          "built-in storage",
-          "lighting",
-          "modern cabinetry",
-          "tiled floors",
-          "open-plan",
-          "renovated",
-          "well-maintained"
-        ]
-      },
+      "labels": [
+        "laundry room",
+        "glass shower",
+        "bathroom vanity",
+        "open plan",
+        "gas stove",
+        "built-in oven",
+        "built-in storage",
+        "tile flooring",
+        "modern minimalist",
+        "bright lighting",
+        "balcony",
+        "study nook"
+      ],
       "image_stats": {
         "total_images": 20,
         "interior_images": 15,
@@ -657,38 +492,18 @@
         "interior_ratio": 0.75
       },
       "evaluation": {
-        "coverage": 0.27384528517723083,
-        "specificity": 1.3571428571428572,
-        "redundancy": 0.8189587593078613,
-        "clip_consistency": 0.29235854744911194,
-        "num_labels": 14,
+        "coverage": 0.26916924118995667,
+        "specificity": 1.9166666666666667,
+        "redundancy": 0.7876580953598022,
+        "clip_consistency": 0.2911126911640167,
+        "num_labels": 12,
         "num_images": 15
       },
-      "error_analysis": {
-        "over_generic": [],
-        "potentially_hallucinated": [],
-        "low_specificity": [
-          "living room",
-          "kitchen",
-          "bathroom",
-          "laundry",
-          "balcony",
-          "bedroom",
-          "tatami room",
-          "built-in storage",
-          "lighting",
-          "modern cabinetry",
-          "tiled floors",
-          "open-plan",
-          "renovated",
-          "well-maintained"
-        ]
-      },
       "timing": {
-        "total_seconds": 6.204524755477905,
-        "stage1_classification": 1.0014410018920898,
-        "stage2_labeling": 4.178654909133911,
-        "stage4_evaluation": 1.0244033336639404
+        "total_seconds": 5.935964822769165,
+        "stage1_classification": 1.0009632110595703,
+        "stage2_labeling": 4.210009813308716,
+        "stage3_evaluation": 0.7249729633331299
       }
     },
     {
@@ -704,22 +519,20 @@
         "interior_area": 21.8,
         "property_age": 13
       },
-      "labels": {
-        "labels": [
-          "kitchen",
-          "balcony",
-          "living room",
-          "tile floors",
-          "wooden cabinetry",
-          "built-in storage",
-          "large windows",
-          "natural light",
-          "glossy surfaces",
-          "well-maintained",
-          "bathroom",
-          "entryway"
-        ]
-      },
+      "labels": [
+        "balcony",
+        "built-in cabinets",
+        "open plan",
+        "wooden flooring",
+        "tile flooring",
+        "built-in kitchen",
+        "glass shower",
+        "laundry space",
+        "parking space",
+        "entryway",
+        "contemporary style",
+        "bright and airy"
+      ],
       "image_stats": {
         "total_images": 20,
         "interior_images": 17,
@@ -727,36 +540,18 @@
         "interior_ratio": 0.85
       },
       "evaluation": {
-        "coverage": 0.2684231102466583,
-        "specificity": 1.5833333333333333,
-        "redundancy": 0.8068844079971313,
-        "clip_consistency": 0.2915356755256653,
+        "coverage": 0.27236732840538025,
+        "specificity": 1.9166666666666667,
+        "redundancy": 0.7907745242118835,
+        "clip_consistency": 0.29745933413505554,
         "num_labels": 12,
         "num_images": 17
       },
-      "error_analysis": {
-        "over_generic": [],
-        "potentially_hallucinated": [],
-        "low_specificity": [
-          "kitchen",
-          "balcony",
-          "living room",
-          "tile floors",
-          "wooden cabinetry",
-          "built-in storage",
-          "large windows",
-          "natural light",
-          "glossy surfaces",
-          "well-maintained",
-          "bathroom",
-          "entryway"
-        ]
-      },
       "timing": {
-        "total_seconds": 7.577651023864746,
-        "stage1_classification": 0.9896068572998047,
-        "stage2_labeling": 5.432803153991699,
-        "stage4_evaluation": 1.1552269458770752
+        "total_seconds": 5.979346036911011,
+        "stage1_classification": 1.0274248123168945,
+        "stage2_labeling": 4.1855669021606445,
+        "stage3_evaluation": 0.7663431167602539
       }
     },
     {
@@ -772,22 +567,23 @@
         "interior_area": 11.79,
         "property_age": 2
       },
-      "labels": {
-        "labels": [
-          "kitchen",
-          "living room",
-          "balcony",
-          "bedroom",
-          "built-in cabinets",
-          "open shelving",
-          "tile floor",
-          "natural light",
-          "modern appliances",
-          "laundry area",
-          "parking basement",
-          "mail room"
-        ]
-      },
+      "labels": [
+        "open plan",
+        "laundry room",
+        "balcony",
+        "bathroom shower enclosure",
+        "separate toilet",
+        "built-in oven",
+        "gas stove",
+        "built-in wardrobe",
+        "gym room",
+        "parking space",
+        "air conditioning",
+        "track lighting",
+        "neutral palette",
+        "bright and airy",
+        "ceiling fans not visible"
+      ],
       "image_stats": {
         "total_images": 19,
         "interior_images": 17,
@@ -795,36 +591,18 @@
         "interior_ratio": 0.8947368421052632
       },
       "evaluation": {
-        "coverage": 0.27803871035575867,
-        "specificity": 1.75,
-        "redundancy": 0.8133554458618164,
-        "clip_consistency": 0.29521360993385315,
-        "num_labels": 12,
+        "coverage": 0.27200067043304443,
+        "specificity": 2.2,
+        "redundancy": 0.7871958613395691,
+        "clip_consistency": 0.29468753933906555,
+        "num_labels": 15,
         "num_images": 17
       },
-      "error_analysis": {
-        "over_generic": [],
-        "potentially_hallucinated": [],
-        "low_specificity": [
-          "kitchen",
-          "living room",
-          "balcony",
-          "bedroom",
-          "built-in cabinets",
-          "open shelving",
-          "tile floor",
-          "natural light",
-          "modern appliances",
-          "laundry area",
-          "parking basement",
-          "mail room"
-        ]
-      },
       "timing": {
-        "total_seconds": 8.098304986953735,
-        "stage1_classification": 0.9674391746520996,
-        "stage2_labeling": 6.067633867263794,
-        "stage4_evaluation": 1.063216209411621
+        "total_seconds": 6.848883867263794,
+        "stage1_classification": 0.9966740608215332,
+        "stage2_labeling": 5.047546863555908,
+        "stage3_evaluation": 0.8046419620513916
       }
     }
   ]
