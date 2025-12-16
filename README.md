@@ -385,6 +385,6 @@ uv run evaluate.py --url <url> --name <name>
 
 ### Output
 Results are saved in the `3DGS-Reconstruction-Quality-Evaluation/results/` directory:
-- [`comparison_report.md`](3DGS-Reconstruction-Evaluation/results/test_metrics_vlm_only/comparison_report.md): Comparative analysis/ranking of all evaluated renders.
+- [`comparison_report.md`](3DGS-Reconstruction-Evaluation/results/comparison_report.md): Comparative analysis/ranking of all evaluated renders.
 - `*_results.json`: Raw metric data.
 - `*_report.md`: Readable report for each render.
