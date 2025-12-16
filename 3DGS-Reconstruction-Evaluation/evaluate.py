@@ -177,6 +177,7 @@ async def main():
         config["cv_metrics"]["blur"]["enabled"] = False
         config["cv_metrics"]["edge_consistency"]["enabled"] = False
         config["cv_metrics"]["brisque"]["enabled"] = False
+        config["cv_metrics"]["maniqa"]["enabled"] = False
 
         logger.info("CV metrics disabled (VLM only mode)")
     

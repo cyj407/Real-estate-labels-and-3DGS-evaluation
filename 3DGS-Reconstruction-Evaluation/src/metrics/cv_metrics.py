@@ -189,13 +189,26 @@ class EdgeConsistencyMetric:
 
 class BRISQUEMetric:
     """
-    No-reference image quality assessment.
-    Simplified BRISQUE-inspired metric using natural scene statistics.
+    Blind/Referenceless Image Spatial Quality Evaluator.
+    Uses pyiqa implementation.
     """
     
+    def __init__(self):
+        """Initialize BRISQUE metric."""
+        if not MANIQA_AVAILABLE: # Reusing the pyiqa availability check
+            raise ImportError("BRISQUE via pyiqa requires pyiqa package")
+        
+        self.device = torch.device("cpu")
+        try:
+            self.model = pyiqa.create_metric('brisque', device=self.device)
+            logger.info(f"BRISQUE initialized on {self.device} (via pyiqa)")
+        except Exception as e:
+            logger.error(f"Failed to initialize BRISQUE: {e}")
+            raise
+
     def compute_quality_score(self, image_path: Union[str, Path]) -> float:
         """
-        Compute no-reference quality score.
+        Compute BRISQUE score for a single image.
         
         Args:
             image_path: Path to image file
@@ -203,40 +216,23 @@ class BRISQUEMetric:
         Returns:
             Quality score (0-100, higher is better)
         """
-        image = cv2.imread(str(image_path))
-        if image is None:
-            raise ValueError(f"Could not load image: {image_path}")
-        
-        gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY).astype(np.float32)
-        
-        # Compute local mean and variance
-        mu = cv2.GaussianBlur(gray, (7, 7), 1.166)
-        mu_sq = mu * mu
-        sigma = cv2.GaussianBlur(gray * gray, (7, 7), 1.166)
-        sigma = np.sqrt(np.abs(sigma - mu_sq))
-        
-        # Normalized luminance
-        structdis = (gray - mu) / (sigma + 1)
-        
-        # Compute features
-        features = []
-        
-        # Mean absolute deviation
-        features.append(np.mean(np.abs(structdis)))
-        
-        # Variance
-        features.append(np.var(structdis))
-        
-        # Skewness and kurtosis approximations
-        features.append(np.mean(structdis ** 3))
-        features.append(np.mean(structdis ** 4))
-        
-        # Simple quality score based on naturalness
-        # Natural images have specific statistical properties
-        score = 100 - min(100, np.abs(features[0] - 0.9) * 50 + 
-                         np.abs(features[1] - 1.0) * 30)
-        
-        return float(max(0, score))
+        try:
+            # pyiqa handles image loading
+            # BRISQUE returns a score typically 0-100, where 0 is best and 100 is worst.
+            score = self.model(str(image_path))
+            
+            if torch.is_tensor(score):
+                score = score.item()
+                
+            # Invert for "higher is better" consistency with other metrics
+            # 0 (best) -> 100, 100 (worst) -> 0
+            quality_score = max(0.0, 100.0 - float(score))
+            
+            return quality_score
+            
+        except Exception as e:
+            logger.error(f"Error computing BRISQUE for {image_path}: {e}")
+            return 0.0
     
     def evaluate_views(self, view_paths: List[Union[str, Path]]) -> Dict:
         """
@@ -272,8 +268,6 @@ class BRISQUEMetric:
             "num_views": len(scores),
             "quality_score": float(np.mean(scores_array))
         }
-
-
 
 
 def evaluate_all_cv_metrics(view_paths: List[Union[str, Path]], config: Dict) -> Dict:

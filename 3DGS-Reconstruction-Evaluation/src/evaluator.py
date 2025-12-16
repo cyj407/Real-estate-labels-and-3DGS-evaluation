@@ -91,6 +91,27 @@ class ReconstructionEvaluator:
         logger.info("\n--- Running VLM Metrics ---")
         vlm_results = evaluate_all_vlm_metrics(view_paths, self.config)
         
+        # Merge VLM per-view details into views list
+        if isinstance(vlm_results, dict) and "image_details" in vlm_results:
+            # Create lookup by filename
+            vlm_lookup = {d.get("image_path"): d for d in vlm_results["image_details"]}
+            
+            for view in views:
+                try:
+                    p = Path(view["screenshot_path"])
+                    if p.name in vlm_lookup:
+                        detail = vlm_lookup[p.name]
+                        # Inject detailed analysis
+                        view["vlm_analysis"] = {
+                            "overall_score": detail.get("overall_score"),
+                            "summary": detail.get("summary"),
+                            "structural_defects": detail.get("structural_defects"),
+                            "texture_artifacts": detail.get("texture_artifacts"),
+                            "subscores": detail.get("subscores")
+                        }
+                except Exception as e:
+                    logger.warning(f"Failed to merge VLM details for view: {e}")
+        
         # Compute overall score
         overall_score = self._compute_overall_score(cv_results, vlm_results)
         
