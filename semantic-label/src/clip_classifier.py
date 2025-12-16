@@ -11,7 +11,7 @@ import numpy as np
 from pathlib import Path
 
 
-class SceneClassifier:
+class ClipSceneClassifier:
     """CLIP-based interior/exterior classifier."""
     
     def __init__(self, model_name: str = "ViT-B/32", pretrained: str = "openai", device: str = "cpu"):
@@ -180,7 +180,7 @@ if __name__ == "__main__":
     )
     
     # Initialize classifier
-    classifier = SceneClassifier(device="cpu")
+    classifier = ClipSceneClassifier(device="cpu")
 
     properties = loader.load_all_properties()
     for property_data, image_paths in properties:

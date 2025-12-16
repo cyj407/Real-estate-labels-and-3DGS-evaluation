@@ -257,7 +257,7 @@ if __name__ == "__main__":
         print(f"\nTesting label generation on property {property_id}")
         
         # Filter interior images
-        classifier = SceneClassifier(device="cpu")
+        classifier = ClipSceneClassifier(device="cpu")
         interior_paths, _ = classifier.filter_interior_images(image_paths)
         
         # Generate labels
