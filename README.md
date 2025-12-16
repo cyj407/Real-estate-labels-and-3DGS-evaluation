@@ -36,7 +36,7 @@ Run the main pipeline to process properties:
 
 ```bash
 cd semantic-label/src
-uv run python main.py
+uv run main.py
 ```
 ### Features
 - **Scene Classification**: Automatically filters interior vs exterior images using **CLIP** (fast) or **SigLIP** (accurate).
