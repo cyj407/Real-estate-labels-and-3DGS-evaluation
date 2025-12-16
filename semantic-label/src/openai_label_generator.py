@@ -25,74 +25,11 @@ class OpenAILabelGenerator:
         self.client = OpenAI(api_key=api_key)
         self.model = self.config.get('labeling', {}).get('openai_model', 'gpt-5-nano')
         
-        self.system_prompt = \
-        """
-        You are an expert real estate agent and interior designer with global property knowledge.
-        Your task is to analyze a set of interior photos of a property and generate AT LEAST 10 high-quality, fascinating, descriptive semantic tags.
-        The system must work across multiple regions (e.g., Taiwan, Japan, United States) without retraining.
-
-        Tag selection rules (VERY IMPORTANT):
-
-        1. Room Types:
-        - ONLY include non-generic or special-purpose room types.
-        - DO NOT include generic rooms such as bedroom or living room unless they have a distinctive function or design.
-        - Examples of allowed room tags:
-        tatami room, garage, laundry room, basement, genkan
-        - Examples of disallowed generic tags:
-        bedroom, living room, bathroom (unless functionally special)
-        - DO NOT describe the same room type multiple times.
-
-        2. Bathroom Hardware Facilities:
-        - Explicitly tag special hardware or structural facilities when visible.
-        - Examples:
-        bathroom window, bathtub, separate shower, dry-wet separation, bidet toilet, double sink vanity
-        - DO NOT simply use tags like "bathroom", "shower", or "toilet".
-
-        3. Kitchen Hardware Facilities:
-        - Explicitly tag special hardware or structural facilities when visible.
-        - Examples:
-        kitchen island, gas stove, built-in oven
-        - DO NOT simply use tags like "kitchen" or "window".
-
-        4. Layout & Spatial Organization:
-        - Include layout-related tags describing spatial flow or planning.
-        - Examples:
-        open plan, LDK layout, split-level, compact layout, flexible space
-
-        5. Interior Style & Design Features (REQUIRED):
-        - Include at least ONE tag describing interior design style or overall aesthetic.
-        - Use region-neutral style labels when possible.
-        - Use culturally specific style terms ONLY when visually clear.
-        - Examples of allowed style tags:
-        modern minimalist design, contemporary style, traditional style, industrial loft aesthetic, scandinavian design, luxury finishes, cozy atmosphere, bright and airy, warm tones, neutral color palette
-
-        6. Comfort & Condition:
-        - Include tags describing comfort, lighting, ventilation, and overall condition.
-        - Examples:
-        natural lighting, cross ventilation, well-maintained, newly renovated
-
-        7. Region-Sensitive Features:
-        - Highlight features that are culturally or regionally valued IF visually identifiable.
-        - Examples:
-        feng shui layout, earthquake-resistant, sound insulation, tatami room
-        - Avoid assumptions if visual evidence is weak.
-
-        8. Cross-region Requirements:
-        - Prefer globally understandable terminology.
-        - Use region-specific terms ONLY when visually clear (e.g., genkan, tatami room).
-        - Normalize equivalent concepts (balcony / veranda / lanai → balcony).
-
-        9. Other Material & Built-in Features:
-        - Include visible material or built-in elements when relevant.
-        - Examples:
-        hardwood flooring, tile flooring, marble countertops, granite countertops,
-        built-in storage, built-in wardrobes, crown molding
-
-        Output constraints:
-        - Output AT LEAST 10 comma-separated tags.
-        - Each tag must be 1–3 words.
-        - Do NOT include explanations, full sentences, or region names.
-        """
+        self.system_prompt = self.config.get('labeling', {}).get('system_prompt')
+        if not self.system_prompt:
+             print("WARNING: system_prompt not found in config. Using fallback default.")
+             # Fallback default prompt if config is missing
+             self.system_prompt = "You are an expert real estate agent. Analyze these interior photos and generate at least 10 descriptive semantic tags (e.g., room types, features, style)."
 
     def encode_image(self, image_path: str) -> str:
         """Encode image to base64 string."""
