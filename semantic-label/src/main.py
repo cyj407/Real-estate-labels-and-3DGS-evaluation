@@ -141,10 +141,10 @@ class SemanticLabelingPipeline:
             label_result['adapted_labels'] if self.generator_type != 'openai' else label_result['labels'],
             interior_paths
         )
-        # error_analysis = self.evaluator.analyze_errors(
-        #     label_result['adapted_labels'] if self.generator_type != 'openai' else label_result['labels'],
-        #     interior_paths
-        # )
+        error_analysis = self.evaluator.analyze_errors(
+            label_result['adapted_labels'] if self.generator_type != 'openai' else label_result['labels'],
+            interior_paths
+        )
         stage3_time = time.time() - stage3_start
         
         total_time = time.time() - start_time
@@ -162,6 +162,7 @@ class SemanticLabelingPipeline:
                 'interior_ratio': classification_stats['interior_ratio']
             },
             'evaluation': evaluation_metrics,
+            'error_analysis': error_analysis,
             'timing': {
                 'total_seconds': total_time,
                 'stage1_classification': stage1_time,
@@ -195,12 +196,36 @@ class SemanticLabelingPipeline:
         # Load all properties
         properties = self.data_loader.load_all_properties()
         
+        num_runs = self.config.get('evaluation', {}).get('num_runs', 1)
+        if num_runs > 1:
+            print(f"Running {num_runs} iterations for latency benchmarking...")
+            
         # Process each property
         all_results = []
         for property_data, image_paths in properties:
-            result = self.process_property(property_data, image_paths)
-            result['image_paths'] = image_paths  # For evaluation
-            all_results.append(result)
+            # Run multiple times if configured
+            property_latencies = []
+            final_result = None
+            
+            for i in range(num_runs):
+                if num_runs > 1:
+                    print(f"  Run {i+1}/{num_runs} for property {property_data.get('property_id')}")
+                    
+                result = self.process_property(property_data, image_paths)
+                property_latencies.append(result['timing']['total_seconds'])
+                final_result = result
+            
+            # Use result from last run, but enrich with latency stats
+            final_result['image_paths'] = image_paths  # For evaluation
+            final_result['latency_stats'] = {
+                'runs': num_runs,
+                'mean_seconds': float(np.mean(property_latencies)),
+                'p95_seconds': float(np.percentile(property_latencies, 95)),
+                'min_seconds': float(np.min(property_latencies)),
+                'max_seconds': float(np.max(property_latencies)),
+                'raw_latencies': property_latencies
+            }
+            all_results.append(final_result)
         
         # Compute aggregate metrics
         print(f"\n{'='*60}")
@@ -216,7 +241,13 @@ class SemanticLabelingPipeline:
             'median_seconds': np.median(latencies),
             'p95_seconds': np.percentile(latencies, 95),
             'min_seconds': np.min(latencies),
-            'max_seconds': np.max(latencies)
+            'max_seconds': np.max(latencies),
+            'details': [
+                {
+                    'property_id': r['property_id'],
+                    'stats': r['latency_stats']
+                } for r in all_results
+            ]
         }
         
         # Compile final results

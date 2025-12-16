@@ -268,32 +268,52 @@ class LabelEvaluator:
         """
         errors = {
             'over_generic': [],
-            'potentially_hallucinated': [],
-            'low_specificity': []
+            'hallucination': [],
+            'wrong_room_type': []
         }
         
-        # Check for over-generic labels (single word, common terms)
-        generic_terms = {'room', 'space', 'area', 'nice', 'good', 'great'}
+        # 1. Over-generic checks
+        generic_terms = {
+            'room', 'space', 'area', 'nice', 'good', 'great', 'layout', 'design', 
+            'style', 'view', 'feature', 'interior', 'exterior', 'building', 'home',
+            'house', 'apartment', 'condo', 'property', 'unit'
+        }
+        
+        # 2. Room type list for specific checking
+        room_types = {
+            'bedroom', 'living room', 'kitchen', 'kitchenette', 'bathroom', 'dining room', 
+            'balcony', 'garage', 'hallway', 'study', 'office', 'gym', 'pool'
+        }
+        
         for label in labels:
-            words = label.split()
-            if len(words) == 1 and words[0].lower() in generic_terms:
-                errors['over_generic'].append(label)
-            elif len(words) <= 2:
-                errors['low_specificity'].append(label)
-        
-        # Check for potentially hallucinated labels (very low image similarity)
-        if image_paths:
-            label_features = self.encode_text([f"a photo of {label}" for label in labels])
-            image_features = self.encode_images(image_paths)
+            label_lower = label.lower()
+            words = label_lower.split()
             
-            if image_features.shape[0] > 0:
-                similarity = (label_features @ image_features.T).cpu().numpy()
-                max_similarities = similarity.max(axis=1)
+            # Check over-generic
+            if label_lower in generic_terms:
+                errors['over_generic'].append(label)
+                continue
                 
-                for i, (label, sim) in enumerate(zip(labels, max_similarities)):
-                    if sim < 0.20:  # Very low similarity threshold
-                        errors['potentially_hallucinated'].append(f"{label} (sim: {sim:.3f})")
-        
+
+
+            # Check visual grounding (Hallucination / Wrong Room Type)
+            if image_paths:
+                label_features = self.encode_text([f"a photo of {label}"])
+                image_features = self.encode_images(image_paths)
+                
+                if image_features.shape[0] > 0:
+                    similarity = (label_features @ image_features.T).cpu().numpy()
+                    max_sim = float(similarity.max())
+                    
+                    # Thresholds
+                    # Room types usually have higher CLIP alignment than abstract features
+                    if any(rt in label_lower for rt in room_types):
+                        if max_sim < 0.22: # Stricter for room types
+                            errors['wrong_room_type'].append(f"{label} ({max_sim:.3f})")
+                    else:
+                        if max_sim < 0.18: # Lower threshold for general features
+                            errors['hallucination'].append(f"{label} ({max_sim:.3f})")
+                            
         return errors
 
 
