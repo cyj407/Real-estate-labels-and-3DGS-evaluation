@@ -1,6 +1,6 @@
 # 3DGS Reconstruction Quality Report: ktv75
 
-**Overall Score**: 43.46/100
+**Overall Score**: 43.62/100
 
 **Number of Views Evaluated**: 12
 
@@ -66,18 +66,18 @@
 
 - **Mean Rating**: 4.92/10
 
-- **Std Dev**: 1.11
+- **Std Dev**: 0.86
 
-- **Range**: [3.00, 7.00]
+- **Range**: [4.00, 6.00]
 
 
 ### Artifact Detection
 
-- **Quality Score**: 43.33/100
+- **Quality Score**: 45.00/100
 
-- **Mean Severity**: 6.67/10
+- **Mean Severity**: 6.50/10
 
-- **Std Dev**: 1.03
+- **Std Dev**: 0.96
 
 
 *Lower severity indicates fewer visual artifacts (ghosting, floating blobs, etc.).*
@@ -85,11 +85,11 @@
 
 ### Structural Quality
 
-- **Quality Score**: 49.17/100
+- **Quality Score**: 48.33/100
 
-- **Mean Rating**: 4.92/10
+- **Mean Rating**: 4.83/10
 
-- **Std Dev**: 1.26
+- **Std Dev**: 1.14
 
 
 *Higher rating indicates better structural integrity (no warped walls, misaligned edges, etc.).*
@@ -111,16 +111,16 @@
 **Score**: 4/10
 
 
-> *The rendering shows major geometric distortions and depth inconsistencies with severe foreground blur and edge misalignments. Textures are inconsistent and blurred, with ghosting artifacts suggesting imperfect surface fusion. Overall, this resembles a rough reconstruction with limited geometric fidelity to a real scene; not suitable as a reliable 3DGS/NeRF reconstruction without substantial corrections.*
+> *The rendering shows significant structural and textural inconsistencies that reduce realism: warped foreground geometry, misaligned edges, abrupt depth transitions, and noticeable blur/ghosting. Overall, the scene fails to convincingly represent a coherent real-world environment; geometric integrity and multi-surface consistency are only marginally acceptable.*
 
 
 **Detected Issues**:
-- ⚠️ **Curved Or Warped Walls**: Large portions of the scene exhibit extreme curvature and warping, especially along the central column-like structure and left foreground, breaking straight-edged geometry.
-- ⚠️ **Misaligned Edges**: Edges near the doorway/ledge and couch area do not align coherently with surrounding geometry, creating visible seams.
-- ⚠️ **Depth Or Perspective Errors**: Ambiguous depth cues and inconsistent perspective; depth appears flattened or exaggerated in several regions, leading to unreliable spatial relationships.
-- 🎨 **Ghosting**: Subtle ghosting around high-contrast edges, likely from multi-view blending artifacts.
-- 🎨 **Over Blur**: Significant overall blur, especially in the foreground, reducing texture sharpness and details.
-- 🎨 **Texture Inconsistency**: Inconsistent surface textures (mixed matte/shiny patches) without plausible lighting variation.
+- ⚠️ **Curved Or Warped Walls**: Foreground column/edge appears distorted with pronounced curvature and warped transitions between surfaces.
+- ⚠️ **Misaligned Edges**: Visible misalignment between floor and walls near the foreground; edge breaks do not form clean right angles.
+- ⚠️ **Depth Or Perspective Errors**: Depth cues are inconsistent (very shallow foreground blur with abrupt black background), leading to unusable perspective in portions of the scene.
+- 🎨 **Ghosting**: Soft ghost-like artifacts around high-contrast transitions, especially near the large blurred foreground.
+- 🎨 **Over Blur**: Strong blur in the near foreground obscures geometry and contributes to depth confusion.
+- 🎨 **Texture Inconsistency**: Inconsistent texture detail across surfaces (sharp on some areas, smeared on others) indicating patchy reconstruction.
 
 
 ### View 2 (30°)
@@ -130,19 +130,19 @@
 
 **VLM Analysis**:
 
-**Score**: 4/10
+**Score**: 5/10
 
 
-> *The render shows a heavily distorted interior with significant geometric warping and depth inconsistencies. Textures are blurred and inconsistent, with ghosting artifacts affecting perception. Overall, it is recognizable as a room but far from a reliable photorealistic reconstruction; major structural and texture fidelity issues reduce realism and spatial coherence.*
+> *The rendering shows a plausible interior layout but suffers from pronounced geometric distortions and depth inconsistencies. Surface textures are variably sharp with deliberate blur and occasional floaty artifacts, reducing realism. Overall, it reads as a roughly reconstructed space with notable but not catastrophic defects; improvements should target rectifying perspective, wall alignments, and texture coherence to approach a photo-realistic realism.*
 
 
 **Detected Issues**:
-- ⚠️ **Curved Or Warped Walls**: Large portions of walls and ceiling show pronounced bending and curving, especially along the left and right edges; geometry appears smeared and non-planar.
-- ⚠️ **Misaligned Edges**: Edges between furniture and walls are inconsistent and jagged; vertical/horizontal alignments do not match real-world rectilinear constraints.
-- ⚠️ **Depth Or Perspective Errors**: Depth cues are distorted; perspective compression and foreshortening look incorrect in several room regions, reducing spatial coherence.
-- 🎨 **Ghosting**: Subtle ghosted outlines around large surfaces and furniture, indicating multi-surface blending artifacts.
-- 🎨 **Over Blur**: Excessive blur across most surfaces, masking fine details and causing smeared textures.
-- 🎨 **Texture Inconsistency**: Inconsistent surface textures; some areas appear overly smooth while others show irregular, painterly patterns.
+- ⚠️ **Curved Or Warped Walls**: Walls and ceiling exhibit notable warping and bending geometry, especially along the edges and corners, giving a non-rectilinear appearance.
+- ⚠️ **Misaligned Edges**: Some door frames, furniture edges, and floor transitions appear slightly misaligned or skewed relative to the scene plane.
+- ⚠️ **Depth Or Perspective Errors**: Depth cues are inconsistent; some objects appear oversized or misplaced in depth, suggesting perspective errors.
+- 🎨 **Floating Artifacts**: Small translucent artifacts hover near surfaces, giving a floaty look in some regions.
+- 🎨 **Over Blur**: Widespread motion-like blur reduces surface sharpness, smoothing fine details.
+- 🎨 **Texture Inconsistency**: Surface textures vary abruptly between adjacent areas, lacking consistent material cues.
 
 
 ### View 3 (60°)
@@ -152,14 +152,16 @@
 
 **VLM Analysis**:
 
-**Score**: 7/10
+**Score**: 6/10
 
 
-> *The scene presents a coherent dining room layout with plausible geometry and depth. Overall structure is solid with minor stylization-induced blur affecting texture sharpness. No major geometric defects observed; slight global smoothing reduces realism but preserves spatial coherence and multi-surface consistency.*
+> *The scene presents a recognizable dining room layout with coherent geometry and plausible lighting. However, the rendering exhibits noticeable over-blurring and painterly texture smoothing typical of 3DGS reconstructions, leading to slightly inconsistent materials and minor depth/perspective anomalies around windows and far surfaces. Overall structure is sound, but texture fidelity and multi-surface coherence could be improved to reach higher realism.*
 
 
 **Detected Issues**:
-- 🎨 **Over Blur**: Overall soft, painterly blur across surfaces consistent with stylized rendering; sharp details are reduced.
+- ⚠️ **Depth Or Perspective Errors**: Subtle perspective inconsistencies around window frames and chair alignments; slight depth mismatch in background elements relative to foreground.
+- 🎨 **Over Blur**: Overall painterly/softed shading and edge diffusion reduce sharpness of textures on furniture and floor.
+- 🎨 **Texture Inconsistency**: Inconsistent material quality across surfaces (table vs. chairs vs. walls) with unnatural smoothing.
 
 
 ### View 4 (90°)
@@ -172,12 +174,12 @@
 **Score**: 6/10
 
 
-> *The scene is recognizable as a dining room reconstruction with coherent layout and depth. However, heavy smoothing and inconsistent texture details reduce realism, and there are minor texture coherence issues across surfaces. Geometry remains largely plausible with no obvious structural breaks.*
+> *Overall geometry appears coherent with plausible room layout and depth cues. Minor texture inconsistencies and global blur reduce realism slightly, but structural integrity is maintained and the scene remains believable as a real interior reconstruction.*
 
 
 **Detected Issues**:
-- 🎨 **Over Blur**: Overall painterly smoothing reduces fine texture and edge sharpness, giving a soft appearance.
-- 🎨 **Texture Inconsistency**: Inconsistent material detail levels across surfaces (e.g., upholstery vs. walls) suggest varying reconstruction fidelity.
+- 🎨 **Over Blur**: General softening across surfaces, likely due to rendering/upsampling.
+- 🎨 **Texture Inconsistency**: Inconsistent texture fidelity on large flat surfaces (e.g., wall paneling and table) with painterly transitions.
 
 
 ### View 5 (120°)
@@ -190,16 +192,12 @@
 **Score**: 6/10
 
 
-> *The rendering shows a plausible room layout with reasonable perspective and object placement, but several geometric and texture inconsistencies reduce realism. Warped/wavy wall regions, slight edge misalignment, and depth inconsistencies detract from structural fidelity. Texture artifacts include painterly blur, high-frequency scribbles, and inconsistent surface textures. Overall realism is moderate; it resembles a real scene but with noticeable reconstruction artifacts that prevent near-photorealistic quality.*
+> *The rendering shows a plausible room layout with coherent seating arrangement and depth, but notable geometric distortion on the left wall and overall softness indicate reconstruction artifacts. The scene is recognizable as a real room, yet not fully geometry-consistent or texture-stable due to warped surfaces and strong blur.*
 
 
 **Detected Issues**:
-- ⚠️ **Curved Or Warped Walls**: Subtle warping along left wall and wall panels; some curved contours appear unnaturally bending away from perspective.
-- ⚠️ **Misaligned Edges**: Ceiling/edge lines show slight misalignment where wall panels meet ceiling; edges do not perfectly align.
-- ⚠️ **Depth Or Perspective Errors**: Depth cues are somewhat inconsistent: foreground table and chairs have exaggerated proximity relative to mid/background objects.
-- 🎨 **Floating Artifacts**: High-frequency scribble-like artifacts around surfaces, notably on darker wall area and along edges.
-- 🎨 **Over Blur**: Overall softening and painterly blur reduce sharpness of fine textures on furniture and wall details.
-- 🎨 **Texture Inconsistency**: Inconsistent texture resolution across surfaces (floor vs walls vs paintings) leading to non-uniform appearance.
+- ⚠️ **Curved Or Warped Walls**: Left wall panel appears warped and scribbled, giving a distorted geometry.
+- 🎨 **Over Blur**: Overall softness suggests heavy post-processing or 3DGS blur, reducing edge sharpness.
 
 
 ### View 6 (150°)
@@ -212,13 +210,14 @@
 **Score**: 6/10
 
 
-> *The rendering presents a recognizable interior layout with plausible geometry and furniture arrangement. However, depth/perspective cues are slightly inconsistent, and texture continuity is variable with noticeable blur and surface inconsistency. Overall realism is moderate, with clear room for improvement in sharpness and geometric alignment.*
+> *The scene presents a plausible interior layout with chairs, tables, and decor, but exhibits moderate geometric distortions (curved/warped walls and perspective biases) and texture inconsistencies. Overall realism is acceptable but not indistinguishable from a real photograph; minor artifacts reduce the overall fidelity.*
 
 
 **Detected Issues**:
-- ⚠️ **Depth Or Perspective Errors**: Subtle perspective and scale inconsistencies around the back wall and chairs, causing a mild sense of depth mismatch.
-- 🎨 **Over Blur**: Overall soft focus and motion-like blur reduce sharpness of surfaces (table edges, chair contours).
-- 🎨 **Texture Inconsistency**: Inconsistent texture detail across surfaces (wall paneling vs artwork area) leading to non-uniform material appearance.
+- ⚠️ **Curved Or Warped Walls**: Left wall and doorway area show slight curvature and irregular edges suggesting warped geometry.
+- ⚠️ **Depth Or Perspective Errors**: Overall depth cues and wall/ceiling intersections appear mildly distorted, particularly near the back wall and table edge, affecting perspective consistency.
+- 🎨 **Over Blur**: General softness especially on furniture and walls, reducing sharpness and depth cues.
+- 🎨 **Texture Inconsistency**: Inconsistent texture quality across surfaces (e.g., mural wall vs. surrounding walls, and decorative items) leading to mismatched realism.
 
 
 ### View 7 (180°)
@@ -228,18 +227,17 @@
 
 **VLM Analysis**:
 
-**Score**: 3/10
+**Score**: 4/10
 
 
-> *The rendering exhibits strong geometric distortions (curved/wavy walls, misaligned edges, and inconsistent depth) and pervasive texture inconsistencies with excessive blur. These factors collectively yield a scene that is not visually consistent with a real-world room and would be considered a poor reconstruction in terms of geometric fidelity and texture stability.*
+> *The rendering exhibits notable geometric distortions and misalignments (curved/warped walls, jagged edges) with smeared textures and incoherent surface details. Depth is mostly plausible, but the overall scene lacks structural reliability and photorealism due to pervasive artifacting and topology issues. Improvements needed in geometry regularization and texture consistency to approach a real-world scene.*
 
 
 **Detected Issues**:
-- ⚠️ **Curved Or Warped Walls**: Wavy and distorted wall planes, especially near the central panel and doorway area.
-- ⚠️ **Misaligned Edges**: Edges do not align cleanly at wall junctions; noticeable misregistration along the cabinet/door frame and seating area.
-- ⚠️ **Depth Or Perspective Errors**: Depth cues are inconsistent; perspective appears warped and objects do not recede or scale realistically.
-- 🎨 **Over Blur**: Overall blur and smeared textures reduce detail; surfaces lack sharpness.
-- 🎨 **Texture Inconsistency**: Texture quality varies abruptly between surfaces; some areas look washed out or smeared.
+- ⚠️ **Curved Or Warped Walls**: Multiple surfaces show heavy scribble-like distortion and bending, notably along the white wall and near the door frame.
+- ⚠️ **Misaligned Edges**: Edges at the door and wall junction appear misaligned and jagged, indicating inconsistent topology.
+- 🎨 **Over Blur**: Overall surfaces appear smeared, reducing fine details on furniture and wall textures.
+- 🎨 **Texture Inconsistency**: Texture quality varies across surfaces (floor, walls, furniture) with abrupt changes and lacking coherence.
 
 
 ### View 8 (210°)
@@ -252,16 +250,14 @@
 **Score**: 4/10
 
 
-> *The rendering exhibits noticeable geometric and texture inconsistencies that undermine realism. Structural cues such as walls and edges are warped or misaligned, depth perception is unreliable, and textures show ghosting and blur. Overall, the scene resembles a distorted reconstruction rather than a faithful real-world capture.*
+> *The rendering shows a recognizable scene structure but suffers from noticeable depth/perspective inconsistencies and edge misalignments. Textures are inconsistently applied with overall blur, leading to a reconstruction that is only moderately realistic and could be confused with a distorted 3DGS/NeRF result.*
 
 
 **Detected Issues**:
-- ⚠️ **Curved Or Warped Walls**: Large portions of wall surfaces appear heavily warped and twisted with scribble-like lines across surfaces.
-- ⚠️ **Misaligned Edges**: Edges between wall panels and floor/ceiling are inconsistent; boundary lines do not align cleanly.
-- ⚠️ **Depth Or Perspective Errors**: Depth cues are unreliable; perspective seems flattened or distorted, causing misinterpretation of room geometry.
-- 🎨 **Ghosting**: Repeated or smeared textures across large areas, especially on walls and furniture.
-- 🎨 **Over Blur**: Overall surface details are blurry, reducing fidelity of textures (fabric, wood, etc.).
-- 🎨 **Texture Inconsistency**: Inconsistent texture density and grain between adjacent surfaces.
+- ⚠️ **Misaligned Edges**: Noticeable misalignment along wall seam/edge near the central column; gaps and edge contours do not line up cleanly with adjacent surfaces.
+- ⚠️ **Depth Or Perspective Errors**: Depth cues appear inconsistent (foreground vs background geometry wobble; caps and edges don't align with expected perspective).
+- 🎨 **Over Blur**: Overall surface textures look smeared or overly soft in several regions, reducing sharpness.
+- 🎨 **Texture Inconsistency**: Texture quality varies across surfaces (some areas look smooth while others are heavily smeared or irregular).
 
 
 ### View 9 (240°)
@@ -271,19 +267,18 @@
 
 **VLM Analysis**:
 
-**Score**: 5/10
+**Score**: 4/10
 
 
-> *The rendering shows noticeable geometric and texture inconsistencies: warped/wrinkled surfaces, misaligned edges, and depth-perspective errors. Texture quality is degraded by ghosting and blur, leading to an overall reconstruction that is only partially convincing as a real scene. Improvements needed in surface planarization, depth accuracy, and texture coherence.*
+> *The rendering exhibits notable geometric distortions (warped walls, misaligned edges) and depth inconsistencies that reduce realism as a real-world 3D reconstruction. Texture fidelity is compromised by ghosting and surface-texture mismatches, leading to an overall moderate-to-poor assessment with only limited structural cues appearing plausible.*
 
 
 **Detected Issues**:
-- ⚠️ **Curved Or Warped Walls**: Multiple curved/wrinkled surfaces on the main cardboard-like plane, suggesting non-planar geometry.
-- ⚠️ **Misaligned Edges**: Edges around the vertical white panel and box boundaries appear slightly misaligned or jagged.
-- ⚠️ **Depth Or Perspective Errors**: Unnatural perspective foreshortening and inconsistent depth cues across the scene.
-- 🎨 **Ghosting**: Numerous fine line artifacts overlaying surfaces, resembling ghost textures.
-- 🎨 **Over Blur**: General softening of details, reducing sharpness of edges and textures.
-- 🎨 **Texture Inconsistency**: Inconsistent surface textures across adjacent regions (cardboard vs wall) with patchy shading.
+- ⚠️ **Curved Or Warped Walls**: Wall panels and vertical surfaces show noticeable curvature and irregular warping, especially along the central brown surface.
+- ⚠️ **Misaligned Edges**: Some edges do not align with adjacent geometry (floor/ceiling lines appear offset), contributing to a disjointed appearance.
+- ⚠️ **Depth Or Perspective Errors**: Depth cues and perspective appear inconsistent (anomalous scale, odd foreshortening), hindering real-world spatial interpretation.
+- 🎨 **Ghosting**:  faint duplicate surfaces and overlaid strokes, typical of reconstruction artifacts.
+- 🎨 **Texture Inconsistency**: Textures (wood, wall, floor) do not match across surfaces; abrupt changes suggest stitching rather than real material continuity.
 
 
 ### View 10 (270°)
@@ -296,17 +291,16 @@
 **Score**: 5/10
 
 
-> *The rendering shows noticeable geometric inconsistencies and significant texture/artifact issues. Warped walls, misaligned edges, and unreliable depth cues indicate reconstruction problems. Ghosting, floating artifacts, and over-blurred textures reduce realism and spatial coherence, resulting in a reconstruction that is only partially plausible as a real scene.*
+> *The rendering shows recognizable spatial structure but with noticeable geometric distortions and texture inconsistencies. Surface warp, edge misalignment, and depth errors reduce realism. Texture artifacts (ghosting, over-blur, and inconsistency) further diminish fidelity. Overall, it is a plausible reconstruction but not convincingly photorealistic; minor artifacts significantly impact perceived accuracy.*
 
 
 **Detected Issues**:
-- ⚠️ **Curved Or Warped Walls**: Large-scale warping and bending of wall and corridor surfaces, especially on the right-side box area and doorway regions.
-- ⚠️ **Misaligned Edges**: Edges between walls, floor, and ceiling are misaligned with noticeable gaps and irregular junctions.
-- ⚠️ **Depth Or Perspective Errors**: Depth cues are inconsistent; perspective foreshortening is unreliable, leading to ambiguous scale and depth.
-- 🎨 **Ghosting**: Faint translucent duplicates and ghost-like traces near edges and surfaces.
-- 🎨 **Floating Artifacts**: Stray strands or haze-like artifacts float in the scene, not tied to geometry.
-- 🎨 **Over Blur**: Extended blur across surfaces reduces fine texture detail.
-- 🎨 **Texture Inconsistency**: Inconsistent texture quality between surfaces (varying sharpness and noise) across the scene.
+- ⚠️ **Curved Or Warped Walls**: Multiple surface imperfections and wavy distortions across wall-like surfaces, suggesting depth warp from splat-based reconstruction.
+- ⚠️ **Misaligned Edges**: Doorways and edges appear slightly offset or smeared relative to surrounding geometry, indicating misalignment.
+- ⚠️ **Depth Or Perspective Errors**: Overall perspective seems skewed; vertical/horizontal cues not consistent with real-world geometry, suggesting depth imprecision.
+- 🎨 **Ghosting**: Faint duplicates and ghost-like edges around high-contrast regions, typical of NeRF/3DGS composites.
+- 🎨 **Over Blur**: Significant blur across large surfaces, reducing texture sharpness and detail fidelity.
+- 🎨 **Texture Inconsistency**: Inconsistent texture quality between foreground cardboard and background walls; patches of varying detail and color.
 
 
 ### View 11 (300°)
@@ -316,20 +310,18 @@
 
 **VLM Analysis**:
 
-**Score**: 4/10
+**Score**: 5/10
 
 
-> *The rendering shows pronounced geometric distortion and texture artifacts that degrade structural realism. Curved/warped walls, misaligned edges, depth inconsistencies, and heavy blur indicate a low-to-moderate reconstruction quality with limited spatial fidelity. Not suitable as a faithful real-world scene reconstruction without correction or refinement.*
+> *The rendering shows notable geometric and textural inconsistencies typical of a coarse 3DGS/NeRF reconstruction. Warped walls, slight edge misalignments, and depth errors reduce realism. Texture sharpness is compromised with blurred regions and inconsistent material cues. Overall, the scene resembles a plausible corridor but with clear reconstruction artifacts that prevent it from being indistinguishable from a real photograph.*
 
 
 **Detected Issues**:
-- ⚠️ **Curved Or Warped Walls**: Extensive warping and curved distortions across large wall surfaces, including doorway edges.
-- ⚠️ **Misaligned Edges**: Edges of door frames and walls do not align cleanly, giving a skewed perspective.
-- ⚠️ **Depth Or Perspective Errors**: Inconsistent depth cues and perspective, likely due to global distortion and blur.
-- 🎨 **Ghosting**: Subtle ghost outlines and multiple faint echoes around edges.
-- 🎨 **Floating Artifacts**: Isolated stray shapes and rings appear detached from surfaces.
-- 🎨 **Over Blur**: Significant motion-like blur reduces surface definition.
-- 🎨 **Texture Inconsistency**: Textures appear smeared and nonuniform across surfaces.
+- ⚠️ **Curved Or Warped Walls**: Visible warping and bending in wall planes and door frames; slight curvature artifacts across the corridor surfaces.
+- ⚠️ **Misaligned Edges**: Some edges and corners appear misaligned or miscoincident, especially near doorway junctions.
+- ⚠️ **Depth Or Perspective Errors**: Depth cues are inconsistent in several regions; perspective compression around the doorway and far wall reduces depth realism.
+- 🎨 **Over Blur**: General blur reduces texture sharpness; fine details are smeared across surfaces, especially near edges.
+- 🎨 **Texture Inconsistency**: Inconsistent material appearance (wood panels vs. wall surfaces) and mismatched reflectivity across surfaces.
 
 
 ### View 12 (330°)
@@ -339,17 +331,16 @@
 
 **VLM Analysis**:
 
-**Score**: 5/10
+**Score**: 4/10
 
 
-> *The rendering shows recognizable architectural layout but suffers from notable geometric and texture inconsistencies typical of 3D Gaussian Splatting reconstructions. Structural elements exhibit warped walls and misaligned edges, with depth cues not fully coherent. Texture fidelity is compromised by ghosting, floating artifacts, and over-blur, reducing realism. Overall, the scene is partially plausible but not a faithful reconstruction of a real-world interior.*
+> *The rendering exhibits significant geometric and depth inconsistencies with warped walls, misaligned edges, and distorted perspective. Textures are smeared with ghosting and inconsistent surface details, reducing realism. Overall, the scene is not a reliable reconstruction of a real 3D interior; artifacts are prominent and affect structural interpretation.*
 
 
 **Detected Issues**:
-- ⚠️ **Curved Or Warped Walls**: Vertical and horizontal wall planes appear irregular and slightly curved due to heavy stitching/warping, notably along doorway frames.
-- ⚠️ **Misaligned Edges**: Door frames and edges do not align perfectly; joints feel offset in several regions.
-- ⚠️ **Depth Or Perspective Errors**: Depth cues appear inconsistent; scale and perspective shift between foreground and background surfaces, reducing realism.
-- 🎨 **Ghosting**: Subtle ghost-like traces around edges and high-contrast transitions.
-- 🎨 **Floating Artifacts**: Sparse stray scribbles/lines that float over surfaces, not tied to geometry.
-- 🎨 **Over Blur**: Overall softening blur reduces sharpness of textures and edges.
-- 🎨 **Texture Inconsistency**: Inconsistent texture density; some walls look smoother while others show different grain/noise levels.
+- ⚠️ **Curved Or Warped Walls**: Numerous jagged and warped edge lines throughout walls and surfaces, especially near doorways and corners.
+- ⚠️ **Misaligned Edges**: Edges of panels and doors appear misaligned or skewed relative to surrounding geometry.
+- ⚠️ **Depth Or Perspective Errors**: Overall perspective feels distorted with inconsistent depth cues and unusual foreshortening in hallway areas.
+- 🎨 **Ghosting**: Fine scribble-like artifacts and overlaid strokes across surfaces.
+- 🎨 **Over Blur**: General scene appears smeared; edges lack crispness especially on vertical structures.
+- 🎨 **Texture Inconsistency**: Textures vary abruptly between surfaces; some areas look painterly rather than physical.

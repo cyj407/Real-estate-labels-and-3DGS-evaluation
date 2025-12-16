@@ -181,7 +181,7 @@ class ReportGenerator:
         report.append("\n---\n")
         
         # Overall ranking
-        report.append("\n## Overall Ranking\n")
+        report.append("## Overall Ranking\n")
         
         # Sort by overall score
         sorted_results = sorted(
@@ -190,21 +190,21 @@ class ReportGenerator:
             reverse=True
         )
         
-        report.append("\n| Rank | Render Name | Overall Score | Views |\n")
-        report.append("|------|-------------|---------------|-------|\n")
+        report.append("| Rank | Render Name | Overall Score | Views |")
+        report.append("|------|-------------|---------------|-------|")
         
         for i, (name, res) in enumerate(sorted_results):
             score = res.get("overall_score", 0)
             num_views = res.get("num_views", 0)
-            report.append(f"| {i+1} | {name} | {score:.2f}/100 | {num_views} |\n")
+            report.append(f"| {i+1} | {name} | {score:.2f}/100 | {num_views} |")
         
         # Detailed comparison table
-        report.append("\n---\n")
-        report.append("\n## Detailed Metric Comparison\n")
+        report.append("---\n")
+        report.append("## Detailed Metric Comparison\n")
         
         # Build comparison table
-        report.append("\n| Render | Blur | Edge | BRISQUE | VLM Quality | VLM Artifacts | VLM Structural |\n")
-        report.append("|--------|------|------|---------|-------------|---------------|----------------|\n")
+        report.append("| Render | Blur | Edge | BRISQUE | VLM Quality | VLM Artifacts | VLM Structural |")
+        report.append("|--------|------|------|---------|-------------|---------------|----------------|")
         
         for name, res in sorted_results:
             cv = res.get("cv_metrics", {})
@@ -217,11 +217,11 @@ class ReportGenerator:
             vlm_artifacts = vlm.get("artifacts", {}).get("quality_score", 0) if isinstance(vlm, dict) else 0
             vlm_structural = vlm.get("structural", {}).get("quality_score", 0) if isinstance(vlm, dict) else 0
             
-            report.append(f"| {name} | {blur_score:.1f} | {edge_score:.1f} | {brisque_score:.1f} | {vlm_quality:.1f} | {vlm_artifacts:.1f} | {vlm_structural:.1f} |\n")
+            report.append(f"| {name} | {blur_score:.1f} | {edge_score:.1f} | {brisque_score:.1f} | {vlm_quality:.1f} | {vlm_artifacts:.1f} | {vlm_structural:.1f} |")
         
         # Insights
-        report.append("\n---\n")
-        report.append("\n## Key Insights\n")
+        report.append("---\n")
+        report.append("## Key Insights\n")
         
         if sorted_results:
             best_name, best_res = sorted_results[0]

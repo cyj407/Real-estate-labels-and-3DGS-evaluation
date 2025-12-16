@@ -2,17 +2,17 @@
   "renders": [
     {
       "name": "ktv_hevc",
-      "overall_score": 49.74395168574004,
+      "overall_score": 49.49395168574004,
       "num_views": 12
     },
     {
       "name": "ktv_hevc_deblur035",
-      "overall_score": 46.69506491663822,
+      "overall_score": 46.736731583304895,
       "num_views": 12
     },
     {
       "name": "ktv75",
-      "overall_score": 43.456356170768196,
+      "overall_score": 43.62302283743487,
       "num_views": 12
     }
   ],
@@ -20,17 +20,17 @@
     {
       "rank": 1,
       "name": "ktv_hevc",
-      "score": 49.74395168574004
+      "score": 49.49395168574004
     },
     {
       "rank": 2,
       "name": "ktv_hevc_deblur035",
-      "score": 46.69506491663822
+      "score": 46.736731583304895
     },
     {
       "rank": 3,
       "name": "ktv75",
-      "score": 43.456356170768196
+      "score": 43.62302283743487
     }
   ]
 }
