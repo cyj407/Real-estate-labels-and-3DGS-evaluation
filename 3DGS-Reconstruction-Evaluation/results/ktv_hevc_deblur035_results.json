@@ -1,0 +1,198 @@
+{
+  "render_name": "ktv_hevc_deblur035",
+  "render_url": "https://3d-tour-demo-scene.vercel.app/?model=https://storage.googleapis.com/3dgs-homee/ktv_h264hevc.glb&splat=https://storage.googleapis.com/3dgs-homee/ktv_hevc_deblur035.ksplat&px=-3.5&py=0.082&pz=0.38&tx=-2.56&ty=0.007&tz=-0.218",
+  "num_views": 12,
+  "cv_metrics": {
+    "blur": {
+      "metric": "blur_laplacian",
+      "mean": 481.8021885827857,
+      "std": 199.64764664042502,
+      "min": 185.24895218985228,
+      "max": 741.6289251048905,
+      "median": 500.8088906447206,
+      "num_views": 12,
+      "threshold": 100,
+      "quality_score": 24.090109429139282
+    },
+    "edge_consistency": {
+      "metric": "edge_consistency",
+      "mean_density": 0.10080423739711934,
+      "std_density": 0.02359780920435519,
+      "min_density": 0.055169753086419755,
+      "max_density": 0.1283695023148148,
+      "consistency_score": 52.80438159128962,
+      "num_views": 12,
+      "quality_score": 52.80438159128962
+    },
+    "brisque": {
+      "metric": "brisque_quality",
+      "mean": 45.9836503987511,
+      "std": 2.718850845068299,
+      "min": 39.96232658624649,
+      "max": 48.60098645091057,
+      "median": 47.09248758852482,
+      "num_views": 12,
+      "quality_score": 45.9836503987511
+    },
+    "maniqa": {
+      "error": "name 'torch' is not defined"
+    }
+  },
+  "vlm_metrics": {
+    "model": "gpt-5-nano",
+    "num_views": 12,
+    "quality": {
+      "mean": 4.833333333333333,
+      "std": 0.7993052538854533,
+      "min": 3.0,
+      "max": 6.0,
+      "median": 5.0,
+      "scores": [
+        5.0,
+        6.0,
+        5.0,
+        6.0,
+        5.0,
+        5.0,
+        5.0,
+        4.0,
+        3.0,
+        5.0,
+        4.0,
+        5.0
+      ],
+      "quality_score": 48.33333333333333
+    },
+    "artifacts": {
+      "median": 7.0,
+      "scores": [
+        7.0,
+        6.0,
+        7.0,
+        6.0,
+        8.0,
+        7.0,
+        7.0,
+        7.0,
+        7.0,
+        5.0,
+        8.0,
+        7.0
+      ],
+      "quality_score": 41.66666666666667,
+      "mean_severity": 6.833333333333333,
+      "std_severity": 0.7993052538854533,
+      "min_severity": 5.0,
+      "max_severity": 8.0
+    },
+    "structural": {
+      "mean": 4.666666666666667,
+      "std": 0.8498365855987975,
+      "min": 3.0,
+      "max": 6.0,
+      "median": 5.0,
+      "scores": [
+        4.0,
+        6.0,
+        5.0,
+        6.0,
+        4.0,
+        5.0,
+        5.0,
+        4.0,
+        3.0,
+        5.0,
+        4.0,
+        5.0
+      ],
+      "quality_score": 46.666666666666664
+    }
+  },
+  "overall_score": 43.982591631311436,
+  "views": [
+    {
+      "view_index": 0,
+      "angle": 0.0,
+      "render_name": "ktv_hevc_deblur035",
+      "screenshot_path": "captured_views/ktv_hevc_deblur035/view_000_000deg.png",
+      "url": "https://3d-tour-demo-scene.vercel.app/?model=https://storage.googleapis.com/3dgs-homee/ktv_h264hevc.glb&splat=https://storage.googleapis.com/3dgs-homee/ktv_hevc_deblur035.ksplat&px=-3.5&py=0.082&pz=0.38&tx=-2.56&ty=0.007&tz=-0.218"
+    },
+    {
+      "view_index": 1,
+      "angle": 30.0,
+      "render_name": "ktv_hevc_deblur035",
+      "screenshot_path": "captured_views/ktv_hevc_deblur035/view_001_030deg.png",
+      "url": "https://3d-tour-demo-scene.vercel.app/?model=https://storage.googleapis.com/3dgs-homee/ktv_h264hevc.glb&splat=https://storage.googleapis.com/3dgs-homee/ktv_hevc_deblur035.ksplat&px=-3.5&py=0.082&pz=0.38&tx=-2.56&ty=0.007&tz=-0.218"
+    },
+    {
+      "view_index": 2,
+      "angle": 60.0,
+      "render_name": "ktv_hevc_deblur035",
+      "screenshot_path": "captured_views/ktv_hevc_deblur035/view_002_060deg.png",
+      "url": "https://3d-tour-demo-scene.vercel.app/?model=https://storage.googleapis.com/3dgs-homee/ktv_h264hevc.glb&splat=https://storage.googleapis.com/3dgs-homee/ktv_hevc_deblur035.ksplat&px=-3.5&py=0.082&pz=0.38&tx=-2.56&ty=0.007&tz=-0.218"
+    },
+    {
+      "view_index": 3,
+      "angle": 90.0,
+      "render_name": "ktv_hevc_deblur035",
+      "screenshot_path": "captured_views/ktv_hevc_deblur035/view_003_090deg.png",
+      "url": "https://3d-tour-demo-scene.vercel.app/?model=https://storage.googleapis.com/3dgs-homee/ktv_h264hevc.glb&splat=https://storage.googleapis.com/3dgs-homee/ktv_hevc_deblur035.ksplat&px=-3.5&py=0.082&pz=0.38&tx=-2.56&ty=0.007&tz=-0.218"
+    },
+    {
+      "view_index": 4,
+      "angle": 120.0,
+      "render_name": "ktv_hevc_deblur035",
+      "screenshot_path": "captured_views/ktv_hevc_deblur035/view_004_120deg.png",
+      "url": "https://3d-tour-demo-scene.vercel.app/?model=https://storage.googleapis.com/3dgs-homee/ktv_h264hevc.glb&splat=https://storage.googleapis.com/3dgs-homee/ktv_hevc_deblur035.ksplat&px=-3.5&py=0.082&pz=0.38&tx=-2.56&ty=0.007&tz=-0.218"
+    },
+    {
+      "view_index": 5,
+      "angle": 150.0,
+      "render_name": "ktv_hevc_deblur035",
+      "screenshot_path": "captured_views/ktv_hevc_deblur035/view_005_150deg.png",
+      "url": "https://3d-tour-demo-scene.vercel.app/?model=https://storage.googleapis.com/3dgs-homee/ktv_h264hevc.glb&splat=https://storage.googleapis.com/3dgs-homee/ktv_hevc_deblur035.ksplat&px=-3.5&py=0.082&pz=0.38&tx=-2.56&ty=0.007&tz=-0.218"
+    },
+    {
+      "view_index": 6,
+      "angle": 180.0,
+      "render_name": "ktv_hevc_deblur035",
+      "screenshot_path": "captured_views/ktv_hevc_deblur035/view_006_180deg.png",
+      "url": "https://3d-tour-demo-scene.vercel.app/?model=https://storage.googleapis.com/3dgs-homee/ktv_h264hevc.glb&splat=https://storage.googleapis.com/3dgs-homee/ktv_hevc_deblur035.ksplat&px=-3.5&py=0.082&pz=0.38&tx=-2.56&ty=0.007&tz=-0.218"
+    },
+    {
+      "view_index": 7,
+      "angle": 210.0,
+      "render_name": "ktv_hevc_deblur035",
+      "screenshot_path": "captured_views/ktv_hevc_deblur035/view_007_210deg.png",
+      "url": "https://3d-tour-demo-scene.vercel.app/?model=https://storage.googleapis.com/3dgs-homee/ktv_h264hevc.glb&splat=https://storage.googleapis.com/3dgs-homee/ktv_hevc_deblur035.ksplat&px=-3.5&py=0.082&pz=0.38&tx=-2.56&ty=0.007&tz=-0.218"
+    },
+    {
+      "view_index": 8,
+      "angle": 240.0,
+      "render_name": "ktv_hevc_deblur035",
+      "screenshot_path": "captured_views/ktv_hevc_deblur035/view_008_240deg.png",
+      "url": "https://3d-tour-demo-scene.vercel.app/?model=https://storage.googleapis.com/3dgs-homee/ktv_h264hevc.glb&splat=https://storage.googleapis.com/3dgs-homee/ktv_hevc_deblur035.ksplat&px=-3.5&py=0.082&pz=0.38&tx=-2.56&ty=0.007&tz=-0.218"
+    },
+    {
+      "view_index": 9,
+      "angle": 270.0,
+      "render_name": "ktv_hevc_deblur035",
+      "screenshot_path": "captured_views/ktv_hevc_deblur035/view_009_270deg.png",
+      "url": "https://3d-tour-demo-scene.vercel.app/?model=https://storage.googleapis.com/3dgs-homee/ktv_h264hevc.glb&splat=https://storage.googleapis.com/3dgs-homee/ktv_hevc_deblur035.ksplat&px=-3.5&py=0.082&pz=0.38&tx=-2.56&ty=0.007&tz=-0.218"
+    },
+    {
+      "view_index": 10,
+      "angle": 300.0,
+      "render_name": "ktv_hevc_deblur035",
+      "screenshot_path": "captured_views/ktv_hevc_deblur035/view_010_300deg.png",
+      "url": "https://3d-tour-demo-scene.vercel.app/?model=https://storage.googleapis.com/3dgs-homee/ktv_h264hevc.glb&splat=https://storage.googleapis.com/3dgs-homee/ktv_hevc_deblur035.ksplat&px=-3.5&py=0.082&pz=0.38&tx=-2.56&ty=0.007&tz=-0.218"
+    },
+    {
+      "view_index": 11,
+      "angle": 330.0,
+      "render_name": "ktv_hevc_deblur035",
+      "screenshot_path": "captured_views/ktv_hevc_deblur035/view_011_330deg.png",
+      "url": "https://3d-tour-demo-scene.vercel.app/?model=https://storage.googleapis.com/3dgs-homee/ktv_h264hevc.glb&splat=https://storage.googleapis.com/3dgs-homee/ktv_hevc_deblur035.ksplat&px=-3.5&py=0.082&pz=0.38&tx=-2.56&ty=0.007&tz=-0.218"
+    }
+  ]
+}
