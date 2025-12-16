@@ -49,10 +49,13 @@ Edit `semantic-label/config.yaml` to switch models or adjust thresholds:
 ```yaml
 scene_classifier:
   type: "siglip"  # Options: "clip", "siglip"
+
+labeling:
+  generator_type: "openai"  # Options: "clip", "siglip", or "openai"
 ```
 
 ### Output
-- Results are saved in the `semantic-label/src/results/semantic_labels_results.json`.
+- Results are saved in the [`semantic-label/src/results/semantic_labels_results.json`](semantic-label/src/results/semantic_labels_results.json).
 - **Latency**: Average latency among all properties:
   ```json
   "mean_seconds": 11.883470129966735,
@@ -347,10 +350,10 @@ scene_classifier:
 ### Usage
 Evaluate all renders defined in `config.yaml` using all enabled metrics.
 ```bash
-cd 3DGS-Reconstruction-Quality-Evaluation/
+cd 3DGS-Reconstruction-Evaluation/
 uv run evaluate.py --skip-capture
 ```
-*This will uses the views under `captured_views/`, and generate reports in `results/`.*
+*This will uses the views under `3DGS-Reconstruction-Evaluation/captured_views/`, and generate reports in [`3DGS-Reconstruction-Evaluation/results/`](3DGS-Reconstruction-Evaluation/results/).*
 
 **Options:**
 - `--skip-capture`: Reuse existing screenshots (faster for re-running metrics).
@@ -373,7 +376,7 @@ uv run evaluate.py --url <url> --name <name>
 - **Parallel Processing**: Multithreaded VLM evaluation for speed.
 - **Reporting**: Generates detailed Markdown reports and JSON results.
 
-### Configuration (`config.yaml`)
+### Configuration (`3DGS-Reconstruction-Quality-Evaluation/config.yaml`)
 - **`renders`**: List of 3DGS viewer URLs to evaluate.
 - **`capture`**: Settings for screenshot resolution, count, and rotation sensitivity.
 - **`cv_metrics`**: Enable/disable Blur, Edge, BRISQUE, MANIQA.
@@ -381,7 +384,7 @@ uv run evaluate.py --url <url> --name <name>
 - **`weights`**: Adjust the influence of each metric on the final score.
 
 ### Output
-Results are saved in the `results/` directory:
+Results are saved in the `3DGS-Reconstruction-Quality-Evaluation/results/` directory:
+- [`comparison_report.md`](3DGS-Reconstruction-Evaluation/results/test_metrics_vlm_only/comparison_report.md): Comparative analysis/ranking of all evaluated renders.
 - `*_results.json`: Raw metric data.
 - `*_report.md`: Readable report for each render.
-- `comparison_report.md`: Comparative analysis/ranking of all evaluated renders.
