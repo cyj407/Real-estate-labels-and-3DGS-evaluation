@@ -35,80 +35,87 @@
       "quality_score": 47.83489938825369
     },
     "maniqa": {
-      "error": "name 'torch' is not defined"
+      "metric": "maniqa",
+      "mean": 43.49272052447001,
+      "std": 3.9719958437222656,
+      "min": 36.79398000240326,
+      "max": 48.63773584365845,
+      "median": 43.628816306591034,
+      "num_views": 12,
+      "quality_score": 43.49272052447001
     }
   },
   "vlm_metrics": {
     "model": "gpt-5-nano",
     "num_views": 12,
     "quality": {
-      "mean": 5.0,
-      "std": 0.9128709291752769,
-      "min": 4.0,
+      "mean": 5.083333333333333,
+      "std": 0.9537935951882998,
+      "min": 3.0,
       "max": 6.0,
       "median": 5.0,
       "scores": [
-        5.0,
         6.0,
         6.0,
         6.0,
         6.0,
         5.0,
+        5.0,
         6.0,
+        5.0,
         4.0,
+        5.0,
         4.0,
-        4.0,
-        4.0,
-        4.0
+        3.0
       ],
-      "quality_score": 50.0
+      "quality_score": 50.83333333333333
     },
     "artifacts": {
       "median": 6.0,
       "scores": [
         5.0,
-        5.0,
+        6.0,
+        6.0,
+        6.0,
         6.0,
         5.0,
+        6.0,
+        6.0,
         6.0,
         7.0,
-        6.0,
-        6.0,
         8.0,
-        6.0,
-        7.0,
-        8.0
+        9.0
       ],
-      "quality_score": 47.5,
-      "mean_severity": 6.25,
-      "std_severity": 1.0103629710818451,
+      "quality_score": 46.666666666666664,
+      "mean_severity": 6.333333333333333,
+      "std_severity": 1.1055415967851332,
       "min_severity": 5.0,
-      "max_severity": 8.0
+      "max_severity": 9.0
     },
     "structural": {
-      "mean": 5.166666666666667,
-      "std": 1.2133516482134197,
-      "min": 4.0,
-      "max": 7.0,
+      "mean": 5.0,
+      "std": 1.0,
+      "min": 3.0,
+      "max": 6.0,
       "median": 5.0,
       "scores": [
         6.0,
-        7.0,
         6.0,
-        7.0,
+        6.0,
+        6.0,
+        5.0,
+        5.0,
         6.0,
         4.0,
-        6.0,
         4.0,
+        5.0,
         4.0,
-        4.0,
-        4.0,
-        4.0
+        3.0
       ],
-      "quality_score": 51.66666666666667
+      "quality_score": 50.0
     }
   },
-  "overall_score": 46.3835822141189,
+  "overall_score": 44.650240264225495,
   "views": [
     {
       "view_index": 0,

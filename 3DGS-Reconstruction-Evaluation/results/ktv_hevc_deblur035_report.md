@@ -1,6 +1,6 @@
 # 3DGS Reconstruction Quality Report: ktv_hevc_deblur035
 
-**Overall Score**: 43.98/100
+**Overall Score**: 42.11/100
 
 **Number of Views Evaluated**: 12
 
@@ -66,18 +66,18 @@
 
 - **Mean Rating**: 4.83/10
 
-- **Std Dev**: 0.80
+- **Std Dev**: 0.69
 
 - **Range**: [3.00, 6.00]
 
 
 ### Artifact Detection
 
-- **Quality Score**: 41.67/100
+- **Quality Score**: 43.33/100
 
-- **Mean Severity**: 6.83/10
+- **Mean Severity**: 6.67/10
 
-- **Std Dev**: 0.80
+- **Std Dev**: 0.47
 
 
 *Lower severity indicates fewer visual artifacts (ghosting, floating blobs, etc.).*
@@ -85,11 +85,11 @@
 
 ### Structural Quality
 
-- **Quality Score**: 46.67/100
+- **Quality Score**: 47.50/100
 
-- **Mean Rating**: 4.67/10
+- **Mean Rating**: 4.75/10
 
-- **Std Dev**: 0.85
+- **Std Dev**: 0.72
 
 
 *Higher rating indicates better structural integrity (no warped walls, misaligned edges, etc.).*

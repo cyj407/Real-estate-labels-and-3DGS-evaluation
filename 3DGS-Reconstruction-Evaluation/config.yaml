@@ -62,8 +62,10 @@ output:
 
 # Metric weights for overall score (optional)
 weights:
-  blur: 0.10
+  blur: 0.15
   edge_consistency: 0.10
-  brisque: 0.10
-  maniqa: 0.25
-  vlm_quality: 0.20
+  brisque: 0.15
+  maniqa: 0.20
+  vlm_quality: 0.15
+  vlm_artifacts: 0.15
+  vlm_structural: 0.10

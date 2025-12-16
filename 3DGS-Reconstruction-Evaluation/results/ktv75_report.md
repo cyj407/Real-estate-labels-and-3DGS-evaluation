@@ -1,6 +1,6 @@
 # 3DGS Reconstruction Quality Report: ktv75
 
-**Overall Score**: 41.65/100
+**Overall Score**: 39.05/100
 
 **Number of Views Evaluated**: 12
 
@@ -62,22 +62,22 @@
 
 ### Overall Quality Assessment
 
-- **Quality Score**: 48.33/100
+- **Quality Score**: 49.17/100
 
-- **Mean Rating**: 4.83/10
+- **Mean Rating**: 4.92/10
 
-- **Std Dev**: 0.69
+- **Std Dev**: 0.76
 
 - **Range**: [4.00, 6.00]
 
 
 ### Artifact Detection
 
-- **Quality Score**: 40.83/100
+- **Quality Score**: 41.67/100
 
-- **Mean Severity**: 6.92/10
+- **Mean Severity**: 6.83/10
 
-- **Std Dev**: 0.76
+- **Std Dev**: 0.69
 
 
 *Lower severity indicates fewer visual artifacts (ghosting, floating blobs, etc.).*
@@ -85,11 +85,11 @@
 
 ### Structural Quality
 
-- **Quality Score**: 47.50/100
+- **Quality Score**: 46.67/100
 
-- **Mean Rating**: 4.75/10
+- **Mean Rating**: 4.67/10
 
-- **Std Dev**: 0.72
+- **Std Dev**: 0.94
 
 
 *Higher rating indicates better structural integrity (no warped walls, misaligned edges, etc.).*
