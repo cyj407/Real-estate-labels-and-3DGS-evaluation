@@ -7,6 +7,7 @@ import json
 from pathlib import Path
 from typing import Dict, List
 import logging
+import os
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -105,17 +106,60 @@ class ReportGenerator:
                 report.append(f"- **Std Dev**: {structural.get('std', 0):.2f}\n")
                 report.append(f"\n*Higher rating indicates better structural integrity (no warped walls, misaligned edges, etc.).*\n")
         
-        # Sample views
+        
+        # Detailed View Analysis
         report.append("\n---\n")
-        report.append("\n## Sample Views\n")
+        report.append("\n## Detailed View Analysis\n")
         views = results.get("views", [])
+        
         if views:
-            # Show first 3 views
-            for i, view in enumerate(views[:3]):
+            for i, view in enumerate(views):
                 path = Path(view["screenshot_path"])
                 if path.exists():
+                    # Calculate relative path for markdown
+                    try:
+                        # Use path relative to project root
+                        # User requested format: captured_views/ktv75/view_000_000deg.png
+                        project_root = Path(__file__).parent.parent
+                        rel_path = os.path.relpath(path.absolute(), project_root.absolute())
+                    except Exception:
+                        rel_path = path.absolute()
+                        
                     report.append(f"\n### View {i+1} ({view.get('angle', 0):.0f}°)\n")
-                    report.append(f"![View {i+1}]({path.absolute()})\n")
+                    report.append(f"![View {i+1}]({rel_path})\n")
+                    
+                    # VLM Analysis
+                    vlm_data = view.get("vlm_analysis")
+                    if vlm_data:
+                        report.append("\n**VLM Analysis**:\n")
+                        
+                        # Score
+                        q = vlm_data.get("overall_score")
+                        if q is not None:
+                             report.append(f"**Score**: {q}/10\n\n")
+
+                        if vlm_data.get("summary"):
+                            report.append(f"> *{vlm_data.get('summary')}*\n\n")
+                        
+                        # Defects
+                        defects = vlm_data.get("structural_defects") or {}
+                        artifacts = vlm_data.get("texture_artifacts") or {}
+                        
+                        issues = []
+                        for k, v in defects.items():
+                            if isinstance(v, dict) and v.get("present"):
+                                 desc = v.get("description", "")
+                                 issues.append(f"- ⚠️ **{k.replace('_', ' ').title()}**: {desc}")
+                        
+                        for k, v in artifacts.items():
+                            if isinstance(v, dict) and v.get("present"):
+                                 desc = v.get("description", "")
+                                 issues.append(f"- 🎨 **{k.replace('_', ' ').title()}**: {desc}")
+
+                        if issues:
+                            report.append("**Detected Issues**:\n" + "\n".join(issues) + "\n")
+                        else:
+                            report.append("No significant defects detected.\n")
         
         return "\n".join(report)
     

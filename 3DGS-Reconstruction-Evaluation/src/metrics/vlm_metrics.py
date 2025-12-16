@@ -275,6 +275,9 @@ class VLMEvaluator:
             try:
                 logger.info(f"Processing view: {Path(path).name}")
                 res = self.evaluate_image_single(path)
+
+                # Add filename for reference
+                res["image_path"] = str(Path(path).name)
                 
                 # Extract scores (defaulting to 5.0 on error inside helper)
                 q = float(res.get("overall_score", 5.0))
@@ -286,25 +289,27 @@ class VLMEvaluator:
                 
                 geo_score = float(sub.get("geometry_score", 5.0))
                 
-                return q, artifact_severity, geo_score
+                return q, artifact_severity, geo_score, res
             except Exception as e:
                 logger.error(f"Error processing {path}: {e}")
-                return 5.0, 5.0, 5.0 # Fallback strict middle/bad score? Or ignore?
-                # Using 5.0 as neutral fallback similar to previous code
+                # Return empty detail on error
+                return 5.0, 5.0, 5.0, {"image_path": str(Path(path).name), "error": str(e)}
 
         with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
             # map preserves order
-            results = list(executor.map(process_view, view_paths))
+            results_list = list(executor.map(process_view, view_paths))
             
-        for q, a, s in results:
+        detailed_evaluations = []
+        for q, a, s, detail in results_list:
             quality_scores.append(q)
             artifact_scores.append(a)
             structural_scores.append(s)
-
+            detailed_evaluations.append(detail)
         
         results = {
             "model": self.model_name,
-            "num_views": len(view_paths)
+            "num_views": len(view_paths),
+            "image_details": detailed_evaluations
         }
         
         # Helper to compute stats
