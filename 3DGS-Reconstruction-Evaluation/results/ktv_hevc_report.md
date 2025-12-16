@@ -103,7 +103,7 @@
 
 ### View 1 (0°)
 
-![View 1](captured_views/ktv_hevc/view_000_000deg.png)
+![View 1](../captured_views/ktv_hevc/view_000_000deg.png)
 
 
 **VLM Analysis**:
@@ -125,7 +125,7 @@
 
 ### View 2 (30°)
 
-![View 2](captured_views/ktv_hevc/view_001_030deg.png)
+![View 2](../captured_views/ktv_hevc/view_001_030deg.png)
 
 
 **VLM Analysis**:
@@ -144,7 +144,7 @@
 
 ### View 3 (60°)
 
-![View 3](captured_views/ktv_hevc/view_002_060deg.png)
+![View 3](../captured_views/ktv_hevc/view_002_060deg.png)
 
 
 **VLM Analysis**:
@@ -162,7 +162,7 @@
 
 ### View 4 (90°)
 
-![View 4](captured_views/ktv_hevc/view_003_090deg.png)
+![View 4](../captured_views/ktv_hevc/view_003_090deg.png)
 
 
 **VLM Analysis**:
@@ -180,7 +180,7 @@
 
 ### View 5 (120°)
 
-![View 5](captured_views/ktv_hevc/view_004_120deg.png)
+![View 5](../captured_views/ktv_hevc/view_004_120deg.png)
 
 
 **VLM Analysis**:
@@ -197,7 +197,7 @@
 
 ### View 6 (150°)
 
-![View 6](captured_views/ktv_hevc/view_005_150deg.png)
+![View 6](../captured_views/ktv_hevc/view_005_150deg.png)
 
 
 **VLM Analysis**:
@@ -218,7 +218,7 @@
 
 ### View 7 (180°)
 
-![View 7](captured_views/ktv_hevc/view_006_180deg.png)
+![View 7](../captured_views/ktv_hevc/view_006_180deg.png)
 
 
 **VLM Analysis**:
@@ -239,7 +239,7 @@
 
 ### View 8 (210°)
 
-![View 8](captured_views/ktv_hevc/view_007_210deg.png)
+![View 8](../captured_views/ktv_hevc/view_007_210deg.png)
 
 
 **VLM Analysis**:
@@ -260,7 +260,7 @@
 
 ### View 9 (240°)
 
-![View 9](captured_views/ktv_hevc/view_008_240deg.png)
+![View 9](../captured_views/ktv_hevc/view_008_240deg.png)
 
 
 **VLM Analysis**:
@@ -281,7 +281,7 @@
 
 ### View 10 (270°)
 
-![View 10](captured_views/ktv_hevc/view_009_270deg.png)
+![View 10](../captured_views/ktv_hevc/view_009_270deg.png)
 
 
 **VLM Analysis**:
@@ -302,7 +302,7 @@
 
 ### View 11 (300°)
 
-![View 11](captured_views/ktv_hevc/view_010_300deg.png)
+![View 11](../captured_views/ktv_hevc/view_010_300deg.png)
 
 
 **VLM Analysis**:
@@ -321,7 +321,7 @@
 
 ### View 12 (330°)
 
-![View 12](captured_views/ktv_hevc/view_011_330deg.png)
+![View 12](../captured_views/ktv_hevc/view_011_330deg.png)
 
 
 **VLM Analysis**:

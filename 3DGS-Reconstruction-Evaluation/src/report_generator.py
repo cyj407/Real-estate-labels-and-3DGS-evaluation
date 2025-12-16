@@ -119,9 +119,9 @@ class ReportGenerator:
                     # Calculate relative path for markdown
                     try:
                         # Use path relative to project root
-                        # User requested format: captured_views/ktv75/view_000_000deg.png
+                        # User requested format: ../captured_views/ktv75/view_000_000deg.png
                         project_root = Path(__file__).parent.parent
-                        rel_path = os.path.relpath(path.absolute(), project_root.absolute())
+                        rel_path = os.path.relpath(path.absolute(), Path(__file__).parent.absolute())
                     except Exception:
                         rel_path = path.absolute()
                         
