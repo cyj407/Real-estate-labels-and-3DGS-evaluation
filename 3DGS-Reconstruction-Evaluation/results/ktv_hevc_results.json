@@ -26,13 +26,13 @@
     },
     "brisque": {
       "metric": "brisque_quality",
-      "mean": 47.83489938825369,
-      "std": 3.0391310781848415,
-      "min": 40.90024068951607,
-      "max": 51.609457582235336,
-      "median": 49.029550701379776,
+      "mean": 84.84853108723958,
+      "std": 10.602037737908182,
+      "min": 54.57598876953125,
+      "max": 94.58282470703125,
+      "median": 88.70684814453125,
       "num_views": 12,
-      "quality_score": 47.83489938825369
+      "quality_score": 84.84853108723958
     },
     "maniqa": {
       "metric": "maniqa",
@@ -48,158 +48,1252 @@
   "vlm_metrics": {
     "model": "gpt-5-nano",
     "num_views": 12,
+    "image_details": [
+      {
+        "overall_score": 5,
+        "structural_defects": {
+          "curved_or_warped_walls": {
+            "present": false,
+            "description": ""
+          },
+          "misaligned_edges": {
+            "present": false,
+            "description": ""
+          },
+          "collapsed_or_melted_geometry": {
+            "present": false,
+            "description": ""
+          },
+          "depth_or_perspective_errors": {
+            "present": true,
+            "description": "Notable black void on the left side and some perspective/edge inconsistencies near the window area suggesting missing data or misalignment in the reconstruction."
+          }
+        },
+        "texture_artifacts": {
+          "ghosting": {
+            "present": false,
+            "description": ""
+          },
+          "floating_artifacts": {
+            "present": false,
+            "description": ""
+          },
+          "over_blur": {
+            "present": true,
+            "description": "Overall soft focus and motion-like blur, especially across the table surface and edges."
+          },
+          "texture_inconsistency": {
+            "present": true,
+            "description": "Inconsistent material reproduction (very dark void area and uneven reflections on the table/floor) indicating texture/material mismatches."
+          }
+        },
+        "subscores": {
+          "geometry_score": 6,
+          "texture_score": 5,
+          "consistency_score": 5
+        },
+        "summary": "The scene is recognizable as an interior dining/living area with plausible geometry and lighting, but there are clear artifacts: a large black void region suggesting missing data or occlusion, depth/perspective inconsistencies near the window area, and overall blur/texture mismatches that reduce realism. Minor geometry appears intact, but texture stability and multi-surface coherence are compromised.",
+        "image_path": "view_000_000deg.png"
+      },
+      {
+        "overall_score": 5,
+        "structural_defects": {
+          "curved_or_warped_walls": {
+            "present": true,
+            "description": "Ceiling/plaster edges and transitions appear smeared and slightly curved, notably around the ceiling beam and wall joints, giving a non-planar feel."
+          },
+          "misaligned_edges": {
+            "present": false,
+            "description": ""
+          },
+          "collapsed_or_melted_geometry": {
+            "present": false,
+            "description": ""
+          },
+          "depth_or_perspective_errors": {
+            "present": false,
+            "description": ""
+          }
+        },
+        "texture_artifacts": {
+          "ghosting": {
+            "present": false,
+            "description": ""
+          },
+          "floating_artifacts": {
+            "present": false,
+            "description": ""
+          },
+          "over_blur": {
+            "present": true,
+            "description": "Overall softness and painterly look reduces sharpness across textures, especially on table surface and flower centerpiece."
+          },
+          "texture_inconsistency": {
+            "present": true,
+            "description": "Inconsistent texture fidelity between materials (wood, fabric, and glass) with some surfaces appearing oversmoothed compared to others."
+          }
+        },
+        "subscores": {
+          "geometry_score": 5,
+          "texture_score": 4,
+          "consistency_score": 5
+        },
+        "summary": "The rendering shows a plausible interior layout with correct spatial arrangement, but exhibits notable geometric and texture inconsistencies typical of 3DGS/NeRF outputs. Some wall/ceiling areas appear curved or smeared, and overall texture is softened with occasional inconsistencies between materials, reducing realism. No severe topology breaks detected, but the scene is not indistinguishable from a real photograph.",
+        "image_path": "view_001_030deg.png"
+      },
+      {
+        "overall_score": 6,
+        "structural_defects": {
+          "curved_or_warped_walls": {
+            "present": false,
+            "description": ""
+          },
+          "misaligned_edges": {
+            "present": false,
+            "description": ""
+          },
+          "collapsed_or_melted_geometry": {
+            "present": false,
+            "description": ""
+          },
+          "depth_or_perspective_errors": {
+            "present": false,
+            "description": ""
+          }
+        },
+        "texture_artifacts": {
+          "ghosting": {
+            "present": true,
+            "description": "visible ghosting/line artifacts across surfaces (table, wall panel, bouquet) typical of 3DGS rendering."
+          },
+          "floating_artifacts": {
+            "present": false,
+            "description": ""
+          },
+          "over_blur": {
+            "present": false,
+            "description": ""
+          },
+          "texture_inconsistency": {
+            "present": true,
+            "description": "inconsistent surface textures on chairs and cabinetry, slight mismatch in shading/reflectivity."
+          }
+        },
+        "subscores": {
+          "geometry_score": 6,
+          "texture_score": 5,
+          "consistency_score": 6
+        },
+        "summary": "The scene shows a coherent room layout with plausible geometry and perspective, but the rendering exhibits noticeable texture inconsistencies and ghosting artifacts typical of 3D Gaussian Splatting reconstructions. Overall realism is moderate; geometric structure remains credible, while texture fidelity and artifact presence reduce perceptual accuracy.",
+        "image_path": "view_002_060deg.png"
+      },
+      {
+        "overall_score": 6,
+        "structural_defects": {
+          "curved_or_warped_walls": {
+            "present": false,
+            "description": ""
+          },
+          "misaligned_edges": {
+            "present": false,
+            "description": ""
+          },
+          "collapsed_or_melted_geometry": {
+            "present": false,
+            "description": ""
+          },
+          "depth_or_perspective_errors": {
+            "present": true,
+            "description": "Subtle depth/perspective misalignment between foreground table/chair region and the background wall area; scene depth cues do not perfectly converge, causing a minor fictitious flattening in some zones."
+          }
+        },
+        "texture_artifacts": {
+          "ghosting": {
+            "present": false,
+            "description": ""
+          },
+          "floating_artifacts": {
+            "present": false,
+            "description": ""
+          },
+          "over_blur": {
+            "present": false,
+            "description": ""
+          },
+          "texture_inconsistency": {
+            "present": true,
+            "description": "Inconsistent or smeared textures on wood paneling and upholstery; visible brush-like strokes and irregularities typical of 3DGS renderings, affecting perceived material fidelity."
+          }
+        },
+        "subscores": {
+          "geometry_score": 7,
+          "texture_score": 6,
+          "consistency_score": 6
+        },
+        "summary": "The scene is recognizable as a dining/sofa area with plausible geometry and layout. Minor depth/perspective ambiguities and noticeable texture inconsistencies reduce realism. Overall, the reconstruction is functional but exhibits small geometric and texture fidelity gaps typical of 3DGS renders.",
+        "image_path": "view_003_090deg.png"
+      },
+      {
+        "overall_score": 5,
+        "structural_defects": {
+          "curved_or_warped_walls": {
+            "present": false,
+            "description": ""
+          },
+          "misaligned_edges": {
+            "present": false,
+            "description": ""
+          },
+          "collapsed_or_melted_geometry": {
+            "present": false,
+            "description": ""
+          },
+          "depth_or_perspective_errors": {
+            "present": true,
+            "description": "Distorted depth cues and slight perspective mismatches between foreground chairs and background elements; depth scaling appears inconsistent."
+          }
+        },
+        "texture_artifacts": {
+          "ghosting": {
+            "present": true,
+            "description": "Visible fine line artifacts across surfaces, especially around edges and near the artwork frame."
+          },
+          "floating_artifacts": {
+            "present": true,
+            "description": "Stray lines and wispy strands appear disconnected from real geometry, floating around the shelves and table area."
+          },
+          "over_blur": {
+            "present": false,
+            "description": ""
+          },
+          "texture_inconsistency": {
+            "present": true,
+            "description": "Inconsistent surface detail between cabinetry, walls, and upholstery; some textures look unnaturally smooth or smeared."
+          }
+        },
+        "subscores": {
+          "geometry_score": 5,
+          "texture_score": 5,
+          "consistency_score": 5
+        },
+        "summary": "The scene shows reasonable overall structure with recognizable room layout, but the reconstruction exhibits depth inconsistencies and prominent rendering artifacts (ghosting, floating strands, texture inconsistency) that reduce realism. Minor geometry remains plausible, but multi-surface coherence is affected by artifacts and depth misalignment.",
+        "image_path": "view_004_120deg.png"
+      },
+      {
+        "overall_score": 5,
+        "structural_defects": {
+          "curved_or_warped_walls": {
+            "present": true,
+            "description": "Subtle warping and irregularities along the wall and shelving edges, especially near the left side of the scene."
+          },
+          "misaligned_edges": {
+            "present": true,
+            "description": "Some edges (e.g., window frame and panel lines) do not align cleanly with adjacent geometry, suggesting stitching or reconstruction misalignment."
+          },
+          "collapsed_or_melted_geometry": {
+            "present": false,
+            "description": ""
+          },
+          "depth_or_perspective_errors": {
+            "present": true,
+            "description": "Inconsistent depth cues in the seating area and foreground objects; perspective does not perfectly match scene scale."
+          }
+        },
+        "texture_artifacts": {
+          "ghosting": {
+            "present": false,
+            "description": ""
+          },
+          "floating_artifacts": {
+            "present": true,
+            "description": "Sparse stray strands/lines appear detached from surfaces, giving a floating artifact impression."
+          },
+          "over_blur": {
+            "present": true,
+            "description": "Overall softening and motion-like blur reduces texture fidelity on seating and wall textures."
+          },
+          "texture_inconsistency": {
+            "present": true,
+            "description": "Visible mismatches in texture sharpness between foreground chairs and wall/flowing decorative panels."
+          }
+        },
+        "subscores": {
+          "geometry_score": 4,
+          "texture_score": 5,
+          "consistency_score": 5
+        },
+        "summary": "The rendering shows a mostly plausible interior layout but exhibits notable geometric distortions and texture inconsistencies. Warped/curved surfaces, misaligned edges, and depth misalignments reduce realism. Texture artifacts include floating strands and overall over-blur, impacting surface fidelity. Overall, it is a moderate reconstruction with several noticeable defects that prevent high realism.",
+        "image_path": "view_005_150deg.png"
+      },
+      {
+        "overall_score": 5,
+        "structural_defects": {
+          "curved_or_warped_walls": {
+            "present": true,
+            "description": "Wall and shelving appear distorted with irregular curves, especially along the glass cabinet and adjacent walls."
+          },
+          "misaligned_edges": {
+            "present": true,
+            "description": "Edges between the shelf unit and surrounding walls/fixtures do not align cleanly, giving a skewed geometry."
+          },
+          "collapsed_or_melted_geometry": {
+            "present": false,
+            "description": ""
+          },
+          "depth_or_perspective_errors": {
+            "present": true,
+            "description": "Perspective cues are inconsistent (tilted lines and warped depth), causing depth cues to feel unrealistic."
+          }
+        },
+        "texture_artifacts": {
+          "ghosting": {
+            "present": false,
+            "description": ""
+          },
+          "floating_artifacts": {
+            "present": false,
+            "description": ""
+          },
+          "over_blur": {
+            "present": true,
+            "description": "Areas around edges of furniture and shelves appear smeared, reducing sharpness."
+          },
+          "texture_inconsistency": {
+            "present": true,
+            "description": "Texture granularity varies across surfaces (glass, metal, fabric) in a way that seems incongruent with real materials."
+          }
+        },
+        "subscores": {
+          "geometry_score": 5,
+          "texture_score": 4,
+          "consistency_score": 5
+        },
+        "summary": "The reconstruction shows noticeable geometric distortions and depth inconsistencies, with blurred textures and conflicting material appearances. Overall realism is moderate but clearly deviates from a real scene in structure and texture fidelity.",
+        "image_path": "view_006_180deg.png"
+      },
+      {
+        "overall_score": 5,
+        "structural_defects": {
+          "curved_or_warped_walls": {
+            "present": true,
+            "description": "Left dark patterned wall appears warped with irregular curvature rather than flat."
+          },
+          "misaligned_edges": {
+            "present": true,
+            "description": "Shelf frames and vertical edges do not align cleanly, creating slight skew in geometry."
+          },
+          "collapsed_or_melted_geometry": {
+            "present": false,
+            "description": ""
+          },
+          "depth_or_perspective_errors": {
+            "present": true,
+            "description": "Depth cues and perspective look inconsistent (distorted scale and skewed vanishing points)."
+          }
+        },
+        "texture_artifacts": {
+          "ghosting": {
+            "present": false,
+            "description": ""
+          },
+          "floating_artifacts": {
+            "present": true,
+            "description": "Thin stray strands or fibers around shelves and decor appear detached from surfaces."
+          },
+          "over_blur": {
+            "present": false,
+            "description": ""
+          },
+          "texture_inconsistency": {
+            "present": true,
+            "description": "Textural patterns (wall, furniture, and decorative elements) lack coherent spacing, causing uneven realism."
+          }
+        },
+        "subscores": {
+          "geometry_score": 5,
+          "texture_score": 4,
+          "consistency_score": 5
+        },
+        "summary": "The rendering shows several structural and texture inconsistencies typical of 3DGS reconstructions: warped walls, misaligned edges, and depth/perspective distortions reduce realism. Some artifacting around fine strands and inconsistent texture distribution further lowers fidelity. Overall, the scene is recognizable but not convincingly indistinguishable from a real photograph; improvements in geometry consistency and texture stabilization would be needed.",
+        "image_path": "view_007_210deg.png"
+      },
+      {
+        "overall_score": 5,
+        "structural_defects": {
+          "curved_or_warped_walls": {
+            "present": true,
+            "description": "Large warped/plastic-looking wall surface on the left with irregular curvature and jagged tessellation visible."
+          },
+          "misaligned_edges": {
+            "present": true,
+            "description": "Edges between wall and floor/ceiling appear misaligned and inconsistent with real geometry; some seams look unrealistically thick."
+          },
+          "collapsed_or_melted_geometry": {
+            "present": false,
+            "description": ""
+          },
+          "depth_or_perspective_errors": {
+            "present": true,
+            "description": "Foreground/background depth cues appear inconsistent; perspective compression and distorted foreshortening around the central seam create depth ambiguity."
+          }
+        },
+        "texture_artifacts": {
+          "ghosting": {
+            "present": true,
+            "description": "Subtle ghost-like repetitions in textured regions, particularly the dark wall area."
+          },
+          "floating_artifacts": {
+            "present": true,
+            "description": "Sparse stray strands and line-like artifacts floating over surfaces, not anchored to geometry."
+          },
+          "over_blur": {
+            "present": true,
+            "description": "Overall softness in large flat areas reduces fine texture fidelity; some regions look overly smoothed."
+          },
+          "texture_inconsistency": {
+            "present": true,
+            "description": "Inconsistent texture density across surfaces; some textures look different in nearby regions, indicating stitching artifacts."
+          }
+        },
+        "subscores": {
+          "geometry_score": 4,
+          "texture_score": 5,
+          "consistency_score": 5
+        },
+        "summary": "The rendering shows notable geometric and textural inconsistencies that reduce realism. Warped wall geometry, misaligned edges, and depth distortions disrupt structural coherence. Texture artifacts (ghosting, floating strands, and uneven detail) further diminish fidelity. While some surface areas hint at plausible geometry, overall scene consistency is limited and would benefit from improved surface reconstruction, better edge alignment, and more stable texturing.",
+        "image_path": "view_008_240deg.png"
+      },
+      {
+        "overall_score": 4,
+        "structural_defects": {
+          "curved_or_warped_walls": {
+            "present": true,
+            "description": "Pattern appears stretched/warped across the main wall surface, suggesting non-rigid or misaligned mesh tiling."
+          },
+          "misaligned_edges": {
+            "present": true,
+            "description": "Edges near the frame and vertical features do not align cleanly with adjacent surfaces, indicating potential stitching artifacts or depth mismatch."
+          },
+          "collapsed_or_melted_geometry": {
+            "present": false,
+            "description": ""
+          },
+          "depth_or_perspective_errors": {
+            "present": true,
+            "description": "Depth cues are inconsistent; scale and perspective do not convincingly align across the scene (foreground vs background misprojection)."
+          }
+        },
+        "texture_artifacts": {
+          "ghosting": {
+            "present": false,
+            "description": ""
+          },
+          "floating_artifacts": {
+            "present": false,
+            "description": ""
+          },
+          "over_blur": {
+            "present": true,
+            "description": "Overall softening/blurrier regions reduce sharpness of fine details, not typical of a real scene."
+          },
+          "texture_inconsistency": {
+            "present": true,
+            "description": "Tiling and repetitive patterns show abrupt changes; texture consistency across surfaces is not uniform."
+          }
+        },
+        "subscores": {
+          "geometry_score": 3,
+          "texture_score": 4,
+          "consistency_score": 3
+        },
+        "summary": "The rendering shows notable geometric and textural inconsistencies: warped patterns, misaligned edges, depth/perspective errors, and non-uniform texture tiling. These issues reduce realism, indicating a reconstruction with structural and appearance artifacts rather than a faithful real-world scene.",
+        "image_path": "view_009_270deg.png"
+      },
+      {
+        "overall_score": 5,
+        "structural_defects": {
+          "curved_or_warped_walls": {
+            "present": true,
+            "description": "Large, irregular warping and bending visible across the vertical surfaces, giving a distorted room-like enclosure."
+          },
+          "misaligned_edges": {
+            "present": true,
+            "description": "Edges between planes appear mismatched and jagged, not aligning cleanly with adjacent surfaces."
+          },
+          "collapsed_or_melted_geometry": {
+            "present": false,
+            "description": ""
+          },
+          "depth_or_perspective_errors": {
+            "present": true,
+            "description": "Depth cues are inconsistent; some surfaces appear unnaturally flat or foreshortened, reducing real-world depth fidelity."
+          }
+        },
+        "texture_artifacts": {
+          "ghosting": {
+            "present": false,
+            "description": ""
+          },
+          "floating_artifacts": {
+            "present": true,
+            "description": "Repeated hair-like textures dominate the scene, giving the impression of floating clusters rather than a stable surface."
+          },
+          "over_blur": {
+            "present": true,
+            "description": "Overall softness and lack of fine detail, especially on edge regions, suggesting excessive blur in shading/texture."
+          },
+          "texture_inconsistency": {
+            "present": true,
+            "description": "Texture density and pattern vary abruptly across surfaces, lacking consistent material appearance."
+          }
+        },
+        "subscores": {
+          "geometry_score": 5,
+          "texture_score": 4,
+          "consistency_score": 4
+        },
+        "summary": "The rendering shows noticeable geometric distortions with warped walls, misaligned edges, and inconsistent depth cues. Texture exhibits heavy blurring and inconsistent patterns with sparse, floating artifact-like elements. Overall realism is moderate but artifacts prevent convincing reconstruction of a real scene.",
+        "image_path": "view_010_300deg.png"
+      },
+      {
+        "overall_score": 4,
+        "structural_defects": {
+          "curved_or_warped_walls": {
+            "present": true,
+            "description": "Prominent vertical seam and warping along the boundary between the light left wall and the dark right surface, suggesting misalignment or deformed geometry."
+          },
+          "misaligned_edges": {
+            "present": true,
+            "description": "Edges near the seam appear jagged and inconsistent with expected planar walls, indicating edge misalignment."
+          },
+          "collapsed_or_melted_geometry": {
+            "present": false,
+            "description": ""
+          },
+          "depth_or_perspective_errors": {
+            "present": true,
+            "description": "Unclear depth cues on the boundary region; perspective appears inconsistent with surrounding surfaces, hinting at depth errors."
+          }
+        },
+        "texture_artifacts": {
+          "ghosting": {
+            "present": true,
+            "description": "Overlaid translucent artifacts across the dark textured surface, reducing clarity."
+          },
+          "floating_artifacts": {
+            "present": false,
+            "description": ""
+          },
+          "over_blur": {
+            "present": true,
+            "description": "Wide regions appear overly smoothed, diminishing fine texture details."
+          },
+          "texture_inconsistency": {
+            "present": true,
+            "description": "Texture density and shading vary abruptly across the scene, inconsistent with a coherent surface."
+          }
+        },
+        "subscores": {
+          "geometry_score": 4,
+          "texture_score": 3,
+          "consistency_score": 4
+        },
+        "summary": "The rendering exhibits notable geometric and depth inconsistencies, particularly along a central seam between left and right surfaces. Texturing shows ghosting and inconsistent detail, with over-smoothed areas. Overall realism is limited; artifacts indicate reconstruction errors in geometry and texture stability.",
+        "image_path": "view_011_330deg.png"
+      }
+    ],
     "quality": {
-      "mean": 5.083333333333333,
-      "std": 0.9537935951882998,
-      "min": 3.0,
+      "mean": 5.0,
+      "std": 0.5773502691896257,
+      "min": 4.0,
       "max": 6.0,
       "median": 5.0,
       "scores": [
-        6.0,
-        6.0,
+        5.0,
+        5.0,
         6.0,
         6.0,
         5.0,
         5.0,
-        6.0,
+        5.0,
+        5.0,
         5.0,
         4.0,
         5.0,
-        4.0,
-        3.0
+        4.0
       ],
-      "quality_score": 50.83333333333333
+      "quality_score": 50.0
     },
     "artifacts": {
-      "median": 6.0,
+      "median": 6.5,
       "scores": [
-        5.0,
         6.0,
-        6.0,
-        6.0,
+        7.0,
         6.0,
         5.0,
-        6.0,
         6.0,
         6.0,
         7.0,
-        8.0,
-        9.0
+        7.0,
+        6.0,
+        7.0,
+        7.0,
+        8.0
       ],
-      "quality_score": 46.666666666666664,
-      "mean_severity": 6.333333333333333,
-      "std_severity": 1.1055415967851332,
+      "quality_score": 45.0,
+      "mean_severity": 6.5,
+      "std_severity": 0.7637626158259734,
       "min_severity": 5.0,
-      "max_severity": 9.0
+      "max_severity": 8.0
     },
     "structural": {
-      "mean": 5.0,
-      "std": 1.0,
+      "mean": 4.916666666666667,
+      "std": 1.0374916331657278,
       "min": 3.0,
-      "max": 6.0,
+      "max": 7.0,
       "median": 5.0,
       "scores": [
         6.0,
-        6.0,
-        6.0,
-        6.0,
-        5.0,
         5.0,
         6.0,
-        4.0,
-        4.0,
+        7.0,
         5.0,
         4.0,
-        3.0
+        5.0,
+        5.0,
+        4.0,
+        3.0,
+        5.0,
+        4.0
       ],
-      "quality_score": 50.0
+      "quality_score": 49.16666666666667
     }
   },
-  "overall_score": 44.650240264225495,
+  "overall_score": 49.74395168574004,
   "views": [
     {
       "view_index": 0,
       "angle": 0.0,
       "render_name": "ktv_hevc",
       "screenshot_path": "captured_views/ktv_hevc/view_000_000deg.png",
-      "url": "https://3d-tour-demo-scene.vercel.app/?model=https://storage.googleapis.com/3dgs-homee/ktv_h264hevc.glb&splat=https://storage.googleapis.com/3dgs-homee/ktv_hevc.ksplat&px=-3.357&py=0.082&pz=0.38&tx=-2.56&ty=0.007&tz=-0.218"
+      "url": "https://3d-tour-demo-scene.vercel.app/?model=https://storage.googleapis.com/3dgs-homee/ktv_h264hevc.glb&splat=https://storage.googleapis.com/3dgs-homee/ktv_hevc.ksplat&px=-3.357&py=0.082&pz=0.38&tx=-2.56&ty=0.007&tz=-0.218",
+      "vlm_analysis": {
+        "overall_score": 5,
+        "summary": "The scene is recognizable as an interior dining/living area with plausible geometry and lighting, but there are clear artifacts: a large black void region suggesting missing data or occlusion, depth/perspective inconsistencies near the window area, and overall blur/texture mismatches that reduce realism. Minor geometry appears intact, but texture stability and multi-surface coherence are compromised.",
+        "structural_defects": {
+          "curved_or_warped_walls": {
+            "present": false,
+            "description": ""
+          },
+          "misaligned_edges": {
+            "present": false,
+            "description": ""
+          },
+          "collapsed_or_melted_geometry": {
+            "present": false,
+            "description": ""
+          },
+          "depth_or_perspective_errors": {
+            "present": true,
+            "description": "Notable black void on the left side and some perspective/edge inconsistencies near the window area suggesting missing data or misalignment in the reconstruction."
+          }
+        },
+        "texture_artifacts": {
+          "ghosting": {
+            "present": false,
+            "description": ""
+          },
+          "floating_artifacts": {
+            "present": false,
+            "description": ""
+          },
+          "over_blur": {
+            "present": true,
+            "description": "Overall soft focus and motion-like blur, especially across the table surface and edges."
+          },
+          "texture_inconsistency": {
+            "present": true,
+            "description": "Inconsistent material reproduction (very dark void area and uneven reflections on the table/floor) indicating texture/material mismatches."
+          }
+        },
+        "subscores": {
+          "geometry_score": 6,
+          "texture_score": 5,
+          "consistency_score": 5
+        }
+      }
     },
     {
       "view_index": 1,
       "angle": 30.0,
       "render_name": "ktv_hevc",
       "screenshot_path": "captured_views/ktv_hevc/view_001_030deg.png",
-      "url": "https://3d-tour-demo-scene.vercel.app/?model=https://storage.googleapis.com/3dgs-homee/ktv_h264hevc.glb&splat=https://storage.googleapis.com/3dgs-homee/ktv_hevc.ksplat&px=-3.357&py=0.082&pz=0.38&tx=-2.56&ty=0.007&tz=-0.218"
+      "url": "https://3d-tour-demo-scene.vercel.app/?model=https://storage.googleapis.com/3dgs-homee/ktv_h264hevc.glb&splat=https://storage.googleapis.com/3dgs-homee/ktv_hevc.ksplat&px=-3.357&py=0.082&pz=0.38&tx=-2.56&ty=0.007&tz=-0.218",
+      "vlm_analysis": {
+        "overall_score": 5,
+        "summary": "The rendering shows a plausible interior layout with correct spatial arrangement, but exhibits notable geometric and texture inconsistencies typical of 3DGS/NeRF outputs. Some wall/ceiling areas appear curved or smeared, and overall texture is softened with occasional inconsistencies between materials, reducing realism. No severe topology breaks detected, but the scene is not indistinguishable from a real photograph.",
+        "structural_defects": {
+          "curved_or_warped_walls": {
+            "present": true,
+            "description": "Ceiling/plaster edges and transitions appear smeared and slightly curved, notably around the ceiling beam and wall joints, giving a non-planar feel."
+          },
+          "misaligned_edges": {
+            "present": false,
+            "description": ""
+          },
+          "collapsed_or_melted_geometry": {
+            "present": false,
+            "description": ""
+          },
+          "depth_or_perspective_errors": {
+            "present": false,
+            "description": ""
+          }
+        },
+        "texture_artifacts": {
+          "ghosting": {
+            "present": false,
+            "description": ""
+          },
+          "floating_artifacts": {
+            "present": false,
+            "description": ""
+          },
+          "over_blur": {
+            "present": true,
+            "description": "Overall softness and painterly look reduces sharpness across textures, especially on table surface and flower centerpiece."
+          },
+          "texture_inconsistency": {
+            "present": true,
+            "description": "Inconsistent texture fidelity between materials (wood, fabric, and glass) with some surfaces appearing oversmoothed compared to others."
+          }
+        },
+        "subscores": {
+          "geometry_score": 5,
+          "texture_score": 4,
+          "consistency_score": 5
+        }
+      }
     },
     {
       "view_index": 2,
       "angle": 60.0,
       "render_name": "ktv_hevc",
       "screenshot_path": "captured_views/ktv_hevc/view_002_060deg.png",
-      "url": "https://3d-tour-demo-scene.vercel.app/?model=https://storage.googleapis.com/3dgs-homee/ktv_h264hevc.glb&splat=https://storage.googleapis.com/3dgs-homee/ktv_hevc.ksplat&px=-3.357&py=0.082&pz=0.38&tx=-2.56&ty=0.007&tz=-0.218"
+      "url": "https://3d-tour-demo-scene.vercel.app/?model=https://storage.googleapis.com/3dgs-homee/ktv_h264hevc.glb&splat=https://storage.googleapis.com/3dgs-homee/ktv_hevc.ksplat&px=-3.357&py=0.082&pz=0.38&tx=-2.56&ty=0.007&tz=-0.218",
+      "vlm_analysis": {
+        "overall_score": 6,
+        "summary": "The scene shows a coherent room layout with plausible geometry and perspective, but the rendering exhibits noticeable texture inconsistencies and ghosting artifacts typical of 3D Gaussian Splatting reconstructions. Overall realism is moderate; geometric structure remains credible, while texture fidelity and artifact presence reduce perceptual accuracy.",
+        "structural_defects": {
+          "curved_or_warped_walls": {
+            "present": false,
+            "description": ""
+          },
+          "misaligned_edges": {
+            "present": false,
+            "description": ""
+          },
+          "collapsed_or_melted_geometry": {
+            "present": false,
+            "description": ""
+          },
+          "depth_or_perspective_errors": {
+            "present": false,
+            "description": ""
+          }
+        },
+        "texture_artifacts": {
+          "ghosting": {
+            "present": true,
+            "description": "visible ghosting/line artifacts across surfaces (table, wall panel, bouquet) typical of 3DGS rendering."
+          },
+          "floating_artifacts": {
+            "present": false,
+            "description": ""
+          },
+          "over_blur": {
+            "present": false,
+            "description": ""
+          },
+          "texture_inconsistency": {
+            "present": true,
+            "description": "inconsistent surface textures on chairs and cabinetry, slight mismatch in shading/reflectivity."
+          }
+        },
+        "subscores": {
+          "geometry_score": 6,
+          "texture_score": 5,
+          "consistency_score": 6
+        }
+      }
     },
     {
       "view_index": 3,
       "angle": 90.0,
       "render_name": "ktv_hevc",
       "screenshot_path": "captured_views/ktv_hevc/view_003_090deg.png",
-      "url": "https://3d-tour-demo-scene.vercel.app/?model=https://storage.googleapis.com/3dgs-homee/ktv_h264hevc.glb&splat=https://storage.googleapis.com/3dgs-homee/ktv_hevc.ksplat&px=-3.357&py=0.082&pz=0.38&tx=-2.56&ty=0.007&tz=-0.218"
+      "url": "https://3d-tour-demo-scene.vercel.app/?model=https://storage.googleapis.com/3dgs-homee/ktv_h264hevc.glb&splat=https://storage.googleapis.com/3dgs-homee/ktv_hevc.ksplat&px=-3.357&py=0.082&pz=0.38&tx=-2.56&ty=0.007&tz=-0.218",
+      "vlm_analysis": {
+        "overall_score": 6,
+        "summary": "The scene is recognizable as a dining/sofa area with plausible geometry and layout. Minor depth/perspective ambiguities and noticeable texture inconsistencies reduce realism. Overall, the reconstruction is functional but exhibits small geometric and texture fidelity gaps typical of 3DGS renders.",
+        "structural_defects": {
+          "curved_or_warped_walls": {
+            "present": false,
+            "description": ""
+          },
+          "misaligned_edges": {
+            "present": false,
+            "description": ""
+          },
+          "collapsed_or_melted_geometry": {
+            "present": false,
+            "description": ""
+          },
+          "depth_or_perspective_errors": {
+            "present": true,
+            "description": "Subtle depth/perspective misalignment between foreground table/chair region and the background wall area; scene depth cues do not perfectly converge, causing a minor fictitious flattening in some zones."
+          }
+        },
+        "texture_artifacts": {
+          "ghosting": {
+            "present": false,
+            "description": ""
+          },
+          "floating_artifacts": {
+            "present": false,
+            "description": ""
+          },
+          "over_blur": {
+            "present": false,
+            "description": ""
+          },
+          "texture_inconsistency": {
+            "present": true,
+            "description": "Inconsistent or smeared textures on wood paneling and upholstery; visible brush-like strokes and irregularities typical of 3DGS renderings, affecting perceived material fidelity."
+          }
+        },
+        "subscores": {
+          "geometry_score": 7,
+          "texture_score": 6,
+          "consistency_score": 6
+        }
+      }
     },
     {
       "view_index": 4,
       "angle": 120.0,
       "render_name": "ktv_hevc",
       "screenshot_path": "captured_views/ktv_hevc/view_004_120deg.png",
-      "url": "https://3d-tour-demo-scene.vercel.app/?model=https://storage.googleapis.com/3dgs-homee/ktv_h264hevc.glb&splat=https://storage.googleapis.com/3dgs-homee/ktv_hevc.ksplat&px=-3.357&py=0.082&pz=0.38&tx=-2.56&ty=0.007&tz=-0.218"
+      "url": "https://3d-tour-demo-scene.vercel.app/?model=https://storage.googleapis.com/3dgs-homee/ktv_h264hevc.glb&splat=https://storage.googleapis.com/3dgs-homee/ktv_hevc.ksplat&px=-3.357&py=0.082&pz=0.38&tx=-2.56&ty=0.007&tz=-0.218",
+      "vlm_analysis": {
+        "overall_score": 5,
+        "summary": "The scene shows reasonable overall structure with recognizable room layout, but the reconstruction exhibits depth inconsistencies and prominent rendering artifacts (ghosting, floating strands, texture inconsistency) that reduce realism. Minor geometry remains plausible, but multi-surface coherence is affected by artifacts and depth misalignment.",
+        "structural_defects": {
+          "curved_or_warped_walls": {
+            "present": false,
+            "description": ""
+          },
+          "misaligned_edges": {
+            "present": false,
+            "description": ""
+          },
+          "collapsed_or_melted_geometry": {
+            "present": false,
+            "description": ""
+          },
+          "depth_or_perspective_errors": {
+            "present": true,
+            "description": "Distorted depth cues and slight perspective mismatches between foreground chairs and background elements; depth scaling appears inconsistent."
+          }
+        },
+        "texture_artifacts": {
+          "ghosting": {
+            "present": true,
+            "description": "Visible fine line artifacts across surfaces, especially around edges and near the artwork frame."
+          },
+          "floating_artifacts": {
+            "present": true,
+            "description": "Stray lines and wispy strands appear disconnected from real geometry, floating around the shelves and table area."
+          },
+          "over_blur": {
+            "present": false,
+            "description": ""
+          },
+          "texture_inconsistency": {
+            "present": true,
+            "description": "Inconsistent surface detail between cabinetry, walls, and upholstery; some textures look unnaturally smooth or smeared."
+          }
+        },
+        "subscores": {
+          "geometry_score": 5,
+          "texture_score": 5,
+          "consistency_score": 5
+        }
+      }
     },
     {
       "view_index": 5,
       "angle": 150.0,
       "render_name": "ktv_hevc",
       "screenshot_path": "captured_views/ktv_hevc/view_005_150deg.png",
-      "url": "https://3d-tour-demo-scene.vercel.app/?model=https://storage.googleapis.com/3dgs-homee/ktv_h264hevc.glb&splat=https://storage.googleapis.com/3dgs-homee/ktv_hevc.ksplat&px=-3.357&py=0.082&pz=0.38&tx=-2.56&ty=0.007&tz=-0.218"
+      "url": "https://3d-tour-demo-scene.vercel.app/?model=https://storage.googleapis.com/3dgs-homee/ktv_h264hevc.glb&splat=https://storage.googleapis.com/3dgs-homee/ktv_hevc.ksplat&px=-3.357&py=0.082&pz=0.38&tx=-2.56&ty=0.007&tz=-0.218",
+      "vlm_analysis": {
+        "overall_score": 5,
+        "summary": "The rendering shows a mostly plausible interior layout but exhibits notable geometric distortions and texture inconsistencies. Warped/curved surfaces, misaligned edges, and depth misalignments reduce realism. Texture artifacts include floating strands and overall over-blur, impacting surface fidelity. Overall, it is a moderate reconstruction with several noticeable defects that prevent high realism.",
+        "structural_defects": {
+          "curved_or_warped_walls": {
+            "present": true,
+            "description": "Subtle warping and irregularities along the wall and shelving edges, especially near the left side of the scene."
+          },
+          "misaligned_edges": {
+            "present": true,
+            "description": "Some edges (e.g., window frame and panel lines) do not align cleanly with adjacent geometry, suggesting stitching or reconstruction misalignment."
+          },
+          "collapsed_or_melted_geometry": {
+            "present": false,
+            "description": ""
+          },
+          "depth_or_perspective_errors": {
+            "present": true,
+            "description": "Inconsistent depth cues in the seating area and foreground objects; perspective does not perfectly match scene scale."
+          }
+        },
+        "texture_artifacts": {
+          "ghosting": {
+            "present": false,
+            "description": ""
+          },
+          "floating_artifacts": {
+            "present": true,
+            "description": "Sparse stray strands/lines appear detached from surfaces, giving a floating artifact impression."
+          },
+          "over_blur": {
+            "present": true,
+            "description": "Overall softening and motion-like blur reduces texture fidelity on seating and wall textures."
+          },
+          "texture_inconsistency": {
+            "present": true,
+            "description": "Visible mismatches in texture sharpness between foreground chairs and wall/flowing decorative panels."
+          }
+        },
+        "subscores": {
+          "geometry_score": 4,
+          "texture_score": 5,
+          "consistency_score": 5
+        }
+      }
     },
     {
       "view_index": 6,
       "angle": 180.0,
       "render_name": "ktv_hevc",
       "screenshot_path": "captured_views/ktv_hevc/view_006_180deg.png",
-      "url": "https://3d-tour-demo-scene.vercel.app/?model=https://storage.googleapis.com/3dgs-homee/ktv_h264hevc.glb&splat=https://storage.googleapis.com/3dgs-homee/ktv_hevc.ksplat&px=-3.357&py=0.082&pz=0.38&tx=-2.56&ty=0.007&tz=-0.218"
+      "url": "https://3d-tour-demo-scene.vercel.app/?model=https://storage.googleapis.com/3dgs-homee/ktv_h264hevc.glb&splat=https://storage.googleapis.com/3dgs-homee/ktv_hevc.ksplat&px=-3.357&py=0.082&pz=0.38&tx=-2.56&ty=0.007&tz=-0.218",
+      "vlm_analysis": {
+        "overall_score": 5,
+        "summary": "The reconstruction shows noticeable geometric distortions and depth inconsistencies, with blurred textures and conflicting material appearances. Overall realism is moderate but clearly deviates from a real scene in structure and texture fidelity.",
+        "structural_defects": {
+          "curved_or_warped_walls": {
+            "present": true,
+            "description": "Wall and shelving appear distorted with irregular curves, especially along the glass cabinet and adjacent walls."
+          },
+          "misaligned_edges": {
+            "present": true,
+            "description": "Edges between the shelf unit and surrounding walls/fixtures do not align cleanly, giving a skewed geometry."
+          },
+          "collapsed_or_melted_geometry": {
+            "present": false,
+            "description": ""
+          },
+          "depth_or_perspective_errors": {
+            "present": true,
+            "description": "Perspective cues are inconsistent (tilted lines and warped depth), causing depth cues to feel unrealistic."
+          }
+        },
+        "texture_artifacts": {
+          "ghosting": {
+            "present": false,
+            "description": ""
+          },
+          "floating_artifacts": {
+            "present": false,
+            "description": ""
+          },
+          "over_blur": {
+            "present": true,
+            "description": "Areas around edges of furniture and shelves appear smeared, reducing sharpness."
+          },
+          "texture_inconsistency": {
+            "present": true,
+            "description": "Texture granularity varies across surfaces (glass, metal, fabric) in a way that seems incongruent with real materials."
+          }
+        },
+        "subscores": {
+          "geometry_score": 5,
+          "texture_score": 4,
+          "consistency_score": 5
+        }
+      }
     },
     {
       "view_index": 7,
       "angle": 210.0,
       "render_name": "ktv_hevc",
       "screenshot_path": "captured_views/ktv_hevc/view_007_210deg.png",
-      "url": "https://3d-tour-demo-scene.vercel.app/?model=https://storage.googleapis.com/3dgs-homee/ktv_h264hevc.glb&splat=https://storage.googleapis.com/3dgs-homee/ktv_hevc.ksplat&px=-3.357&py=0.082&pz=0.38&tx=-2.56&ty=0.007&tz=-0.218"
+      "url": "https://3d-tour-demo-scene.vercel.app/?model=https://storage.googleapis.com/3dgs-homee/ktv_h264hevc.glb&splat=https://storage.googleapis.com/3dgs-homee/ktv_hevc.ksplat&px=-3.357&py=0.082&pz=0.38&tx=-2.56&ty=0.007&tz=-0.218",
+      "vlm_analysis": {
+        "overall_score": 5,
+        "summary": "The rendering shows several structural and texture inconsistencies typical of 3DGS reconstructions: warped walls, misaligned edges, and depth/perspective distortions reduce realism. Some artifacting around fine strands and inconsistent texture distribution further lowers fidelity. Overall, the scene is recognizable but not convincingly indistinguishable from a real photograph; improvements in geometry consistency and texture stabilization would be needed.",
+        "structural_defects": {
+          "curved_or_warped_walls": {
+            "present": true,
+            "description": "Left dark patterned wall appears warped with irregular curvature rather than flat."
+          },
+          "misaligned_edges": {
+            "present": true,
+            "description": "Shelf frames and vertical edges do not align cleanly, creating slight skew in geometry."
+          },
+          "collapsed_or_melted_geometry": {
+            "present": false,
+            "description": ""
+          },
+          "depth_or_perspective_errors": {
+            "present": true,
+            "description": "Depth cues and perspective look inconsistent (distorted scale and skewed vanishing points)."
+          }
+        },
+        "texture_artifacts": {
+          "ghosting": {
+            "present": false,
+            "description": ""
+          },
+          "floating_artifacts": {
+            "present": true,
+            "description": "Thin stray strands or fibers around shelves and decor appear detached from surfaces."
+          },
+          "over_blur": {
+            "present": false,
+            "description": ""
+          },
+          "texture_inconsistency": {
+            "present": true,
+            "description": "Textural patterns (wall, furniture, and decorative elements) lack coherent spacing, causing uneven realism."
+          }
+        },
+        "subscores": {
+          "geometry_score": 5,
+          "texture_score": 4,
+          "consistency_score": 5
+        }
+      }
     },
     {
       "view_index": 8,
       "angle": 240.0,
       "render_name": "ktv_hevc",
       "screenshot_path": "captured_views/ktv_hevc/view_008_240deg.png",
-      "url": "https://3d-tour-demo-scene.vercel.app/?model=https://storage.googleapis.com/3dgs-homee/ktv_h264hevc.glb&splat=https://storage.googleapis.com/3dgs-homee/ktv_hevc.ksplat&px=-3.357&py=0.082&pz=0.38&tx=-2.56&ty=0.007&tz=-0.218"
+      "url": "https://3d-tour-demo-scene.vercel.app/?model=https://storage.googleapis.com/3dgs-homee/ktv_h264hevc.glb&splat=https://storage.googleapis.com/3dgs-homee/ktv_hevc.ksplat&px=-3.357&py=0.082&pz=0.38&tx=-2.56&ty=0.007&tz=-0.218",
+      "vlm_analysis": {
+        "overall_score": 5,
+        "summary": "The rendering shows notable geometric and textural inconsistencies that reduce realism. Warped wall geometry, misaligned edges, and depth distortions disrupt structural coherence. Texture artifacts (ghosting, floating strands, and uneven detail) further diminish fidelity. While some surface areas hint at plausible geometry, overall scene consistency is limited and would benefit from improved surface reconstruction, better edge alignment, and more stable texturing.",
+        "structural_defects": {
+          "curved_or_warped_walls": {
+            "present": true,
+            "description": "Large warped/plastic-looking wall surface on the left with irregular curvature and jagged tessellation visible."
+          },
+          "misaligned_edges": {
+            "present": true,
+            "description": "Edges between wall and floor/ceiling appear misaligned and inconsistent with real geometry; some seams look unrealistically thick."
+          },
+          "collapsed_or_melted_geometry": {
+            "present": false,
+            "description": ""
+          },
+          "depth_or_perspective_errors": {
+            "present": true,
+            "description": "Foreground/background depth cues appear inconsistent; perspective compression and distorted foreshortening around the central seam create depth ambiguity."
+          }
+        },
+        "texture_artifacts": {
+          "ghosting": {
+            "present": true,
+            "description": "Subtle ghost-like repetitions in textured regions, particularly the dark wall area."
+          },
+          "floating_artifacts": {
+            "present": true,
+            "description": "Sparse stray strands and line-like artifacts floating over surfaces, not anchored to geometry."
+          },
+          "over_blur": {
+            "present": true,
+            "description": "Overall softness in large flat areas reduces fine texture fidelity; some regions look overly smoothed."
+          },
+          "texture_inconsistency": {
+            "present": true,
+            "description": "Inconsistent texture density across surfaces; some textures look different in nearby regions, indicating stitching artifacts."
+          }
+        },
+        "subscores": {
+          "geometry_score": 4,
+          "texture_score": 5,
+          "consistency_score": 5
+        }
+      }
     },
     {
       "view_index": 9,
       "angle": 270.0,
       "render_name": "ktv_hevc",
       "screenshot_path": "captured_views/ktv_hevc/view_009_270deg.png",
-      "url": "https://3d-tour-demo-scene.vercel.app/?model=https://storage.googleapis.com/3dgs-homee/ktv_h264hevc.glb&splat=https://storage.googleapis.com/3dgs-homee/ktv_hevc.ksplat&px=-3.357&py=0.082&pz=0.38&tx=-2.56&ty=0.007&tz=-0.218"
+      "url": "https://3d-tour-demo-scene.vercel.app/?model=https://storage.googleapis.com/3dgs-homee/ktv_h264hevc.glb&splat=https://storage.googleapis.com/3dgs-homee/ktv_hevc.ksplat&px=-3.357&py=0.082&pz=0.38&tx=-2.56&ty=0.007&tz=-0.218",
+      "vlm_analysis": {
+        "overall_score": 4,
+        "summary": "The rendering shows notable geometric and textural inconsistencies: warped patterns, misaligned edges, depth/perspective errors, and non-uniform texture tiling. These issues reduce realism, indicating a reconstruction with structural and appearance artifacts rather than a faithful real-world scene.",
+        "structural_defects": {
+          "curved_or_warped_walls": {
+            "present": true,
+            "description": "Pattern appears stretched/warped across the main wall surface, suggesting non-rigid or misaligned mesh tiling."
+          },
+          "misaligned_edges": {
+            "present": true,
+            "description": "Edges near the frame and vertical features do not align cleanly with adjacent surfaces, indicating potential stitching artifacts or depth mismatch."
+          },
+          "collapsed_or_melted_geometry": {
+            "present": false,
+            "description": ""
+          },
+          "depth_or_perspective_errors": {
+            "present": true,
+            "description": "Depth cues are inconsistent; scale and perspective do not convincingly align across the scene (foreground vs background misprojection)."
+          }
+        },
+        "texture_artifacts": {
+          "ghosting": {
+            "present": false,
+            "description": ""
+          },
+          "floating_artifacts": {
+            "present": false,
+            "description": ""
+          },
+          "over_blur": {
+            "present": true,
+            "description": "Overall softening/blurrier regions reduce sharpness of fine details, not typical of a real scene."
+          },
+          "texture_inconsistency": {
+            "present": true,
+            "description": "Tiling and repetitive patterns show abrupt changes; texture consistency across surfaces is not uniform."
+          }
+        },
+        "subscores": {
+          "geometry_score": 3,
+          "texture_score": 4,
+          "consistency_score": 3
+        }
+      }
     },
     {
       "view_index": 10,
       "angle": 300.0,
       "render_name": "ktv_hevc",
       "screenshot_path": "captured_views/ktv_hevc/view_010_300deg.png",
-      "url": "https://3d-tour-demo-scene.vercel.app/?model=https://storage.googleapis.com/3dgs-homee/ktv_h264hevc.glb&splat=https://storage.googleapis.com/3dgs-homee/ktv_hevc.ksplat&px=-3.357&py=0.082&pz=0.38&tx=-2.56&ty=0.007&tz=-0.218"
+      "url": "https://3d-tour-demo-scene.vercel.app/?model=https://storage.googleapis.com/3dgs-homee/ktv_h264hevc.glb&splat=https://storage.googleapis.com/3dgs-homee/ktv_hevc.ksplat&px=-3.357&py=0.082&pz=0.38&tx=-2.56&ty=0.007&tz=-0.218",
+      "vlm_analysis": {
+        "overall_score": 5,
+        "summary": "The rendering shows noticeable geometric distortions with warped walls, misaligned edges, and inconsistent depth cues. Texture exhibits heavy blurring and inconsistent patterns with sparse, floating artifact-like elements. Overall realism is moderate but artifacts prevent convincing reconstruction of a real scene.",
+        "structural_defects": {
+          "curved_or_warped_walls": {
+            "present": true,
+            "description": "Large, irregular warping and bending visible across the vertical surfaces, giving a distorted room-like enclosure."
+          },
+          "misaligned_edges": {
+            "present": true,
+            "description": "Edges between planes appear mismatched and jagged, not aligning cleanly with adjacent surfaces."
+          },
+          "collapsed_or_melted_geometry": {
+            "present": false,
+            "description": ""
+          },
+          "depth_or_perspective_errors": {
+            "present": true,
+            "description": "Depth cues are inconsistent; some surfaces appear unnaturally flat or foreshortened, reducing real-world depth fidelity."
+          }
+        },
+        "texture_artifacts": {
+          "ghosting": {
+            "present": false,
+            "description": ""
+          },
+          "floating_artifacts": {
+            "present": true,
+            "description": "Repeated hair-like textures dominate the scene, giving the impression of floating clusters rather than a stable surface."
+          },
+          "over_blur": {
+            "present": true,
+            "description": "Overall softness and lack of fine detail, especially on edge regions, suggesting excessive blur in shading/texture."
+          },
+          "texture_inconsistency": {
+            "present": true,
+            "description": "Texture density and pattern vary abruptly across surfaces, lacking consistent material appearance."
+          }
+        },
+        "subscores": {
+          "geometry_score": 5,
+          "texture_score": 4,
+          "consistency_score": 4
+        }
+      }
     },
     {
       "view_index": 11,
       "angle": 330.0,
       "render_name": "ktv_hevc",
       "screenshot_path": "captured_views/ktv_hevc/view_011_330deg.png",
-      "url": "https://3d-tour-demo-scene.vercel.app/?model=https://storage.googleapis.com/3dgs-homee/ktv_h264hevc.glb&splat=https://storage.googleapis.com/3dgs-homee/ktv_hevc.ksplat&px=-3.357&py=0.082&pz=0.38&tx=-2.56&ty=0.007&tz=-0.218"
+      "url": "https://3d-tour-demo-scene.vercel.app/?model=https://storage.googleapis.com/3dgs-homee/ktv_h264hevc.glb&splat=https://storage.googleapis.com/3dgs-homee/ktv_hevc.ksplat&px=-3.357&py=0.082&pz=0.38&tx=-2.56&ty=0.007&tz=-0.218",
+      "vlm_analysis": {
+        "overall_score": 4,
+        "summary": "The rendering exhibits notable geometric and depth inconsistencies, particularly along a central seam between left and right surfaces. Texturing shows ghosting and inconsistent detail, with over-smoothed areas. Overall realism is limited; artifacts indicate reconstruction errors in geometry and texture stability.",
+        "structural_defects": {
+          "curved_or_warped_walls": {
+            "present": true,
+            "description": "Prominent vertical seam and warping along the boundary between the light left wall and the dark right surface, suggesting misalignment or deformed geometry."
+          },
+          "misaligned_edges": {
+            "present": true,
+            "description": "Edges near the seam appear jagged and inconsistent with expected planar walls, indicating edge misalignment."
+          },
+          "collapsed_or_melted_geometry": {
+            "present": false,
+            "description": ""
+          },
+          "depth_or_perspective_errors": {
+            "present": true,
+            "description": "Unclear depth cues on the boundary region; perspective appears inconsistent with surrounding surfaces, hinting at depth errors."
+          }
+        },
+        "texture_artifacts": {
+          "ghosting": {
+            "present": true,
+            "description": "Overlaid translucent artifacts across the dark textured surface, reducing clarity."
+          },
+          "floating_artifacts": {
+            "present": false,
+            "description": ""
+          },
+          "over_blur": {
+            "present": true,
+            "description": "Wide regions appear overly smoothed, diminishing fine texture details."
+          },
+          "texture_inconsistency": {
+            "present": true,
+            "description": "Texture density and shading vary abruptly across the scene, inconsistent with a coherent surface."
+          }
+        },
+        "subscores": {
+          "geometry_score": 4,
+          "texture_score": 3,
+          "consistency_score": 4
+        }
+      }
     }
   ]
 }

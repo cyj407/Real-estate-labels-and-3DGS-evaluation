@@ -1,0 +1,138 @@
+{
+  "render_name": "ktv_hevc",
+  "render_url": "https://3d-tour-demo-scene.vercel.app/?model=https://storage.googleapis.com/3dgs-homee/ktv_h264hevc.glb&splat=https://storage.googleapis.com/3dgs-homee/ktv_hevc.ksplat&px=-3.357&py=0.082&pz=0.38&tx=-2.56&ty=0.007&tz=-0.218",
+  "num_views": 12,
+  "cv_metrics": {
+    "blur": {
+      "metric": "blur_laplacian",
+      "mean": 553.2441226809015,
+      "std": 143.0765911734347,
+      "min": 297.9833082542891,
+      "max": 714.6691623997227,
+      "median": 590.1559986476229,
+      "num_views": 12,
+      "threshold": 100,
+      "quality_score": 27.66220613404507
+    },
+    "edge_consistency": {
+      "metric": "edge_consistency",
+      "mean_density": 0.12496588059413583,
+      "std_density": 0.02498934834506659,
+      "min_density": 0.0673022762345679,
+      "max_density": 0.15383728780864198,
+      "consistency_score": 50.02130330986682,
+      "num_views": 12,
+      "quality_score": 50.02130330986682
+    },
+    "brisque": {
+      "metric": "brisque_quality",
+      "mean": 47.83489938825369,
+      "std": 3.0391310781848415,
+      "min": 40.90024068951607,
+      "max": 51.609457582235336,
+      "median": 49.029550701379776,
+      "num_views": 12,
+      "quality_score": 47.83489938825369
+    },
+    "maniqa": {
+      "metric": "maniqa",
+      "mean": 43.49272052447001,
+      "std": 3.9719958437222656,
+      "min": 36.79398000240326,
+      "max": 48.63773584365845,
+      "median": 43.628816306591034,
+      "num_views": 12,
+      "quality_score": 43.49272052447001
+    }
+  },
+  "vlm_metrics": {
+    "enabled": false
+  },
+  "overall_score": 41.70873377370916,
+  "views": [
+    {
+      "view_index": 0,
+      "angle": 0.0,
+      "render_name": "ktv_hevc",
+      "screenshot_path": "captured_views/ktv_hevc/view_000_000deg.png",
+      "url": "https://3d-tour-demo-scene.vercel.app/?model=https://storage.googleapis.com/3dgs-homee/ktv_h264hevc.glb&splat=https://storage.googleapis.com/3dgs-homee/ktv_hevc.ksplat&px=-3.357&py=0.082&pz=0.38&tx=-2.56&ty=0.007&tz=-0.218"
+    },
+    {
+      "view_index": 1,
+      "angle": 30.0,
+      "render_name": "ktv_hevc",
+      "screenshot_path": "captured_views/ktv_hevc/view_001_030deg.png",
+      "url": "https://3d-tour-demo-scene.vercel.app/?model=https://storage.googleapis.com/3dgs-homee/ktv_h264hevc.glb&splat=https://storage.googleapis.com/3dgs-homee/ktv_hevc.ksplat&px=-3.357&py=0.082&pz=0.38&tx=-2.56&ty=0.007&tz=-0.218"
+    },
+    {
+      "view_index": 2,
+      "angle": 60.0,
+      "render_name": "ktv_hevc",
+      "screenshot_path": "captured_views/ktv_hevc/view_002_060deg.png",
+      "url": "https://3d-tour-demo-scene.vercel.app/?model=https://storage.googleapis.com/3dgs-homee/ktv_h264hevc.glb&splat=https://storage.googleapis.com/3dgs-homee/ktv_hevc.ksplat&px=-3.357&py=0.082&pz=0.38&tx=-2.56&ty=0.007&tz=-0.218"
+    },
+    {
+      "view_index": 3,
+      "angle": 90.0,
+      "render_name": "ktv_hevc",
+      "screenshot_path": "captured_views/ktv_hevc/view_003_090deg.png",
+      "url": "https://3d-tour-demo-scene.vercel.app/?model=https://storage.googleapis.com/3dgs-homee/ktv_h264hevc.glb&splat=https://storage.googleapis.com/3dgs-homee/ktv_hevc.ksplat&px=-3.357&py=0.082&pz=0.38&tx=-2.56&ty=0.007&tz=-0.218"
+    },
+    {
+      "view_index": 4,
+      "angle": 120.0,
+      "render_name": "ktv_hevc",
+      "screenshot_path": "captured_views/ktv_hevc/view_004_120deg.png",
+      "url": "https://3d-tour-demo-scene.vercel.app/?model=https://storage.googleapis.com/3dgs-homee/ktv_h264hevc.glb&splat=https://storage.googleapis.com/3dgs-homee/ktv_hevc.ksplat&px=-3.357&py=0.082&pz=0.38&tx=-2.56&ty=0.007&tz=-0.218"
+    },
+    {
+      "view_index": 5,
+      "angle": 150.0,
+      "render_name": "ktv_hevc",
+      "screenshot_path": "captured_views/ktv_hevc/view_005_150deg.png",
+      "url": "https://3d-tour-demo-scene.vercel.app/?model=https://storage.googleapis.com/3dgs-homee/ktv_h264hevc.glb&splat=https://storage.googleapis.com/3dgs-homee/ktv_hevc.ksplat&px=-3.357&py=0.082&pz=0.38&tx=-2.56&ty=0.007&tz=-0.218"
+    },
+    {
+      "view_index": 6,
+      "angle": 180.0,
+      "render_name": "ktv_hevc",
+      "screenshot_path": "captured_views/ktv_hevc/view_006_180deg.png",
+      "url": "https://3d-tour-demo-scene.vercel.app/?model=https://storage.googleapis.com/3dgs-homee/ktv_h264hevc.glb&splat=https://storage.googleapis.com/3dgs-homee/ktv_hevc.ksplat&px=-3.357&py=0.082&pz=0.38&tx=-2.56&ty=0.007&tz=-0.218"
+    },
+    {
+      "view_index": 7,
+      "angle": 210.0,
+      "render_name": "ktv_hevc",
+      "screenshot_path": "captured_views/ktv_hevc/view_007_210deg.png",
+      "url": "https://3d-tour-demo-scene.vercel.app/?model=https://storage.googleapis.com/3dgs-homee/ktv_h264hevc.glb&splat=https://storage.googleapis.com/3dgs-homee/ktv_hevc.ksplat&px=-3.357&py=0.082&pz=0.38&tx=-2.56&ty=0.007&tz=-0.218"
+    },
+    {
+      "view_index": 8,
+      "angle": 240.0,
+      "render_name": "ktv_hevc",
+      "screenshot_path": "captured_views/ktv_hevc/view_008_240deg.png",
+      "url": "https://3d-tour-demo-scene.vercel.app/?model=https://storage.googleapis.com/3dgs-homee/ktv_h264hevc.glb&splat=https://storage.googleapis.com/3dgs-homee/ktv_hevc.ksplat&px=-3.357&py=0.082&pz=0.38&tx=-2.56&ty=0.007&tz=-0.218"
+    },
+    {
+      "view_index": 9,
+      "angle": 270.0,
+      "render_name": "ktv_hevc",
+      "screenshot_path": "captured_views/ktv_hevc/view_009_270deg.png",
+      "url": "https://3d-tour-demo-scene.vercel.app/?model=https://storage.googleapis.com/3dgs-homee/ktv_h264hevc.glb&splat=https://storage.googleapis.com/3dgs-homee/ktv_hevc.ksplat&px=-3.357&py=0.082&pz=0.38&tx=-2.56&ty=0.007&tz=-0.218"
+    },
+    {
+      "view_index": 10,
+      "angle": 300.0,
+      "render_name": "ktv_hevc",
+      "screenshot_path": "captured_views/ktv_hevc/view_010_300deg.png",
+      "url": "https://3d-tour-demo-scene.vercel.app/?model=https://storage.googleapis.com/3dgs-homee/ktv_h264hevc.glb&splat=https://storage.googleapis.com/3dgs-homee/ktv_hevc.ksplat&px=-3.357&py=0.082&pz=0.38&tx=-2.56&ty=0.007&tz=-0.218"
+    },
+    {
+      "view_index": 11,
+      "angle": 330.0,
+      "render_name": "ktv_hevc",
+      "screenshot_path": "captured_views/ktv_hevc/view_011_330deg.png",
+      "url": "https://3d-tour-demo-scene.vercel.app/?model=https://storage.googleapis.com/3dgs-homee/ktv_h264hevc.glb&splat=https://storage.googleapis.com/3dgs-homee/ktv_hevc.ksplat&px=-3.357&py=0.082&pz=0.38&tx=-2.56&ty=0.007&tz=-0.218"
+    }
+  ]
+}

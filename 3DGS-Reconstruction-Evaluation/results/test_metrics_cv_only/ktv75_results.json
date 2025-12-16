@@ -1,0 +1,138 @@
+{
+  "render_name": "ktv75",
+  "render_url": "https://3d-tour-demo-scene.vercel.app/?model=https://storage.googleapis.com/3dgs-homee/ktv50.glb&splat=https://storage.googleapis.com/3dgs-homee/ktv75.ksplat&px=-3.357&py=0.082&pz=0.38&tx=-2.56&ty=0.007&tz=-0.218",
+  "num_views": 12,
+  "cv_metrics": {
+    "blur": {
+      "metric": "blur_laplacian",
+      "mean": 249.88650742895473,
+      "std": 98.05662853827798,
+      "min": 120.53558830167042,
+      "max": 407.7667539104678,
+      "median": 245.18167929540374,
+      "num_views": 12,
+      "threshold": 100,
+      "quality_score": 12.494325371447736
+    },
+    "edge_consistency": {
+      "metric": "edge_consistency",
+      "mean_density": 0.05650487075617284,
+      "std_density": 0.023769073470358396,
+      "min_density": 0.020264274691358025,
+      "max_density": 0.08923514660493827,
+      "consistency_score": 52.461853059283214,
+      "num_views": 12,
+      "quality_score": 52.461853059283214
+    },
+    "brisque": {
+      "metric": "brisque_quality",
+      "mean": 41.59691135709485,
+      "std": 2.794478760573853,
+      "min": 35.802452862262726,
+      "max": 45.160416066646576,
+      "median": 42.082245983183384,
+      "num_views": 12,
+      "quality_score": 41.59691135709485
+    },
+    "maniqa": {
+      "metric": "maniqa",
+      "mean": 36.992788314819336,
+      "std": 3.0178220368141444,
+      "min": 32.75877833366394,
+      "max": 42.12687015533447,
+      "median": 36.83810383081436,
+      "num_views": 12,
+      "quality_score": 36.992788314819336
+    }
+  },
+  "vlm_metrics": {
+    "enabled": false
+  },
+  "overall_score": 34.59738079695596,
+  "views": [
+    {
+      "view_index": 0,
+      "angle": 0.0,
+      "render_name": "ktv75",
+      "screenshot_path": "captured_views/ktv75/view_000_000deg.png",
+      "url": "https://3d-tour-demo-scene.vercel.app/?model=https://storage.googleapis.com/3dgs-homee/ktv50.glb&splat=https://storage.googleapis.com/3dgs-homee/ktv75.ksplat&px=-3.357&py=0.082&pz=0.38&tx=-2.56&ty=0.007&tz=-0.218"
+    },
+    {
+      "view_index": 1,
+      "angle": 30.0,
+      "render_name": "ktv75",
+      "screenshot_path": "captured_views/ktv75/view_001_030deg.png",
+      "url": "https://3d-tour-demo-scene.vercel.app/?model=https://storage.googleapis.com/3dgs-homee/ktv50.glb&splat=https://storage.googleapis.com/3dgs-homee/ktv75.ksplat&px=-3.357&py=0.082&pz=0.38&tx=-2.56&ty=0.007&tz=-0.218"
+    },
+    {
+      "view_index": 2,
+      "angle": 60.0,
+      "render_name": "ktv75",
+      "screenshot_path": "captured_views/ktv75/view_002_060deg.png",
+      "url": "https://3d-tour-demo-scene.vercel.app/?model=https://storage.googleapis.com/3dgs-homee/ktv50.glb&splat=https://storage.googleapis.com/3dgs-homee/ktv75.ksplat&px=-3.357&py=0.082&pz=0.38&tx=-2.56&ty=0.007&tz=-0.218"
+    },
+    {
+      "view_index": 3,
+      "angle": 90.0,
+      "render_name": "ktv75",
+      "screenshot_path": "captured_views/ktv75/view_003_090deg.png",
+      "url": "https://3d-tour-demo-scene.vercel.app/?model=https://storage.googleapis.com/3dgs-homee/ktv50.glb&splat=https://storage.googleapis.com/3dgs-homee/ktv75.ksplat&px=-3.357&py=0.082&pz=0.38&tx=-2.56&ty=0.007&tz=-0.218"
+    },
+    {
+      "view_index": 4,
+      "angle": 120.0,
+      "render_name": "ktv75",
+      "screenshot_path": "captured_views/ktv75/view_004_120deg.png",
+      "url": "https://3d-tour-demo-scene.vercel.app/?model=https://storage.googleapis.com/3dgs-homee/ktv50.glb&splat=https://storage.googleapis.com/3dgs-homee/ktv75.ksplat&px=-3.357&py=0.082&pz=0.38&tx=-2.56&ty=0.007&tz=-0.218"
+    },
+    {
+      "view_index": 5,
+      "angle": 150.0,
+      "render_name": "ktv75",
+      "screenshot_path": "captured_views/ktv75/view_005_150deg.png",
+      "url": "https://3d-tour-demo-scene.vercel.app/?model=https://storage.googleapis.com/3dgs-homee/ktv50.glb&splat=https://storage.googleapis.com/3dgs-homee/ktv75.ksplat&px=-3.357&py=0.082&pz=0.38&tx=-2.56&ty=0.007&tz=-0.218"
+    },
+    {
+      "view_index": 6,
+      "angle": 180.0,
+      "render_name": "ktv75",
+      "screenshot_path": "captured_views/ktv75/view_006_180deg.png",
+      "url": "https://3d-tour-demo-scene.vercel.app/?model=https://storage.googleapis.com/3dgs-homee/ktv50.glb&splat=https://storage.googleapis.com/3dgs-homee/ktv75.ksplat&px=-3.357&py=0.082&pz=0.38&tx=-2.56&ty=0.007&tz=-0.218"
+    },
+    {
+      "view_index": 7,
+      "angle": 210.0,
+      "render_name": "ktv75",
+      "screenshot_path": "captured_views/ktv75/view_007_210deg.png",
+      "url": "https://3d-tour-demo-scene.vercel.app/?model=https://storage.googleapis.com/3dgs-homee/ktv50.glb&splat=https://storage.googleapis.com/3dgs-homee/ktv75.ksplat&px=-3.357&py=0.082&pz=0.38&tx=-2.56&ty=0.007&tz=-0.218"
+    },
+    {
+      "view_index": 8,
+      "angle": 240.0,
+      "render_name": "ktv75",
+      "screenshot_path": "captured_views/ktv75/view_008_240deg.png",
+      "url": "https://3d-tour-demo-scene.vercel.app/?model=https://storage.googleapis.com/3dgs-homee/ktv50.glb&splat=https://storage.googleapis.com/3dgs-homee/ktv75.ksplat&px=-3.357&py=0.082&pz=0.38&tx=-2.56&ty=0.007&tz=-0.218"
+    },
+    {
+      "view_index": 9,
+      "angle": 270.0,
+      "render_name": "ktv75",
+      "screenshot_path": "captured_views/ktv75/view_009_270deg.png",
+      "url": "https://3d-tour-demo-scene.vercel.app/?model=https://storage.googleapis.com/3dgs-homee/ktv50.glb&splat=https://storage.googleapis.com/3dgs-homee/ktv75.ksplat&px=-3.357&py=0.082&pz=0.38&tx=-2.56&ty=0.007&tz=-0.218"
+    },
+    {
+      "view_index": 10,
+      "angle": 300.0,
+      "render_name": "ktv75",
+      "screenshot_path": "captured_views/ktv75/view_010_300deg.png",
+      "url": "https://3d-tour-demo-scene.vercel.app/?model=https://storage.googleapis.com/3dgs-homee/ktv50.glb&splat=https://storage.googleapis.com/3dgs-homee/ktv75.ksplat&px=-3.357&py=0.082&pz=0.38&tx=-2.56&ty=0.007&tz=-0.218"
+    },
+    {
+      "view_index": 11,
+      "angle": 330.0,
+      "render_name": "ktv75",
+      "screenshot_path": "captured_views/ktv75/view_011_330deg.png",
+      "url": "https://3d-tour-demo-scene.vercel.app/?model=https://storage.googleapis.com/3dgs-homee/ktv50.glb&splat=https://storage.googleapis.com/3dgs-homee/ktv75.ksplat&px=-3.357&py=0.082&pz=0.38&tx=-2.56&ty=0.007&tz=-0.218"
+    }
+  ]
+}

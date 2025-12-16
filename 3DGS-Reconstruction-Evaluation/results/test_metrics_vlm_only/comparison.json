@@ -1,0 +1,36 @@
+{
+  "renders": [
+    {
+      "name": "ktv_hevc",
+      "overall_score": 50.20833333333333,
+      "num_views": 12
+    },
+    {
+      "name": "ktv75",
+      "overall_score": 45.625,
+      "num_views": 12
+    },
+    {
+      "name": "ktv_hevc_deblur035",
+      "overall_score": 44.58333333333333,
+      "num_views": 12
+    }
+  ],
+  "ranking": [
+    {
+      "rank": 1,
+      "name": "ktv_hevc",
+      "score": 50.20833333333333
+    },
+    {
+      "rank": 2,
+      "name": "ktv75",
+      "score": 45.625
+    },
+    {
+      "rank": 3,
+      "name": "ktv_hevc_deblur035",
+      "score": 44.58333333333333
+    }
+  ]
+}
