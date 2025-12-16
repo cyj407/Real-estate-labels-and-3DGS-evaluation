@@ -11,7 +11,7 @@ import yaml
 import numpy as np
 
 from data_loader import PropertyDataLoader
-from scene_classifier import SceneClassifier
+from clip_classifier import ClipSceneClassifier
 from siglip_classifier import SigLIPSceneClassifier
 from label_generator import LabelGenerator
 from siglip_label_generator import SigLIPLabelGenerator
@@ -50,7 +50,7 @@ class SemanticLabelingPipeline:
             )
         else:
             print("Using CLIP scene classifier")
-            self.scene_classifier = SceneClassifier(
+            self.scene_classifier = ClipSceneClassifier(
                 model_name=self.config['model']['name'],
                 pretrained=self.config['model']['pretrained'],
                 device=self.device

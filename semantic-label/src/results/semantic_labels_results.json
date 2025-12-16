@@ -1,7 +1,7 @@
 {
   "summary": {
     "total_properties": 10,
-    "timestamp": "2025-12-15 15:28:37",
+    "timestamp": "2025-12-17 02:50:36",
     "config": {
       "model": "ViT-B/32",
       "device": "cpu",
@@ -9,107 +9,259 @@
     }
   },
   "latency_statistics": {
-    "mean_seconds": 6.818067669868469,
-    "median_seconds": 6.7945414781570435,
-    "p95_seconds": 8.182937252521514,
-    "min_seconds": 5.728361129760742,
-    "max_seconds": 8.419121742248535
+    "mean_seconds": 11.883470129966735,
+    "median_seconds": 11.260725021362305,
+    "p95_seconds": 15.01300731897354,
+    "min_seconds": 9.752989053726196,
+    "max_seconds": 15.73918890953064,
+    "details": [
+      {
+        "property_id": "GZ50364605",
+        "stats": {
+          "runs": 3,
+          "mean_seconds": 12.753605763117472,
+          "p95_seconds": 13.92692563533783,
+          "min_seconds": 11.995177268981934,
+          "max_seconds": 14.125452041625977,
+          "raw_latencies": [
+            12.140187978744507,
+            11.995177268981934,
+            14.125452041625977
+          ]
+        }
+      },
+      {
+        "property_id": "TC08957218",
+        "stats": {
+          "runs": 3,
+          "mean_seconds": 13.396948019663492,
+          "p95_seconds": 17.06574490070343,
+          "min_seconds": 11.071355104446411,
+          "max_seconds": 17.69224500656128,
+          "raw_latencies": [
+            17.69224500656128,
+            11.071355104446411,
+            11.427243947982788
+          ]
+        }
+      },
+      {
+        "property_id": "KS186226",
+        "stats": {
+          "runs": 3,
+          "mean_seconds": 11.313208421071371,
+          "p95_seconds": 11.881236481666566,
+          "min_seconds": 10.310814142227173,
+          "max_seconds": 11.897944211959839,
+          "raw_latencies": [
+            11.897944211959839,
+            11.7308669090271,
+            10.310814142227173
+          ]
+        }
+      },
+      {
+        "property_id": "KS187345",
+        "stats": {
+          "runs": 3,
+          "mean_seconds": 12.689109325408936,
+          "p95_seconds": 13.627867937088013,
+          "min_seconds": 10.848976135253906,
+          "max_seconds": 13.632540941238403,
+          "raw_latencies": [
+            13.632540941238403,
+            13.585810899734497,
+            10.848976135253906
+          ]
+        }
+      },
+      {
+        "property_id": "KS185237",
+        "stats": {
+          "runs": 3,
+          "mean_seconds": 12.061180671056112,
+          "p95_seconds": 14.130648231506347,
+          "min_seconds": 10.508474111557007,
+          "max_seconds": 14.453926801681519,
+          "raw_latencies": [
+            14.453926801681519,
+            10.508474111557007,
+            11.22114109992981
+          ]
+        }
+      },
+      {
+        "property_id": "KS187126",
+        "stats": {
+          "runs": 3,
+          "mean_seconds": 13.987332264582315,
+          "p95_seconds": 15.47661371231079,
+          "min_seconds": 13.109370946884155,
+          "max_seconds": 15.73918890953064,
+          "raw_latencies": [
+            13.113436937332153,
+            13.109370946884155,
+            15.73918890953064
+          ]
+        }
+      },
+      {
+        "property_id": "KS186928",
+        "stats": {
+          "runs": 3,
+          "mean_seconds": 11.473570982615152,
+          "p95_seconds": 12.362733316421508,
+          "min_seconds": 10.841155052185059,
+          "max_seconds": 12.505971908569336,
+          "raw_latencies": [
+            12.505971908569336,
+            10.841155052185059,
+            11.073585987091064
+          ]
+        }
+      },
+      {
+        "property_id": "KS184357",
+        "stats": {
+          "runs": 3,
+          "mean_seconds": 13.759162028630575,
+          "p95_seconds": 14.771908378601074,
+          "min_seconds": 13.035001039505005,
+          "max_seconds": 14.934574842453003,
+          "raw_latencies": [
+            13.307910203933716,
+            14.934574842453003,
+            13.035001039505005
+          ]
+        }
+      },
+      {
+        "property_id": "KS181499",
+        "stats": {
+          "runs": 3,
+          "mean_seconds": 12.479379336039225,
+          "p95_seconds": 15.1140887260437,
+          "min_seconds": 10.599987030029297,
+          "max_seconds": 15.537842035293579,
+          "raw_latencies": [
+            15.537842035293579,
+            10.599987030029297,
+            11.3003089427948
+          ]
+        }
+      },
+      {
+        "property_id": "CW67133884",
+        "stats": {
+          "runs": 3,
+          "mean_seconds": 11.138561089833578,
+          "p95_seconds": 12.34354088306427,
+          "min_seconds": 9.752989053726196,
+          "max_seconds": 12.47158932685852,
+          "raw_latencies": [
+            11.191104888916016,
+            12.47158932685852,
+            9.752989053726196
+          ]
+        }
+      }
+    ]
   },
   "aggregate_metrics": {
-    "mean_coverage": 0.27393048703670503,
-    "mean_specificity": 4.958823529411765,
-    "mean_redundancy": 0.7063977956771851,
-    "mean_clip_consistency": 0.29567921757698057,
-    "diversity": 0.8983996805879197,
+    "mean_coverage": 0.2704926997423172,
+    "mean_specificity": 1.9603571428571427,
+    "mean_redundancy": 0.7912824928760529,
+    "mean_clip_consistency": 0.29532252848148344,
+    "diversity": 0.8538550866277004,
     "total_properties": 10,
     "per_property": [
       {
-        "coverage": 0.27557292580604553,
-        "specificity": 1.9333333333333333,
-        "redundancy": 0.7812915444374084,
-        "clip_consistency": 0.29307591915130615,
+        "coverage": 0.2748434245586395,
+        "specificity": 2.066666666666667,
+        "redundancy": 0.7785578370094299,
+        "clip_consistency": 0.29473698139190674,
         "num_labels": 15,
         "num_images": 20,
         "property_id": "GZ50364605"
       },
       {
-        "coverage": 0.27247726917266846,
-        "specificity": 1.588235294117647,
-        "redundancy": 0.793795645236969,
-        "clip_consistency": 0.30390986800193787,
-        "num_labels": 17,
+        "coverage": 0.2740125060081482,
+        "specificity": 1.9285714285714286,
+        "redundancy": 0.7695832252502441,
+        "clip_consistency": 0.30551597476005554,
+        "num_labels": 14,
         "num_images": 19,
         "property_id": "TC08957218"
       },
       {
-        "coverage": 0.30788129568099976,
-        "specificity": 32.0,
-        "redundancy": 0.0,
-        "clip_consistency": 0.3104049861431122,
-        "num_labels": 1,
+        "coverage": 0.27422478795051575,
+        "specificity": 1.7333333333333334,
+        "redundancy": 0.7654905915260315,
+        "clip_consistency": 0.3009018003940582,
+        "num_labels": 15,
         "num_images": 20,
         "property_id": "KS186226"
       },
       {
-        "coverage": 0.27282389998435974,
-        "specificity": 1.8333333333333333,
-        "redundancy": 0.7803673148155212,
-        "clip_consistency": 0.28899258375167847,
-        "num_labels": 12,
+        "coverage": 0.2741658687591553,
+        "specificity": 1.6875,
+        "redundancy": 0.8036534786224365,
+        "clip_consistency": 0.29476189613342285,
+        "num_labels": 16,
         "num_images": 20,
         "property_id": "KS187345"
       },
       {
-        "coverage": 0.26853474974632263,
-        "specificity": 1.9333333333333333,
-        "redundancy": 0.7824584245681763,
-        "clip_consistency": 0.29042327404022217,
-        "num_labels": 15,
+        "coverage": 0.27246764302253723,
+        "specificity": 2.0,
+        "redundancy": 0.8115237951278687,
+        "clip_consistency": 0.29205018281936646,
+        "num_labels": 12,
         "num_images": 20,
         "property_id": "KS185237"
       },
       {
-        "coverage": 0.27295926213264465,
-        "specificity": 2.066666666666667,
-        "redundancy": 0.7814205288887024,
-        "clip_consistency": 0.3012978434562683,
+        "coverage": 0.2756105363368988,
+        "specificity": 1.9333333333333333,
+        "redundancy": 0.7994362115859985,
+        "clip_consistency": 0.3002464771270752,
         "num_labels": 15,
         "num_images": 20,
         "property_id": "KS187126"
       },
       {
-        "coverage": 0.2550191581249237,
-        "specificity": 2.2,
-        "redundancy": 0.7790160179138184,
-        "clip_consistency": 0.28935250639915466,
+        "coverage": 0.25492069125175476,
+        "specificity": 2.066666666666667,
+        "redundancy": 0.7867103815078735,
+        "clip_consistency": 0.2922825217247009,
         "num_labels": 15,
         "num_images": 20,
         "property_id": "KS186928"
       },
       {
-        "coverage": 0.26916924118995667,
-        "specificity": 1.9166666666666667,
-        "redundancy": 0.7876580953598022,
-        "clip_consistency": 0.2880486845970154,
-        "num_labels": 12,
+        "coverage": 0.26711249351501465,
+        "specificity": 2.0714285714285716,
+        "redundancy": 0.8080320358276367,
+        "clip_consistency": 0.2860683798789978,
+        "num_labels": 14,
         "num_images": 20,
         "property_id": "KS184357"
       },
       {
-        "coverage": 0.27236732840538025,
-        "specificity": 1.9166666666666667,
-        "redundancy": 0.7907745242118835,
-        "clip_consistency": 0.2969321608543396,
-        "num_labels": 12,
+        "coverage": 0.2677983045578003,
+        "specificity": 2.1875,
+        "redundancy": 0.7850239276885986,
+        "clip_consistency": 0.2939707338809967,
+        "num_labels": 16,
         "num_images": 20,
         "property_id": "KS181499"
       },
       {
-        "coverage": 0.2724997401237488,
-        "specificity": 2.2,
-        "redundancy": 0.7871958613395691,
-        "clip_consistency": 0.2943543493747711,
-        "num_labels": 15,
+        "coverage": 0.2697707414627075,
+        "specificity": 1.9285714285714286,
+        "redundancy": 0.8048134446144104,
+        "clip_consistency": 0.29269033670425415,
+        "num_labels": 14,
         "num_images": 19,
         "property_id": "CW67133884"
       }
@@ -130,21 +282,21 @@
         "property_age": 43
       },
       "labels": [
-        "balcony",
-        "garage",
-        "basement parking",
-        "laundry nook",
-        "separate toilet",
-        "bathroom sink",
-        "brick accent wall",
-        "wood flooring",
-        "teal accent wall",
         "open plan",
+        "compact layout",
+        "platform bed",
+        "brick accent wall",
+        "balcony",
+        "laundry area",
         "built-in storage",
-        "air conditioning",
-        "bright lighting",
-        "well-maintained",
-        "compact kitchen"
+        "hardwood flooring",
+        "bathroom tile",
+        "air conditioner",
+        "multi-use space",
+        "garage/parking access",
+        "scooter storage",
+        "modern minimalist",
+        "bright and airy"
       ],
       "image_stats": {
         "total_images": 20,
@@ -153,18 +305,35 @@
         "interior_ratio": 0.95
       },
       "evaluation": {
-        "coverage": 0.27557292580604553,
-        "specificity": 1.9333333333333333,
-        "redundancy": 0.7812915444374084,
-        "clip_consistency": 0.2924240827560425,
+        "coverage": 0.2748434245586395,
+        "specificity": 2.066666666666667,
+        "redundancy": 0.7785578370094299,
+        "clip_consistency": 0.2938413619995117,
         "num_labels": 15,
         "num_images": 19
       },
+      "error_analysis": {
+        "over_generic": [],
+        "hallucination": [],
+        "wrong_room_type": []
+      },
       "timing": {
-        "total_seconds": 8.419121742248535,
-        "stage1_classification": 1.1688942909240723,
-        "stage2_labeling": 6.287517786026001,
-        "stage3_evaluation": 0.9626967906951904
+        "total_seconds": 14.125452041625977,
+        "stage1_classification": 1.0006721019744873,
+        "stage2_labeling": 8.27823281288147,
+        "stage3_evaluation": 4.846527814865112
+      },
+      "latency_stats": {
+        "runs": 3,
+        "mean_seconds": 12.753605763117472,
+        "p95_seconds": 13.92692563533783,
+        "min_seconds": 11.995177268981934,
+        "max_seconds": 14.125452041625977,
+        "raw_latencies": [
+          12.140187978744507,
+          11.995177268981934,
+          14.125452041625977
+        ]
       }
     },
     {
@@ -181,23 +350,20 @@
         "property_age": 30
       },
       "labels": [
-        "tatami room",
-        "garage",
-        "laundry room",
-        "basement",
-        "genkan",
         "open plan",
         "mezzanine",
-        "skylight",
-        "built-in storage",
-        "kitchen island",
-        "tile flooring",
-        "wooden ceiling",
+        "garage",
         "balcony",
-        "carport",
-        "contemporary style",
+        "kitchen green cabinets",
+        "tiled bathroom",
+        "wooden floor room",
+        "laundry nook",
+        "staircase",
+        "built-in storage",
+        "skylight ceiling",
+        "natural light",
         "bright and airy",
-        "well-maintained"
+        "neutral palette"
       ],
       "image_stats": {
         "total_images": 19,
@@ -206,18 +372,35 @@
         "interior_ratio": 0.8421052631578947
       },
       "evaluation": {
-        "coverage": 0.27247726917266846,
-        "specificity": 1.588235294117647,
-        "redundancy": 0.793795645236969,
-        "clip_consistency": 0.3058704435825348,
-        "num_labels": 17,
+        "coverage": 0.2740125060081482,
+        "specificity": 1.9285714285714286,
+        "redundancy": 0.7695832252502441,
+        "clip_consistency": 0.30828025937080383,
+        "num_labels": 14,
         "num_images": 16
       },
+      "error_analysis": {
+        "over_generic": [],
+        "hallucination": [],
+        "wrong_room_type": []
+      },
       "timing": {
-        "total_seconds": 6.827377796173096,
-        "stage1_classification": 1.0291481018066406,
-        "stage2_labeling": 4.93118691444397,
-        "stage3_evaluation": 0.8670127391815186
+        "total_seconds": 11.427243947982788,
+        "stage1_classification": 1.0193719863891602,
+        "stage2_labeling": 5.988564968109131,
+        "stage3_evaluation": 4.419291973114014
+      },
+      "latency_stats": {
+        "runs": 3,
+        "mean_seconds": 13.396948019663492,
+        "p95_seconds": 17.06574490070343,
+        "min_seconds": 11.071355104446411,
+        "max_seconds": 17.69224500656128,
+        "raw_latencies": [
+          17.69224500656128,
+          11.071355104446411,
+          11.427243947982788
+        ]
       }
     },
     {
@@ -234,7 +417,21 @@
         "property_age": 0
       },
       "labels": [
-        "balcony\nsliding glass doors\nkitchen dishwasher\ninduction stove\nglass backsplash\nlaundry area\nopen plan\nLDK layout\nmodern minimalist\nnatural lighting\nwood flooring\nbalcony planters\nshower enclosure\nbathroom vanity\nentry grill\nfloor windows"
+        "open plan",
+        "balcony",
+        "glass railing",
+        "wood-look flooring",
+        "kitchenette",
+        "dishwasher",
+        "shower room",
+        "toilet",
+        "built-in storage",
+        "entryway grill",
+        "natural lighting",
+        "high ceilings",
+        "neutral palette",
+        "urban view",
+        "balcony greenery"
       ],
       "image_stats": {
         "total_images": 20,
@@ -243,18 +440,35 @@
         "interior_ratio": 0.8
       },
       "evaluation": {
-        "coverage": 0.30788129568099976,
-        "specificity": 32.0,
-        "redundancy": 0.0,
-        "clip_consistency": 0.3082507252693176,
-        "num_labels": 1,
+        "coverage": 0.2730359733104706,
+        "specificity": 1.7333333333333334,
+        "redundancy": 0.7654905915260315,
+        "clip_consistency": 0.29397308826446533,
+        "num_labels": 15,
         "num_images": 16
       },
+      "error_analysis": {
+        "over_generic": [],
+        "hallucination": [],
+        "wrong_room_type": []
+      },
       "timing": {
-        "total_seconds": 7.894267320632935,
-        "stage1_classification": 1.0105609893798828,
-        "stage2_labeling": 6.399850845336914,
-        "stage3_evaluation": 0.4838261604309082
+        "total_seconds": 10.310814142227173,
+        "stage1_classification": 1.0468699932098389,
+        "stage2_labeling": 4.425764083862305,
+        "stage3_evaluation": 4.838167905807495
+      },
+      "latency_stats": {
+        "runs": 3,
+        "mean_seconds": 11.313208421071371,
+        "p95_seconds": 11.881236481666566,
+        "min_seconds": 10.310814142227173,
+        "max_seconds": 11.897944211959839,
+        "raw_latencies": [
+          11.897944211959839,
+          11.7308669090271,
+          10.310814142227173
+        ]
       }
     },
     {
@@ -271,18 +485,22 @@
         "property_age": 0
       },
       "labels": [
+        "open plan",
         "balcony",
         "terrace",
-        "open plan",
-        "kitchen with dishwasher",
-        "built-in cabinets",
-        "modern minimalist",
-        "bright light",
-        "neutral palette",
-        "wood-look floor",
         "gym",
-        "underground parking",
-        "glass shower"
+        "garage",
+        "laundry room",
+        "kitchen",
+        "modern minimalist",
+        "bright lighting",
+        "well-ventilated",
+        "hardwood flooring",
+        "tile flooring",
+        "bathroom with shower",
+        "built-in storage",
+        "garden nook",
+        "spacious hallway"
       ],
       "image_stats": {
         "total_images": 20,
@@ -291,18 +509,35 @@
         "interior_ratio": 1.0
       },
       "evaluation": {
-        "coverage": 0.27282389998435974,
-        "specificity": 1.8333333333333333,
-        "redundancy": 0.7803673148155212,
-        "clip_consistency": 0.28899258375167847,
-        "num_labels": 12,
+        "coverage": 0.2741658687591553,
+        "specificity": 1.6875,
+        "redundancy": 0.8036534786224365,
+        "clip_consistency": 0.29476189613342285,
+        "num_labels": 16,
         "num_images": 20
       },
+      "error_analysis": {
+        "over_generic": [],
+        "hallucination": [],
+        "wrong_room_type": []
+      },
       "timing": {
-        "total_seconds": 6.761705160140991,
-        "stage1_classification": 1.0149221420288086,
-        "stage2_labeling": 4.938681125640869,
-        "stage3_evaluation": 0.8080840110778809
+        "total_seconds": 10.848976135253906,
+        "stage1_classification": 1.079509973526001,
+        "stage2_labeling": 4.144873142242432,
+        "stage3_evaluation": 5.624580144882202
+      },
+      "latency_stats": {
+        "runs": 3,
+        "mean_seconds": 12.689109325408936,
+        "p95_seconds": 13.627867937088013,
+        "min_seconds": 10.848976135253906,
+        "max_seconds": 13.632540941238403,
+        "raw_latencies": [
+          13.632540941238403,
+          13.585810899734497,
+          10.848976135253906
+        ]
       }
     },
     {
@@ -319,21 +554,18 @@
         "property_age": 4
       },
       "labels": [
+        "open plan",
         "balcony",
         "gym",
+        "entertainment lounge",
         "billiards room",
-        "clubhouse lounge",
-        "parking garage",
-        "media wall",
-        "open plan",
+        "bar area",
         "modern minimalist design",
-        "bright lighting",
+        "bright and airy",
         "city view",
-        "built-in shelves",
-        "wooden flooring",
-        "glass shower",
-        "bathtub",
-        "double sink vanity"
+        "hardwood flooring",
+        "built-in storage",
+        "underground parking"
       ],
       "image_stats": {
         "total_images": 20,
@@ -342,18 +574,35 @@
         "interior_ratio": 0.85
       },
       "evaluation": {
-        "coverage": 0.26853474974632263,
-        "specificity": 1.9333333333333333,
-        "redundancy": 0.7824584245681763,
-        "clip_consistency": 0.2903228998184204,
-        "num_labels": 15,
+        "coverage": 0.27246764302253723,
+        "specificity": 2.0,
+        "redundancy": 0.8115237951278687,
+        "clip_consistency": 0.29158052802085876,
+        "num_labels": 12,
         "num_images": 17
       },
+      "error_analysis": {
+        "over_generic": [],
+        "hallucination": [],
+        "wrong_room_type": []
+      },
       "timing": {
-        "total_seconds": 5.728361129760742,
-        "stage1_classification": 0.993049144744873,
-        "stage2_labeling": 3.923184871673584,
-        "stage3_evaluation": 0.8121099472045898
+        "total_seconds": 11.22114109992981,
+        "stage1_classification": 1.1366689205169678,
+        "stage2_labeling": 6.139487981796265,
+        "stage3_evaluation": 3.9449732303619385
+      },
+      "latency_stats": {
+        "runs": 3,
+        "mean_seconds": 12.061180671056112,
+        "p95_seconds": 14.130648231506347,
+        "min_seconds": 10.508474111557007,
+        "max_seconds": 14.453926801681519,
+        "raw_latencies": [
+          14.453926801681519,
+          10.508474111557007,
+          11.22114109992981
+        ]
       }
     },
     {
@@ -370,21 +619,21 @@
         "property_age": 7
       },
       "labels": [
-        "separate shower",
-        "gas stove",
-        "kitchen cabinetry",
         "balcony",
-        "glossy tile flooring",
-        "open plan",
-        "bright and airy",
-        "modern minimalist design",
+        "kitchen",
+        "sliding doors",
+        "glass shower",
         "indoor playground",
-        "clubhouse",
-        "pool lounge",
-        "gym/lounge area",
-        "marble accents",
-        "built-in storage",
-        "lobby reception"
+        "game room",
+        "lobby",
+        "bar counter",
+        "open plan",
+        "contemporary style",
+        "modern minimalist design",
+        "bright lighting",
+        "neutral color palette",
+        "tile flooring",
+        "air conditioning"
       ],
       "image_stats": {
         "total_images": 20,
@@ -393,18 +642,35 @@
         "interior_ratio": 0.85
       },
       "evaluation": {
-        "coverage": 0.27295926213264465,
-        "specificity": 2.066666666666667,
-        "redundancy": 0.7814205288887024,
-        "clip_consistency": 0.30165600776672363,
+        "coverage": 0.2756105363368988,
+        "specificity": 1.9333333333333333,
+        "redundancy": 0.7994362115859985,
+        "clip_consistency": 0.3006824851036072,
         "num_labels": 15,
         "num_images": 17
       },
+      "error_analysis": {
+        "over_generic": [],
+        "hallucination": [],
+        "wrong_room_type": []
+      },
       "timing": {
-        "total_seconds": 6.760899782180786,
-        "stage1_classification": 1.0132179260253906,
-        "stage2_labeling": 4.929239749908447,
-        "stage3_evaluation": 0.8184218406677246
+        "total_seconds": 15.73918890953064,
+        "stage1_classification": 1.0432031154632568,
+        "stage2_labeling": 9.975318908691406,
+        "stage3_evaluation": 4.720653057098389
+      },
+      "latency_stats": {
+        "runs": 3,
+        "mean_seconds": 13.987332264582315,
+        "p95_seconds": 15.47661371231079,
+        "min_seconds": 13.109370946884155,
+        "max_seconds": 15.73918890953064,
+        "raw_latencies": [
+          13.113436937332153,
+          13.109370946884155,
+          15.73918890953064
+        ]
       }
     },
     {
@@ -422,20 +688,20 @@
       },
       "labels": [
         "open plan",
-        "compact kitchen",
-        "built-in microwave",
-        "induction hob",
-        "glass backsplash",
+        "compact layout",
+        "kitchenette",
+        "built-in storage",
         "floating shelves",
-        "wall-mounted storage",
         "balcony access",
-        "large windows",
-        "modern minimalist design",
-        "neutral color palette",
         "natural lighting",
-        "well-maintained",
-        "wood veneer panels",
-        "console wall shelf"
+        "large windows",
+        "neutral palette",
+        "warm tones",
+        "modern minimalist",
+        "bright and airy",
+        "tile flooring",
+        "green accent wall",
+        "glass partition"
       ],
       "image_stats": {
         "total_images": 20,
@@ -444,18 +710,35 @@
         "interior_ratio": 0.75
       },
       "evaluation": {
-        "coverage": 0.2550191581249237,
-        "specificity": 2.2,
-        "redundancy": 0.7790160179138184,
-        "clip_consistency": 0.28495702147483826,
+        "coverage": 0.25492069125175476,
+        "specificity": 2.066666666666667,
+        "redundancy": 0.7867103815078735,
+        "clip_consistency": 0.2866027355194092,
         "num_labels": 15,
         "num_images": 15
       },
+      "error_analysis": {
+        "over_generic": [],
+        "hallucination": [],
+        "wrong_room_type": []
+      },
       "timing": {
-        "total_seconds": 7.024749040603638,
-        "stage1_classification": 1.0068368911743164,
-        "stage2_labeling": 5.265567064285278,
-        "stage3_evaluation": 0.7523279190063477
+        "total_seconds": 11.073585987091064,
+        "stage1_classification": 1.0312151908874512,
+        "stage2_labeling": 5.388528823852539,
+        "stage3_evaluation": 4.653828859329224
+      },
+      "latency_stats": {
+        "runs": 3,
+        "mean_seconds": 11.473570982615152,
+        "p95_seconds": 12.362733316421508,
+        "min_seconds": 10.841155052185059,
+        "max_seconds": 12.505971908569336,
+        "raw_latencies": [
+          12.505971908569336,
+          10.841155052185059,
+          11.073585987091064
+        ]
       }
     },
     {
@@ -473,17 +756,19 @@
       },
       "labels": [
         "laundry room",
-        "glass shower",
-        "bathroom vanity",
-        "open plan",
-        "gas stove",
-        "built-in oven",
+        "bathroom",
+        "open kitchen",
         "built-in storage",
-        "tile flooring",
-        "modern minimalist",
-        "bright lighting",
         "balcony",
-        "study nook"
+        "pink wardrobe",
+        "built-in wardrobes",
+        "modern minimalist design",
+        "bright and airy",
+        "natural lighting",
+        "neutral color palette",
+        "pool view",
+        "open plan",
+        "compact layout"
       ],
       "image_stats": {
         "total_images": 20,
@@ -492,18 +777,35 @@
         "interior_ratio": 0.75
       },
       "evaluation": {
-        "coverage": 0.26916924118995667,
-        "specificity": 1.9166666666666667,
-        "redundancy": 0.7876580953598022,
-        "clip_consistency": 0.2911126911640167,
-        "num_labels": 12,
+        "coverage": 0.26611799001693726,
+        "specificity": 2.0714285714285716,
+        "redundancy": 0.8080320358276367,
+        "clip_consistency": 0.28691694140434265,
+        "num_labels": 14,
         "num_images": 15
       },
+      "error_analysis": {
+        "over_generic": [],
+        "hallucination": [],
+        "wrong_room_type": []
+      },
       "timing": {
-        "total_seconds": 5.935964822769165,
-        "stage1_classification": 1.0009632110595703,
-        "stage2_labeling": 4.210009813308716,
-        "stage3_evaluation": 0.7249729633331299
+        "total_seconds": 13.035001039505005,
+        "stage1_classification": 1.1017882823944092,
+        "stage2_labeling": 7.4551496505737305,
+        "stage3_evaluation": 4.478049993515015
+      },
+      "latency_stats": {
+        "runs": 3,
+        "mean_seconds": 13.759162028630575,
+        "p95_seconds": 14.771908378601074,
+        "min_seconds": 13.035001039505005,
+        "max_seconds": 14.934574842453003,
+        "raw_latencies": [
+          13.307910203933716,
+          14.934574842453003,
+          13.035001039505005
+        ]
       }
     },
     {
@@ -520,18 +822,22 @@
         "property_age": 13
       },
       "labels": [
-        "balcony",
-        "built-in cabinets",
+        "balcony view",
         "open plan",
-        "wooden flooring",
+        "LDK layout",
+        "built-in storage",
+        "hardwood flooring",
         "tile flooring",
-        "built-in kitchen",
-        "glass shower",
-        "laundry space",
-        "parking space",
-        "entryway",
-        "contemporary style",
-        "bright and airy"
+        "modern kitchen",
+        "laundry room",
+        "bathroom with tub",
+        "walk-in wardrobe",
+        "ceiling recessed lights",
+        "air conditioning",
+        "generous natural light",
+        "secure parking",
+        "lobby entrance",
+        "contemporary style"
       ],
       "image_stats": {
         "total_images": 20,
@@ -540,18 +846,35 @@
         "interior_ratio": 0.85
       },
       "evaluation": {
-        "coverage": 0.27236732840538025,
-        "specificity": 1.9166666666666667,
-        "redundancy": 0.7907745242118835,
-        "clip_consistency": 0.29745933413505554,
-        "num_labels": 12,
+        "coverage": 0.2677983045578003,
+        "specificity": 2.1875,
+        "redundancy": 0.7850239276885986,
+        "clip_consistency": 0.2943350076675415,
+        "num_labels": 16,
         "num_images": 17
       },
+      "error_analysis": {
+        "over_generic": [],
+        "hallucination": [],
+        "wrong_room_type": []
+      },
       "timing": {
-        "total_seconds": 5.979346036911011,
-        "stage1_classification": 1.0274248123168945,
-        "stage2_labeling": 4.1855669021606445,
-        "stage3_evaluation": 0.7663431167602539
+        "total_seconds": 11.3003089427948,
+        "stage1_classification": 1.045091152191162,
+        "stage2_labeling": 4.815062046051025,
+        "stage3_evaluation": 5.440141916275024
+      },
+      "latency_stats": {
+        "runs": 3,
+        "mean_seconds": 12.479379336039225,
+        "p95_seconds": 15.1140887260437,
+        "min_seconds": 10.599987030029297,
+        "max_seconds": 15.537842035293579,
+        "raw_latencies": [
+          15.537842035293579,
+          10.599987030029297,
+          11.3003089427948
+        ]
       }
     },
     {
@@ -569,20 +892,19 @@
       },
       "labels": [
         "open plan",
-        "laundry room",
+        "modern minimalist",
+        "bright lighting",
+        "laminate flooring",
+        "built-in storage",
+        "stainless steel appliances",
         "balcony",
-        "bathroom shower enclosure",
-        "separate toilet",
-        "built-in oven",
-        "gas stove",
-        "built-in wardrobe",
-        "gym room",
-        "parking space",
-        "air conditioning",
-        "track lighting",
-        "neutral palette",
-        "bright and airy",
-        "ceiling fans not visible"
+        "laundry area",
+        "walk-in wardrobe",
+        "city views",
+        "gym facility",
+        "underground parking",
+        "mailroom",
+        "security lobby"
       ],
       "image_stats": {
         "total_images": 19,
@@ -591,18 +913,35 @@
         "interior_ratio": 0.8947368421052632
       },
       "evaluation": {
-        "coverage": 0.27200067043304443,
-        "specificity": 2.2,
-        "redundancy": 0.7871958613395691,
-        "clip_consistency": 0.29468753933906555,
-        "num_labels": 15,
+        "coverage": 0.2689426839351654,
+        "specificity": 1.9285714285714286,
+        "redundancy": 0.8048134446144104,
+        "clip_consistency": 0.2927100658416748,
+        "num_labels": 14,
         "num_images": 17
       },
+      "error_analysis": {
+        "over_generic": [],
+        "hallucination": [],
+        "wrong_room_type": []
+      },
       "timing": {
-        "total_seconds": 6.848883867263794,
-        "stage1_classification": 0.9966740608215332,
-        "stage2_labeling": 5.047546863555908,
-        "stage3_evaluation": 0.8046419620513916
+        "total_seconds": 9.752989053726196,
+        "stage1_classification": 1.0281579494476318,
+        "stage2_labeling": 4.260879993438721,
+        "stage3_evaluation": 4.463939905166626
+      },
+      "latency_stats": {
+        "runs": 3,
+        "mean_seconds": 11.138561089833578,
+        "p95_seconds": 12.34354088306427,
+        "min_seconds": 9.752989053726196,
+        "max_seconds": 12.47158932685852,
+        "raw_latencies": [
+          11.191104888916016,
+          12.47158932685852,
+          9.752989053726196
+        ]
       }
     }
   ]

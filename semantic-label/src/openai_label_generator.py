@@ -85,8 +85,7 @@ class OpenAILabelGenerator:
             elapsed = time.time() - start_time
             print(f"  OpenAI response received in {elapsed:.2f}s")
            
-            print(response)
-            result_text = response.output_text
+            result_text = response.output_text.replace("\n", ",")
             print(f"  Raw response: {result_text}")
             
             # Parse comma-separated tags
